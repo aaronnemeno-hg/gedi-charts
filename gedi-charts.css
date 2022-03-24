@@ -1,0 +1,50 @@
+/* General */
+
+/* Overall Doughnuts */
+.role-overall-charts {
+    display: flex;;
+    flex-direction: row;
+}
+
+
+.role-overall-charts .role-overall-doughnuts-container,
+.role-overall-charts .role-overall-stacked-container {
+    width: 50%;
+}
+
+.role-overall-doughnut-item .role-overall-doughnut-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.role-overall-doughnut-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.role-overall-doughnut-desc p {
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.role-overall-doughnut-desc p span {
+    display: block;
+}
+
+
+.role-overall-doughnut-desc p span:first-child {
+    font-size: 3rem;
+}
+
+
+.role-overall-doughnut-desc p span:not(:first-child) {
+    font-size: 2rem;
+}
+
+.role-overall-stacked-wrapper p {
+    padding: 0;
+    margin: 0;
+}

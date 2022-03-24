@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" data-ng-app="virtualevent" data-ng-controller="mainCtrl">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Doughnuts and Bar Charts</title>
+
+<!-- Bootstrap core CSS -->
+<link href="assets/vendor/bootstrapv2/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/vendor/chartv2js/dist/Chart.min.css" />
+</head>
+<body>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 ml-auto">
+      <div class="donut-chart">
+      <canvas id="myChart" width="400" height="400"></canvas>
+      <div class="absolute-center text-center">
+        <h3>XXXK</h3>
+        <p>Employees</p>
+      </div>
+    </div>
+      </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mr-auto">
+      <div class="donut-chart">
+      <canvas id="myChart2" width="400" height="400"></canvas>
+      <!--<div class="absolute-center text-center">
+        <h3>XXXK</h3>
+        <p>Employees</p>
+      </div>-->
+    </div>
+      </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-12 col-sm-8  mx-auto">
+      <canvas id="barChart" width="400" height="200">
+      <p>U.S. Women: 33.5%, U.S. Men: 66.4%, International Women: 25.6%, International Men: 71.6%</p>
+      </canvas>
+      </div>
+    </div>
+  
+  <div class="row my-5">
+    <div class="col-12 col-sm-6  mx-auto">
+      <h3>Boeing Commercial Airplanes</h3>
+      <canvas id="barChart2" width="400" height="30"></canvas>
+        <div class="d-flex justify-content-between mt-n2"><span class="chart-percent">19.6%</span><span class="chart-percent">80.4%</span></div>
+      </div>
+    </div>
+</div>
+<script src="assets/vendor/jquery/dist/jquery-1.11.1.min.js"></script> 
+<!--<script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>--> 
+<script src="assets/vendor/bootstrapv2/js/bootstrap.min.js"></script> 
+ 
+  <script src="assets/vendor/chartv2js/dist/Chart.bundle.min.js"></script>
+<!--<script src="assets/vendor/chart.js/dist/chart.min.js"></script>  -->
+<script src="assets/vendor/chartv2js-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+<script>
+Chart.pluginService.register({
+      beforeDraw: function(chart) {
+        if (chart.config.options.elements.center) {
+          // Get ctx from string
+          var ctx = chart.chart.ctx;
+
+          // Get options from the center object in options
+          var centerConfig = chart.config.options.elements.center;
+          var fontStyle = centerConfig.fontStyle || 'Arial';
+          var headline = centerConfig.headline || '';
+          var txt = centerConfig.text || '';
+          var color = centerConfig.color || '#000';
+          var maxFontSize = centerConfig.maxFontSize || 24;
+          var sidePadding = centerConfig.sidePadding || 20;
+          var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+          // Start with a base font of 30px
+          if(headline !== ''){
+            ctx.font = "48px " + fontStyle;
+          } else {
+            ctx.font = "24px " + fontStyle;
+          }
+          // Get the width of the string and also the width of the element minus 10 to give it 5px side padding
+          var stringWidth = ctx.measureText(txt).width;
+          var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+
+          // Find out how much the font can grow in width.
+          var widthRatio = elementWidth / stringWidth;
+          var newFontSize = Math.floor(24 * widthRatio);
+          var elementHeight = (chart.innerRadius * 2);
+
+          // Pick a new font size so it will not be larger than the height of label.
+          var fontSizeToUse = Math.min(newFontSize, elementHeight, maxFontSize);
+          //var fontSizeToUse = 24;
+          var minFontSize = centerConfig.minFontSize;
+          var lineHeight = centerConfig.lineHeight || 25;
+          var wrapText = false;
+          if (minFontSize === undefined) {
+            minFontSize = 20;
+          }
+
+          if (minFontSize && fontSizeToUse < minFontSize) {
+            fontSizeToUse = minFontSize;
+            wrapText = true;
+          }
+
+
+          // Set font settings to draw it correctly.
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+          var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
+          ctx.font = fontSizeToUse + "px " + fontStyle;
+          //ctx.font = "48px " + fontStyle;
+          ctx.fillStyle = color;
+          /*if (!wrapText) {
+            ctx.fillText(headline, centerX, centerY);
+            return;
+          }*/
+          var words;
+          var line = '';
+          var lines = [headline];
+          if(txt.indexOf('||') !== -1){
+            words = txt.split('||');
+            lines = lines.concat(words);
+          } else{
+            words = txt.split(' ');
+           
+            // Break words up into multiple lines if necessary
+            for (var n = 0; n < words.length; n++) {
+              var testLine = line + words[n] + ' ';
+              var metrics = ctx.measureText(testLine);
+              var testWidth = metrics.width;
+              if (testWidth > elementWidth && n > 0) {
+                lines.push(line);
+                line = words[n] + ' ';
+              } else {
+                line = testLine;
+              }
+            }
+          }
+          // Move the center up depending on line height and number of lines
+          centerY -= ((lines.length - 1) / 2) * lineHeight;
+          for (var n = 0; n < lines.length; n++) {
+            if(n===0){
+              ctx.font = "48px " + fontStyle;
+              ctx.fillText(lines[0], centerX, centerY);
+              centerY += 36;
+            }else{
+              ctx.font = fontSizeToUse + "px " + fontStyle;
+              ctx.fillText(lines[n], centerX, centerY);
+              centerY += lineHeight;
+            }
+            
+          }
+          //Draw text in center
+          ctx.fillText(line, centerX, centerY);
+        }
+      }
+    });
+
+  const bar = document.getElementById('barChart');
+  const myBar = new Chart(bar, {
+    type: 'bar',
+    plugins: [ChartDataLabels],
+    data: {
+      labels: ['U.S. Women','U.S. Men', 'Int. Women', 'Int. Men'],
+      datasets: [{
+        data: [33.5,66.4,25.6,71.6],
+      barThickness:50,
+        backgroundColor: [
+          'rgba(105, 167, 226, 1)',
+          'rgba(19, 60, 101, 1)',
+          'rgba(105, 167, 226, 1)',
+          'rgba(19, 60, 101, 1)'
+        ],
+        datalabels:{
+          anchor:'end',
+          align:'top',
+          offset:5,
+          formatter: function(value) {
+            return value+'%';
+          }
+        }
+      }],
+      
+    },
+    options: {
+      responsive:true,
+      aspectRatio:2,
+      tooltips: {
+          callbacks: {
+            label: function(context) {
+              let label = context.label || '';
+
+              if (label) {
+                label = ' ' + label + ' ';
+              }
+              if (context.value !== null) {
+                label = ' ' +context.value + '%';
+              }
+              return label;
+            }
+          }
+        },
+        legend:{
+          display:false
+        },
+      scales: {
+        yAxes: [{
+          beginAtZero: true,
+          gridLines:{
+            lineWidth:2,
+            display: true,
+            drawTicks: true,
+            drawOnChartArea: true,
+            zeroLineWidth:2,
+            color:'rgb(218,218,218)',
+            zeroLineColor:'rgb(218,218,218)',
+            drawOnChartArea: false
+          },
+          
+          ticks: {
+                    
+          min:0,
+          max:80,
+                    callback: function(value, index, ticks) {
+                        return value +'%';
+                    }
+                }
+        }],
+        xAxes:[{
+              
+              ticks:{
+                tickWidth:0,
+                padding:10
+              },
+          gridLines:{
+            lineWidth:2,
+            display: true,
+            drawTicks: false,
+            color:'rgb(218,218,218)',
+            zeroLineColor:'rgb(218,218,218)',
+            drawOnChartArea: false
+          }
+        }]
+      },
+      plugins: {
+      }
+    }
+  });
+  
+    const bar2 = document.getElementById('barChart2');
+  const myBar2 = new Chart(bar2, {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Boeing Commercial Airplanes'],
+      datasets: [{
+            label: 'Women',
+      barThickness:25,
+            data: [19.6,0],
+            backgroundColor: 'rgba(105, 167, 226, 1)',
+            borderColor: 'rgba(105, 167, 226, 1)',
+            borderWidth: 0,
+        
+        },{
+            label: 'Men',
+      barThickness:25,
+            data: [80.4,0],
+            backgroundColor: 'rgba(19, 60, 101, 1)',
+            borderColor: 'rgba(19, 60, 101, 1)',
+            borderWidth: 0
+        }],
+      
+    },
+    
+    options: {
+      responsive:true,
+        legend:{
+          display:false
+        },
+      layout:{
+        padding:{
+          left:-8
+        }
+      },
+      tooltips:{
+        enabled:false
+      },
+          indexAxis: 'y',
+        scales: {
+      
+            xAxes: [{
+              gridLines:{
+                display:false,
+                drawBorder:false
+              },
+              ticks:{
+                display:false
+              },
+                stacked: true
+            }],
+            yAxes: [{
+              gridLines:{
+                display:false,
+                drawBorder:false
+              },
+              ticks:{
+                display:false
+              },
+                stacked: true
+            }]
+    },
+      plugins: {
+    }
+    }
+  });
+  
+const buildDonut = function(ctx,labelArr,dataArr,colorArr,header,centerMsg){
+  let colors = ['rgba(19, 60, 101, 1)','rgba(105, 167, 226, 1)'];
+  let headline = header ? header : '';
+  let msg = centerMsg ? centerMsg : '';
+  if(colorArr){
+    colors = colorArr;
+  }
+const myChart = new Chart(ctx, {
+    type: 'doughnut',
+  
+    data: {
+        labels: labelArr,
+        datasets: [{
+            data: dataArr,
+            backgroundColor: colors,
+            borderWidth: 0
+        }]
+    },
+    options:{
+      cutoutPercentage: 80,
+      spacing: 0,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              let label = data.labels[tooltipItem.index] || '';
+              if (label) {
+                label = ' ' + label + ' ';
+              }
+              if (data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] !== null) {
+                label += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%';
+              }
+              return label;
+            }
+          }
+        },
+        legend: {
+            display: false,
+          position:'bottom'
+        },
+      elements: {
+        center: {
+          headline:headline,
+          text: msg,
+          color: '#212529', // Default is #000000
+          fontStyle: "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", // Default is Arial
+          sidePadding: 20, // Default is 20 (as a percentage)
+          maxFontSize: 24, // Default is 20 (in px), set to false and text will not wrap.
+          lineHeight: 25 // Default is 25 (in px), used for when text wraps
+        }
+      }
+      
+  }
+});
+  }
+ const ctx = document.getElementById('myChart');
+  buildDonut(ctx,['Women', 'Men'],[25,75]); 
+  const ctx2 = document.getElementById('myChart2');
+  buildDonut(ctx2,['Asian','Black','Hispanic/Latino/x/a','Native American','Pacific Islander','2+ races','White'],[20.4,6.8,5.5,1.0,1.3,2.9,62.1],['#CCE981','#81bc00','#007167','#92C0EA','#4C95DF','#2F77CC','#133C65'],'32.7%','Racial & Ethnic||Minorities');
+</script>
+</body>
+</html>
