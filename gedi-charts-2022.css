@@ -108,6 +108,42 @@
     background: #133C65;
 }
 
+.role-gender-woc {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.role-gender-woc-title span {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.role-gender-woc-us-overall p span:first-child,
+.role-gender-woc-executive-overall p span:first-child {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.role-gender-woc-us-overall p span:not(:first-child),
+.role-gender-woc-executive-overall p span:not(:first-child) {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.role-gender-woc-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.role-gender-woc-message {
+    width: 80%;
+}
+
+.role-gender-woc-us-overall p span,
+.role-gender-woc-executive-overall p span {
+    display: block;
+}
+
 /* Race & Ethnicity */
 .role-legend.legend-pacific-islander {
     background: #CCE981;
@@ -147,4 +183,17 @@
 
 .charts-footer .charts-footer-title {
     font-weight: 700;
+}
+
+.nav-tabs.sub-tabs {
+    width: 40%;
+    margin: 0 auto;
+}
+
+@media only screen  and (min-width: 668px) {
+
+    .nav-tabs.sub-tabs li {
+        width: unset;
+    }
+
 }
