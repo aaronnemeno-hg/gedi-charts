@@ -141,3 +141,10 @@
     background: #598200;
 }
 
+.charts-footer p span {
+    display: block;
+}
+
+.charts-footer .charts-footer-title {
+    font-weight: 700;
+}
