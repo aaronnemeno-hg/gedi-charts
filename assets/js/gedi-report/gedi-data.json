@@ -1683,11 +1683,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 3.6, 6.4, 7.0, 14.2, 68.8],
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"data": [0, 0, 0, 6.4, 7.0, 14.2, 68.8, 3.6],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -1715,7 +1715,6 @@
 						}
 					}
 				}
-
 			},
 			"us_bca": {
 				"canvas_id": "reUSBCA20",
@@ -2035,11 +2034,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"data": [0, 0, 0, 8.3, 0, 8.3, 83.3],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2097,11 +2096,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 5.0, 25.0, 0, 5.0,  65.0],
+							"data": [0, 0, 0, 25.0, 0, 5.0,  65.0, 5.0],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2159,11 +2158,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 2.0, 6.5, 4.0, 8.3, 79.2],
+							"data": [0, 0, 0, 6.5, 4.0, 8.3, 79.2, 2.0],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2221,11 +2220,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 2.9, 6.0, 6.2, 2.9, 77.0],
+							"data": [0, 0, 0, 6.0, 6.2, 2.9, 77.0, 2.9],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2283,11 +2282,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"data": [],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2345,12 +2344,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 2.7, 4.4, 7.6, 17.6, 67.7],
+							"data": [0, 0, 0, 4.4, 7.6, 17.6, 67.7, 2.7],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2408,12 +2407,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 4.6, 7.6, 7.2, 16.6, 64.0],
+							"data": [0, 0, 0, 7.6, 7.2, 16.6, 64.0, 4.6],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2471,12 +2470,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
 							"data": [],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2534,12 +2533,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
+						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 5.4, 8.3, 9.6, 13.9, 62.8],
+							"data": [0, 0, 0, 8.3, 9.6, 13.9, 62.8, 5.4],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
+							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -3502,6 +3501,475 @@
 									"zeroLineColor": "rgb(218, 218, 218)",
 									"drawOnChartArea": false
 								}
+							}]
+						}
+					}
+				}
+			}
+		}
+	},
+	"veterans": {
+		"2020": {
+			"us_overall": {
+				"canvas_id": "veUSOverall20",
+				"title": "U.S. Overall",
+				"chart": {
+					"type": "doughnut",
+					"data": {
+                        "labels": ["Veterans", "Non Veterans"],
+						"datasets": [{
+							"label": "",
+							"data": [14.8, 0],
+                            "backgroundColor": ["#133C65", "#133C65"],
+							"borderColor": [],
+							"borderWidth": 1
+						}]
+					},
+					"options": {
+						"cutoutPercentage": 80,
+						"spacing": 0,
+						"tooltips": {
+							"callbacks": {}
+						},
+						"legend": {
+							"display": false,
+							"position": "bottom"
+						},
+						"elements": {
+							"center": {
+								"headline": "",
+								"text": "",
+								"color": "#212529",
+								"fontStyle": "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", 
+								"sidePadding": 20,
+								"maxFontSize": 24,
+								"lineHeight": 25
+							}
+						}
+					}
+				}
+			},
+			"us_bca": {
+				"canvas_id": "veUSBCA20",
+				"title": "U.S. Boeing Commercial Airlines",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Commercial Airplanes"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [16.0, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans", 
+							"barThickness":25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}]
+						}
+					}
+				}
+			},
+			"us_bds": {
+				"canvas_id": "veUSBDS20",
+				"title": "U.S. Boeing Defense, Space and Security",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Defense, Space and Security"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [18.8, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans",
+							"barThickness": 25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(129,188,0)",
+							"borderColor": "rgb(129,188,0)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}]
+						}
+					}
+				}
+			},
+			"us_bgs": {
+				"canvas_id": "veUSBGS20",
+				"title": "U.S. Boeing Global Services",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Global Services"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [34.8, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans",
+							"barThickness": 25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(129,188,0)",
+							"borderColor": "rgb(129,188,0)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}]
+						}
+					}
+				}
+			}
+		},
+		"2021": {
+			"us_overall": {
+				"canvas_id": "veUSOverall21",
+				"title": "U.S. Overall",
+				"chart": {
+					"type": "doughnut",
+					"data": {
+                        "labels": ["Veterans", "Non Veterans"],
+						"datasets": [{
+							"label": "",
+							"data": [14.6, 0],
+                            "backgroundColor": ["#133C65", "#133C65"],
+							"borderColor": [],
+							"borderWidth": 1
+						}]
+					},
+					"options": {
+						"cutoutPercentage": 80,
+						"spacing": 0,
+						"tooltips": {
+							"callbacks": {}
+						},
+						"legend": {
+							"display": false,
+							"position": "bottom"
+						},
+						"elements": {
+							"center": {
+								"headline": "",
+								"text": "",
+								"color": "#212529",
+								"fontStyle": "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", 
+								"sidePadding": 20,
+								"maxFontSize": 24,
+								"lineHeight": 25
+							}
+						}
+					}
+				}
+
+			},
+			"us_bca": {
+				"canvas_id": "veUSBCA21",
+				"title": "U.S. Boeing Commercial Airlines",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Commercial Airplanes"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [14.9, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans", 
+							"barThickness":25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}]
+						}
+					}
+				}
+			},
+			"us_bds": {
+				"canvas_id": "veUSBDS21",
+				"title": "U.S. Boeing Defense, Space and Security",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Defense, Space and Security"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [18.8, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans",
+							"barThickness": 25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(129,188,0)",
+							"borderColor": "rgb(129,188,0)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}]
+						}
+					}
+				}
+			},
+			"us_bgs": {
+				"canvas_id": "veUSBGS21",
+				"title": "U.S. Boeing Global Services",
+				"chart": {
+					"type": "horizontalBar",
+					"data": {
+						"labels": ["U.S. Boeing Global Services"],
+						"datasets": [
+						{
+							"label": "Veterans", 
+							"barThickness":25,
+							"data": [27.9, 0],
+							"backgroundColor": "rgb(204,233,129)",
+							"borderColor": "rgb(204,233,129)",
+							"borderWidth": 0
+						},
+						{
+							"label": "Non Veterans",
+							"barThickness": 25,
+							"data": [0, 0],
+							"backgroundColor": "rgb(129,188,0)",
+							"borderColor": "rgb(129,188,0)",
+							"borderWidth": 0
+						}] 
+					},
+					"options": {
+						"responsive": true,
+						"legend": {
+							"display": false
+						},
+						"layout": {
+							"padding": {
+								"left": -8
+							}
+						},
+						"tooltips": {
+							"enabled": false
+						},
+						"indexAxis": "y",
+						"scales": {
+							"xAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
+							}],
+							"yAxes": [{
+								"gridLines": {
+									"display": false,
+									"drawBorder": false
+								},
+								"ticks": {
+									"display": false
+								},
+								"stacked": true
 							}]
 						}
 					}

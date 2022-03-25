@@ -61,7 +61,83 @@
     height: 200px;
 }
 
+.role-legend-container {
+    padding-top: 3rem;
+}
+
+.role-legend-container .role-legend,
+.role-legend-container .role-legend-text {
+    display: inline-block;
+}
+
+.role-legend-container .role-legend {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background: black;
+}
+
+.role-legend-container .role-legend:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.role-legend-container .role-legend-text {
+    margin-left: 1rem;
+    margin-bottom: 0 !important;
+    padding: 0;
+}
+
 .role-links-container a.role-links {
     text-decoration: none;
     font-weight: 700;
+    padding: 0 1rem;
 }
+
+.role-links-container .role-links-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Gender */
+.role-legend.legend-women {
+    background: #69A7E2;
+}
+
+.role-legend.legend-men {
+    background: #133C65;
+}
+
+/* Race & Ethnicity */
+.role-legend.legend-pacific-islander {
+    background: #CCE981;
+}
+
+.role-legend.legend-native-american {
+    background: #81BC00;
+}
+
+.role-legend.legend-2-or-more {
+    background: #007167;
+}
+
+.role-legend.legend-black {
+    background: #BBD8F2;
+}
+
+.role-legend.legend-hlax {
+    background: #4C95DF;
+}
+
+.role-legend.legend-asian {
+    background: #2F77CC;
+}
+
+.role-legend.legend-white {
+    background: #133C65;
+}
+
+.role-legend.legend-addtl-races {
+    background: #598200;
+}
+

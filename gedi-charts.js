@@ -246,7 +246,7 @@ function loadCharts(category, year, roles) {
             for (var i = 0; i < roles.length; i++) {
 
                 // Add conditions here to skip rendering charts by category and role
-                if (category === "race-ethnicity" && roles[i] === "intl_overall") {
+                if ((category === "race-ethnicity" || category === "veterans") && roles[i] === "intl_overall") {
                     // skip since there is no doughnut chart for international overall
                     // under race and ethnicity
                     continue;
