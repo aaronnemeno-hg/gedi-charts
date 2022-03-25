@@ -7,7 +7,7 @@
     <title>HTML 5 Boilerplate</title>
     <link href="assets/vendor/bootstrapv2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/chartv2js/dist/Chart.min.css" />
-    <link rel="stylesheet" href="gedi-charts.css" />
+    <link rel="stylesheet" href="gedi-charts-2022.css" />
 
     <script src="assets/vendor/jquery/dist/jquery-1.11.1.min.js"></script>
     <!--<script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>-->
@@ -15,10 +15,10 @@
     <script src="assets/vendor/chartv2js/dist/Chart.bundle.min.js"></script>
     <!--<script src="assets/vendor/chart.js/dist/chart.min.js"></script>  -->
     <script src="assets/vendor/chartv2js-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
-    <script src="index.js"></script>
+    <script src="gedi-charts.js"></script>
   </head>
   <body>
-      <section class="block copy-large copy-styles fade-bottom js-resize story-section">
+      <section class="block copy-large copy-styles fade-bottom js-resize story-section gedi-charts-section-2022">
         <div class="wrap">
           <div class="charts-tabs">
             <div class="tabs tabs-bottom tabs-center tabs-simple">
@@ -188,7 +188,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="">
+                  <div class="role-links-container">
                     <a href="#" 
                         class="role-links" 
                         data-target-tablistlv2="tabListLevel2Gender"
@@ -248,12 +248,188 @@
                         Hires
                     </a>
                   </div>
+                  <div class="role-gender-woc">
+                    <h3>Women of Color</h3>
+                    <div class="">
+                      <div class="role-gender-woc-overall">
+                        <div class="role-gender-woc-us-overall"><h3>U.S. Overall</h3><span>9.1%</span></div>
+                        <div class="role-gender-woc-executive-overall"><h3>Executive Level</h3><span>8.4%</span></div>
+                      </div>
+                      <div class="">
+                        <p>We're proud of our diverse women leaders and the innovation they bring to Boeing. Women of color are more represented overall and in the executive levels compared with last year, though we know there's still much work to do. Leanne Caret, president and CEO of Boeing Defense, Space & Security and execurity champion of the Boeing Women Inspiring Leadership (BWIL) Business Resource Group, has for the past few hears held Execuritive Women of Color Connect Circles to support champion Boeing's most senior women of color. Efforts such as this help foster connection and sponsorship, enabling Boeing to hire and retain more women of color.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div> <!-- end #gender -->
 
                 <!-- Race & Ethnicity Content -->
                 <div class="tab-pane" id="race-ethnicity">
                   <div class="">
                     <p>In our U.S. workforce, overall racial and ethnic minority representation increased to 32.7% which is 3 points above average for the aerospace and defense industry. In 2021, racial and ethnic minorities accounted for 42.5% of our U.S. hires, compared to 37.2% in 2020. Our racial equity aspirations, Racial Equity Task Force, <a href="#" target="_blank">Business Resource Groups</a> and Inclusion Ambassadors continue to inform our efforts, including the enterprise rollout of bias mitigation training and guidance to inclusive interview teams. In 2021, we gave $1.4 million in charitable grants to HBCUs and have invested $30 million in organizations focused on racial equity and social justice since 2020. </p>
+                    <div class="tabs-bottom tabs-center tabs-simple">
+                      <ul id="tabListLevel2RaceEthnicity" class="nav nav-tabs">
+                        <li class="active">
+                          <a href="#race-ethnicity-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"> 2021 </a>
+                        </li>
+                        <li>
+                          <a href="#race-ethnicity-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"> 2020 </a>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="race-ethnicity-2021">
+                          <div class="role-overall-charts">
+                            <div class="role-overall-doughnuts-container">
+                              <div class="role-overall-doughnut-item">
+                                <h3>U.S. Overall</h3>
+                                <div class="role-overall-doughnut-wrapper">
+                                  <div class="role-us-overall-doughnut" style="max-height: 250px; max-width: 250px;">
+                                    <canvas id="reUSOverall21" width="240" height="240"></canvas>
+                                  </div> 
+                                </div>
+                              </div>
+                            </div> <!-- end of .role-overall-doughnuts-container -->
+                            <div class="role-overall-stacked-container">
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Commercial Airplanes</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>1.0% Native American</p>
+                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                    <canvas id="reUSBCA21" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Defense, Space and Security</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>9.3% Black</p>
+                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                    <canvas id="reUSBDS21" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Global Services</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>63.4% White</p>
+                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                    <canvas id="reUSBGS21" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> <!-- end .role-overall-stacked-container -->
+                          </div>
+                          <div class="role-other-charts">
+                            <canvas id="reBarGraph21" width="400" height="200"></canvas>
+                          </div>
+                        </div>
+                        <div class="tab-pane" id="race-ethnicity-2020">
+                          <div class="role-overall-charts">
+                            <div class="role-overall-doughnuts-container">
+                              <div class="role-overall-doughnut-item">
+                                <h3>U.S. Overall</h3>
+                                <div class="role-overall-doughnut-wrapper">
+                                  <div class="role-us-overall-doughnut" style="max-height: 250px; max-width: 250px;">
+                                    <canvas id="reUSOverall20" width="240" height="240"></canvas>
+                                  </div> 
+                                </div>
+                              </div>
+                            </div> <!-- end of .role-overall-doughnuts-container -->
+                            <div class="role-overall-stacked-container">
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Commercial Airplanes</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>1.0% Native American</p>
+                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                    <canvas id="reUSBCA20" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Defense, Space and Security</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>9.3% Black</p>
+                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                    <canvas id="reUSBDS20" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="role-overall-stacked-item">
+                                <h3>U.S. Boeing Global Services</h3>
+                                <div class="role-overall-stacked-wrapper">
+                                  <p>63.4% White</p>
+                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                    <canvas id="reUSBGS20" width="400" height="50"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> <!-- end .role-overall-stacked-container -->
+                          </div>                      
+                          <div class="role-other-charts">
+                            <canvas id="reBarGraph20" width="400" height="200"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="role-links-container">
+                    <a href="#" 
+                        class="role-links" 
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
+                        Overall
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="board_of_directors">
+                        Board of Directors
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="executive_council">
+                        Executive Council
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="executives">
+                        Executives
+                    </a>
+                    <a href="#"
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="managers">
+                        Managers
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="individual_contributors">
+                        Individual Contributors
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="engineering">
+                        Engineering
+                    </a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="production_and_maintenance">
+                        Production & Maintenance
+                    </a>
+                    <a href="#" 
+                        class="role-links" 
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="promotions">Promotions</a>
+                    <a href="#" 
+                        class="role-links"
+                        data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                        data-chart-roles="hires">
+                        Hires
+                    </a>
                   </div>
                 </div> <!-- end #race-ethnicity -->
 

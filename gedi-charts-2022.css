@@ -6,7 +6,6 @@
     flex-direction: row;
 }
 
-
 .role-overall-charts .role-overall-doughnuts-container,
 .role-overall-charts .role-overall-stacked-container {
     width: 50%;
@@ -15,6 +14,10 @@
 .role-overall-doughnut-item .role-overall-doughnut-wrapper {
     display: flex;
     flex-direction: row;
+}
+
+.role-overall-doughnut-item h3 {
+    margin-bottom: 0;
 }
 
 .role-overall-doughnut-desc {
@@ -26,7 +29,7 @@
 .role-overall-doughnut-desc p {
     text-align: center;
     margin-left: 10px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important; /* avoid collision with gedi-reports-2022.css */
     font-weight: 300;
 }
 
@@ -36,15 +39,29 @@
 
 
 .role-overall-doughnut-desc p span:first-child {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
 .role-overall-doughnut-desc p span:not(:first-child) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 34px;
+}
+
+.role-overall-stacked-item h3 {
+    margin-bottom: 0;
 }
 
 .role-overall-stacked-wrapper p {
     padding: 0;
-    margin: 0;
+    margin: 0 !important; /* avoid colliding with gedi-reports-2022.css */
+}
+
+.role-links-container {
+    height: 200px;
+}
+
+.role-links-container a.role-links {
+    text-decoration: none;
+    font-weight: 700;
 }

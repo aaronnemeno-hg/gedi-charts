@@ -130,7 +130,8 @@ function initChartPluginService() {
 }
 
 function initTabs() {
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    $(document).on('shown.bs.tab', '.gedi-charts-section-2022 a[data-toggle="tab"]', function(e) {
+        console.log("SHOWN BS TAB");
         var tabLevel = $(this).data('chart-level');
         if (tabLevel == "category") {
             // default year if at category level (level 1 tab)
@@ -141,6 +142,8 @@ function initTabs() {
             rolesArr = roles.split(";");
 
             var activeTabPaneID = $(this).attr('href');
+            console.log("ACTIVE TAB PANE ID")
+            console.log(activeTabPaneID);
             const targetTabPane = document.querySelector(activeTabPaneID).querySelector('.tab-pane.active');
             console.log("TAB PANE FOUND");
             console.log(targetTabPane);
@@ -229,11 +232,12 @@ function initRoleLinks() {
 }
 
 function loadCharts(category, year, roles) {
+    console.log(`${category} - ${year} - ${roles}`);
     $.ajax({
         type: 'GET',
         async: false,
         dataType: 'json',
-        url: '/gedi-data.json',
+        url: '/assets/js/gedi-report/gedi-data.json',
         success: function(data) {
             console.log("Init chart data");
             //console.log(data);
@@ -241,9 +245,19 @@ function loadCharts(category, year, roles) {
             // use key category and key role to get target chart json    
             for (var i = 0; i < roles.length; i++) {
 
+                // Add conditions here to skip rendering charts by category and role
+                if (category === "race-ethnicity" && roles[i] === "intl_overall") {
+                    // skip since there is no doughnut chart for international overall
+                    // under race and ethnicity
+                    continue;
+                }
+                console.log("ROLES");
                 console.log(roles[i]);
+                console.log("CATEGORY YEAR")
                 console.log(data[category][year][roles[i]]);
+                console.log("CATEGORY YEAR CANVAS ID")
                 console.log(data[category][year][roles[i]]['canvas_id']);
+                console.log("CATEGORY YEAR CHART OBJ")
                 console.log(data[category][year][roles[i]]['chart']);
                 
                 const canvasID = data[category][year][roles[i]]['canvas_id'];
@@ -300,7 +314,7 @@ function injectCallbacksByChart(chartObj) {
         console.log(chartObj.options.tooltips.callbacks);
         chartObj.options.tooltips.callbacks.label = overallDoughnutLabel;
     } else if (chartObj.type === "bar") { // vertical
-        chartObj.plugins = [ChartDataLabels];
+        chartObj.plugins = [self.ChartDataLabels];
         console.log("CHART DATA LABELS");
         console.log(chartObj.data.datasets[0].datalabels);
         // formatter
