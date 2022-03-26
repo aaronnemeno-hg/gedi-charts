@@ -1,0 +1,204 @@
+/* Tabs CSS customizations */
+/* Tabs */
+.tabs {
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.nav-tabs {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	border-bottom-color: #EEE;
+}
+
+.nav-tabs li {
+	display: inline-block;
+	float: none;
+}
+
+.nav-tabs li:last-child a {
+	margin-right: 0;
+}
+
+.nav-tabs li a {
+	border-radius: 5px 5px 0 0;
+	font-size: 14px;
+	margin-right: 1px;
+}
+
+.nav-tabs li a, .nav-tabs li a:hover {
+	background: #F4F4F4;
+	border-bottom: none;
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #EEE;
+	border-top: 3px solid #EEE;
+	color: #CCC;
+}
+
+.nav-tabs li a:hover {
+	border-bottom-color: transparent;
+	border-top: 3px solid #CCC;
+	box-shadow: none;
+}
+
+.nav-tabs li a:active, .nav-tabs li a:focus {
+	border-bottom: 0;
+}
+
+.nav-tabs li.active a,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+	background: #FFF;
+	border-left-color: #EEE;
+	border-right-color: #EEE;
+	border-top: 3px solid #CCC;
+	color: #CCC;
+}
+
+.tab-content {
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+	background-color: #FFF;
+	border: 1px solid #EEE;
+	border-top: 0;
+	padding: 15px;
+}
+.tab-content > .tab-pane {
+	display: none;
+}
+.tab-content > .active {
+	display: block;
+}
+
+/* Right Aligned */
+.nav-tabs.nav-right {
+	text-align: right;
+}
+
+/* Bottom Tabs */
+.tabs.tabs-bottom {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.tabs.tabs-bottom .tab-content {
+	border-radius: 4px 4px 0 0;
+	border-bottom: 0;
+	border-top: 1px solid #EEE;
+}
+
+.tabs.tabs-bottom .nav-tabs {
+	border-bottom: none;
+	border-top: 1px solid #EEE;
+}
+
+.tabs.tabs-bottom .nav-tabs li {
+	margin-bottom: 0;
+	margin-top: -1px;
+}
+
+.tabs.tabs-bottom .nav-tabs li:last-child a {
+	margin-right: 0;
+}
+
+.tabs.tabs-bottom .nav-tabs li a {
+	border-radius: 0 0 5px 5px;
+	font-size: 14px;
+	margin-right: 1px;
+}
+
+.tabs.tabs-bottom .nav-tabs li a, .tabs.tabs-bottom .nav-tabs li a:hover {
+	border-bottom: 3px solid #EEE;
+	border-top: 1px solid #EEE;
+}
+
+.tabs.tabs-bottom .nav-tabs li a:hover {
+	border-bottom: 3px solid #CCC;
+	border-top: 1px solid #EEE;
+}
+
+.tabs.tabs-bottom .nav-tabs li.active a,
+.tabs.tabs-bottom .nav-tabs li.active a:hover,
+.tabs.tabs-bottom .nav-tabs li.active a:focus {
+	border-bottom: 3px solid #CCC;
+	border-top-color: transparent;
+	border-bottom-color: #009bdf;
+}
+/* Simple */
+.tabs.tabs-simple .nav-tabs {
+	border: 0;
+	margin-bottom: 10px;
+}
+
+.tabs.tabs-simple .nav-tabs > li {
+	margin-left: 0;
+	margin-bottom: 20px;
+}
+
+.tabs.tabs-simple .nav-tabs > li a, .tabs.tabs-simple .nav-tabs > li a:hover, .tabs.tabs-simple .nav-tabs > li a:focus {
+	padding: 15px 30px;
+	background: none;
+	border: 0;
+	border-bottom: 3px solid #eee;
+	border-radius: 0;
+	color: #777;
+	font-size: 16px;
+}
+
+.tabs.tabs-simple .tab-content {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+	.tabs .nav.nav-tabs.nav-justified li {
+		display: block;
+		margin-bottom: -5px;
+	}
+
+	.tabs .nav.nav-tabs.nav-justified li a {
+		border-top-width: 3px !important;
+		border-bottom-width: 0 !important;
+	}
+
+	.tabs .nav.nav-tabs.nav-justified li:first-child a, .tabs .nav.nav-tabs.nav-justified li:first-child a:hover {
+		border-radius: 5px 5px 0 0;
+	}
+
+	.tabs .nav.nav-tabs.nav-justified li:last-child a, .tabs .nav.nav-tabs.nav-justified li:last-child a:hover {
+		border-radius: 0;
+	}
+
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li {
+		margin-bottom: 0;
+		margin-top: -5px;
+	}
+
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li a {
+		border-bottom-width: 3px !important;
+		border-top-width: 0 !important;
+	}
+
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:first-child a, .tabs.tabs-bottom .nav.nav-tabs.nav-justified li:first-child a:hover {
+		border-radius: 0;
+	}
+
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a, .tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a:hover {
+		border-radius: 0 0 5px 5px;
+	}
+}
+html body .tabs.tabs-simple .nav-tabs > li.active a {
+	border-top-color: #009bdf;
+	color: #009bdf;
+}
+html body .tabs.tabs-bottom .nav-tabs li.active a {
+	border-bottom-color: #009bdf;
+}
+html body .copy-styles .tabs.tabs-simple .nav-tabs > li::before {
+    display: none;
+}

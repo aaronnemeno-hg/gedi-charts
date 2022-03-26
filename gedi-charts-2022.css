@@ -91,12 +91,22 @@
     text-decoration: none;
     font-weight: 700;
     padding: 0 1rem;
+    text-transform: uppercase;
+    color: #0033A1;
+}
+
+.role-links-container a.role-links.active {
+    color: #4BA0CC;
 }
 
 .role-links-container .role-links-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.role-links-wrapper {
+    padding: 1rem 0;
 }
 
 /* Gender */

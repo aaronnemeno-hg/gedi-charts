@@ -187,9 +187,16 @@ function initRoleLinks() {
 
     for (var i = 0; i < roleLinks.length; i++) {
         //console.log(roleLinks[i]);
-        roleLinks[i].addEventListener('click', function(e) {
+        roleLinks[i].addEventListener('click', function(e, key) {
             e.preventDefault();
             
+            console.log("KEY");
+            console.log(key);
+            
+            /*if (e.target.classList.includes("active")) {
+
+            }*/
+
             var targetTabListLevel2 = e.target.getAttribute('data-target-tablistlv2');
             console.log(targetTabListLevel2);
 

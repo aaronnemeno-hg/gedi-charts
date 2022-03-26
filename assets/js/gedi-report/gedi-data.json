@@ -2619,7 +2619,7 @@
 						},
 						"elements": {
 							"center": {
-								"headline": "32.7",
+								"headline": "32.7%",
 								"text": "Racial and Ethnic Minorities",
 								"color": "#212529",
 								"fontStyle": "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", 
@@ -3537,8 +3537,8 @@
 						},
 						"elements": {
 							"center": {
-								"headline": "",
-								"text": "",
+								"headline": "14.8%",
+								"text": "Veterans",
 								"color": "#212529",
 								"fontStyle": "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", 
 								"sidePadding": 20,
