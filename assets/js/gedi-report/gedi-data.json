@@ -3520,13 +3520,13 @@
 						"datasets": [{
 							"label": "",
 							"data": [14.8, 0],
-                            "backgroundColor": ["#133C65", "#133C65"],
+                            "backgroundColor": ["#69A7E2", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
 					},
 					"options": {
-						"cutoutPercentage": 80,
+						"cutoutPercentage": 85,
 						"spacing": 0,
 						"tooltips": {
 							"callbacks": {}
@@ -3561,16 +3561,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [16.0, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans", 
 							"barThickness":25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},
@@ -3625,16 +3625,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [18.8, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(129,188,0)",
-							"borderColor": "rgb(129,188,0)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},
@@ -3689,16 +3689,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [34.8, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(129,188,0)",
-							"borderColor": "rgb(129,188,0)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},
@@ -3753,13 +3753,13 @@
 						"datasets": [{
 							"label": "",
 							"data": [14.6, 0],
-                            "backgroundColor": ["#133C65", "#133C65"],
+                            "backgroundColor": ["#69A7E2", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
 					},
 					"options": {
-						"cutoutPercentage": 80,
+						"cutoutPercentage": 85,
 						"spacing": 0,
 						"tooltips": {
 							"callbacks": {}
@@ -3770,12 +3770,12 @@
 						},
 						"elements": {
 							"center": {
-								"headline": "",
-								"text": "",
+								"headline": "14.6%",
+								"text": "Veterans",
 								"color": "#212529",
 								"fontStyle": "HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, Arial, sans-serif", 
 								"sidePadding": 20,
-								"maxFontSize": 24,
+								"fontSize": 12,
 								"lineHeight": 25
 							}
 						}
@@ -3795,16 +3795,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [14.9, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans", 
 							"barThickness":25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},
@@ -3859,16 +3859,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [18.8, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(129,188,0)",
-							"borderColor": "rgb(129,188,0)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},
@@ -3923,16 +3923,16 @@
 							"label": "Veterans", 
 							"barThickness":25,
 							"data": [27.9, 0],
-							"backgroundColor": "rgb(204,233,129)",
-							"borderColor": "rgb(204,233,129)",
+							"backgroundColor": "rgb(105,167,226)",
+							"borderColor": "rgb(105,167,226)",
 							"borderWidth": 0
 						},
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
 							"data": [0, 0],
-							"backgroundColor": "rgb(129,188,0)",
-							"borderColor": "rgb(129,188,0)",
+							"backgroundColor": "rgb(19,60,101)",
+							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
 						}] 
 					},

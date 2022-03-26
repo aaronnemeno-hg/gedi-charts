@@ -1,9 +1,23 @@
 @font-face {
     font-family: "HelveticaNeueW01-55Roma";
+    style: normal;
+    font-weight: 400;
+    stretch: 100;
     src: url(fonts/HelveticaNeueW01-55Roma.woff);
 }
 
 @font-face {
     font-family: "HelveticaNeueW01-75Bold";
+    style: normal;
+    font-weight: 400;
+    stretch: 100;
     src: url(fonts/HelveticaNeueW01-75Bold.woff);
+}
+
+@font-face {
+    font-family: "HelveticaNeueW01-45Ligh";
+    style: normal;
+    font-weight: 400;
+    stretch: 100;
+    src: url(fonts/HelveticaNeueW01-45Ligh.woff);
 }

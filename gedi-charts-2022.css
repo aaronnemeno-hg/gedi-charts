@@ -14,9 +14,11 @@
 .role-overall-doughnut-item .role-overall-doughnut-wrapper {
     display: flex;
     flex-direction: row;
+    padding-bottom: 1.2rem;
 }
 
 .role-overall-doughnut-item h3 {
+    padding: .7rem 0;
     margin-bottom: 0;
 }
 
@@ -57,6 +59,11 @@
     margin: 0 !important; /* avoid colliding with gedi-reports-2022.css */
 }
 
+.role-other-charts {
+    display: flex;
+    padding-top: 2rem;
+}
+
 .role-links-container {
     height: 200px;
 }
@@ -78,7 +85,7 @@
 }
 
 .role-legend-container .role-legend:not(:first-child) {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .role-legend-container .role-legend-text {
@@ -130,15 +137,19 @@
 
 .role-gender-woc-us-overall p span:first-child,
 .role-gender-woc-executive-overall p span:first-child {
-    font-size: 24px;
+    font-family: "HelveticaNeueW01-75Bold";
+    font-size: 20px;
     font-weight: 500;
+    line-height: 28px;
 }
 
 .role-gender-woc-us-overall p span:not(:first-child),
 .role-gender-woc-executive-overall p span:not(:first-child) {
     font-size: 3rem;
     font-weight: 300;
+    line-height: 52px;
 }
+
 
 .role-gender-woc-wrapper {
     display: flex;
@@ -199,6 +210,59 @@
     width: 40%;
     margin: 0 auto;
 }
+
+/* Disability */
+
+.disability-desc-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.disability-desc-left {
+    width: 40%;
+}
+
+.disability-desc-right {
+    width: 30%;
+}
+
+.disability-desc-right span {
+    font-size: 28px;
+    line-height: 50px;
+    font-weight: 300;
+    font-family: "HelveticaNeueW01-45Ligh" !important;
+}
+
+.disability-desc-right span mark {
+    background-color: #CCE981;
+}
+
+.lgbtqia-desc-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lgbtqia-desc-left {
+    width: 40%;
+}
+
+.lgbtqia-desc-right {
+    width: 30%;
+}
+
+.lgbtqia-desc-right span {
+    font-size: 28px;
+    line-height: 50px;
+    font-weight: 300;
+    font-family: "HelveticaNeueW01-45Ligh" !important;
+}
+
+.lgbtqia-desc-right span mark{
+    background-color: #CCE981;
+}
+
 
 @media only screen  and (min-width: 668px) {
 

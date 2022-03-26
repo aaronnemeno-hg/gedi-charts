@@ -321,7 +321,7 @@ function injectCallbacksByChart(chartObj) {
         console.log(chartObj.options.tooltips.callbacks);
         chartObj.options.tooltips.callbacks.label = overallDoughnutLabel;
     } else if (chartObj.type === "bar") { // vertical
-        //chartObj.plugins = [self.ChartDataLabels];
+        chartObj.plugins = [self.ChartDataLabels];
         console.log("CHART DATA LABELS");
         console.log(chartObj.data.datasets[0].datalabels);
         // formatter
