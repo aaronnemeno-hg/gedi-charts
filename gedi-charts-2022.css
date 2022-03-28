@@ -17,8 +17,9 @@
     padding-bottom: 1.2rem;
 }
 
-.role-overall-doughnut-item h3 {
-    padding: .7rem 0;
+.role-overall-doughnut-item h3,
+.role-overall-stacked-item h3 {
+    padding-top: .7rem;
     margin-bottom: 0;
 }
 
@@ -101,6 +102,7 @@
     text-transform: uppercase;
     color: #0033A1;
     padding-top: 0.2rem;
+    text-align: center;
 }
 
 .role-links-container a.role-links.active {

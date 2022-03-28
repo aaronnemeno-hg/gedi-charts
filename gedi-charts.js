@@ -334,6 +334,15 @@ function initRoleLinks(roleLinksClass) {
 function loadCharts(category, year, roles) {
     console.log(`${category} - ${year} - ${roles}`);
 
+    // TODO: remove/update condition below if there will be
+    // charts for categories other than gender, race and ethnicity,
+    // and veterans
+    if (category === "disability" || category === "lgbtqia"){
+        // skipping reamaining categories disability and lgbtqia
+        // since they dont have charts
+        return;
+    }
+
     $.ajax({
         type: 'GET',
         async: false,
