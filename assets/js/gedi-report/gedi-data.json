@@ -1,6 +1,7 @@
 {
 	"gender": {
 		"2020": {
+			"disclaimer_container_id": "genderChartsDisclaimer20",
 			"us_overall": {
 				"canvas_id": "genderUSOverall20",
 				"title": "U.S. Overall",
@@ -336,6 +337,7 @@
 			"executive_council": {
 				"canvas_id": "genderBarGraph20",
 				"title": "Executive Council",
+				"disclaimer": "*Executive Council gender data includes both U.S. and International members.",
 				"chart": {
 					"type": "bar",
 					"data": {
@@ -374,7 +376,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -401,9 +403,9 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
-							"data": [31.8, 68.2],
+							"data": [31.8, 68.2, -1, -1],
 							"barThickness": 50,
 							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)", "rgb(105,167,226)", "rgb(20,60,101)"],
 							"datalabels": {
@@ -463,9 +465,9 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
-							"data": [22.2, 77.8],
+							"data": [22.2, 77.8, -1, -1],
 							"barThickness": 50,
 							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
 							"datalabels": {
@@ -525,7 +527,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"data": [],
 							"barThickness": 50,
@@ -587,7 +589,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [16.6, 83.4],
@@ -623,7 +625,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -650,10 +652,10 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"label": "",
-							"data": [13.8, 86.2],
+							"data": [13.8, 86.2, -1, -1],
 							"barThickness": 50,
 							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
 							"datalabels": {
@@ -686,7 +688,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -713,7 +715,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [29.0, 71.0],
@@ -776,7 +778,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [22.0, 78.0],
@@ -812,7 +814,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -835,6 +837,7 @@
 			}
 		},
 		"2021": {
+			"disclaimer_container_id": "genderChartsDisclaimer21",
 			"us_overall": {
 				"canvas_id": "genderUSOverall21",
 				"title": "U.S. Overall",
@@ -1171,6 +1174,7 @@
 			"executive_council": {
 				"canvas_id": "genderBarGraph21",
 				"title": "Executive Council",
+				"disclaimer": "*Executive Council gender data includes both U.S. and International members.",
 				"chart": {
 					"type": "bar",
 					"data": {
@@ -1210,7 +1214,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -1237,7 +1241,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"label": "",
 							"data": [33.5, 66.4, 25.6, 71.6],
@@ -1300,7 +1304,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"label": "",
 							"data": [22.8, 76.4, 23.7, 75.2],
@@ -1363,7 +1367,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"label": "",
 							"data": [36.9, 62.7, 25.5, 70.7],
@@ -1426,7 +1430,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [16.8, 82.9],
@@ -1462,7 +1466,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -1489,7 +1493,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women", "International Women", "International Men"],
+						"labels": ["U.S. Women", "U.S. Men", "International Women", "International Men"],
 						"datasets": [{
 							"label": "",
 							"data": [14.7, 84.9, 14.3, 84.1],
@@ -1525,7 +1529,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -1552,7 +1556,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [29.7, 69.8],
@@ -1615,7 +1619,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Women"],
+						"labels": ["U.S. Women", "U.S. Men"],
 						"datasets": [{
 							"label": "",
 							"data": [23.9, 75.7],
@@ -1677,17 +1681,18 @@
 
 	"race-ethnicity": {
 		"2020": {
+			"disclaimer_container_id": "reChartsDisclaimer20",
 			"us_overall": {
 				"canvas_id": "reUSOverall20",
 				"title": "U.S. Overall",
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 0, 6.4, 7.0, 14.2, 68.8, 3.6],
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"data": [6.4, 7.0, 14.2, 68.8, 3.6],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -2034,11 +2039,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 0, 8.3, 0, 8.3, 83.3],
+							"data": [8.3, 0, 8.3, 83.3, 0],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2069,7 +2074,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -2096,11 +2101,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 0, 25.0, 0, 5.0,  65.0, 5.0],
+							"data": [25.0, 0, 5.0,  65.0, 5.0],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2158,11 +2163,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 0, 6.5, 4.0, 8.3, 79.2, 2.0],
+							"data": [6.5, 4.0, 8.3, 79.2, 2.0],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2193,7 +2198,7 @@
 								},
 								"ticks": {
 									"min": 0,
-									"max": 80
+									"max": 90
 								}
 							}],
 							"xAxes": [{
@@ -2220,11 +2225,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
-							"data": [0, 0, 0, 6.0, 6.2, 2.9, 77.0, 2.9],
+							"data": [6.0, 6.2, 7.9, 77.0, 2.9],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2344,12 +2349,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 0, 4.4, 7.6, 17.6, 67.7, 2.7],
+							"data": [4.4, 7.6, 17.6, 67.7, 2.7],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2407,12 +2412,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 0, 7.6, 7.2, 16.6, 64.0, 4.6],
+							"data": [7.6, 7.2, 16.6, 64.0, 4.6],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2533,12 +2538,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Pacific Islander", "Native American", "2 or more races", "Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
 						"datasets": [{
 							"label": "",
-							"data": [0, 0, 0, 8.3, 9.6, 13.9, 62.8, 5.4],
+							"data": [8.3, 9.6, 13.9, 62.8, 5.4],
 							"barThickness": 50,
-							"backgroundColor": ["#CCE981", "#81BC00", "#007167", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -2592,6 +2597,7 @@
 			}
 		},
 		"2021": {
+			"disclaimer_container_id": "reChartsDisclaimer21",
 			"us_overall": {
 				"canvas_id": "reUSOverall21",
 				"title": "U.S. Overall",
@@ -3510,16 +3516,17 @@
 	},
 	"veterans": {
 		"2020": {
+			"disclaimer_container_id": "veChartsDisclaimer20",
 			"us_overall": {
 				"canvas_id": "veUSOverall20",
 				"title": "U.S. Overall",
 				"chart": {
 					"type": "doughnut",
 					"data": {
-                        "labels": ["Veterans", "Non Veterans"],
+                        "labels": ["Veterans", "Others"],
 						"datasets": [{
 							"label": "",
-							"data": [14.8, 0],
+							"data": [14.8, 85.2],
                             "backgroundColor": ["#69A7E2", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
@@ -3568,7 +3575,7 @@
 						{
 							"label": "Non Veterans", 
 							"barThickness":25,
-							"data": [0, 0],
+							"data": [84, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -3632,7 +3639,7 @@
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [81.2, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -3696,7 +3703,7 @@
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [65.2, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -3743,6 +3750,7 @@
 			}
 		},
 		"2021": {
+			"disclaimer_container_id": "veChartsDisclaimer21",
 			"us_overall": {
 				"canvas_id": "veUSOverall21",
 				"title": "U.S. Overall",
@@ -3752,8 +3760,8 @@
                         "labels": ["Veterans", "Non Veterans"],
 						"datasets": [{
 							"label": "",
-							"data": [14.6, 0],
-                            "backgroundColor": ["#69A7E2", "#133C65"],
+							"data": [14.6, 85.4],
+							"backgroundColor": ["#69A7E2", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -3802,7 +3810,7 @@
 						{
 							"label": "Non Veterans", 
 							"barThickness":25,
-							"data": [0, 0],
+							"data": [85.1, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -3866,7 +3874,7 @@
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [81.2, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -3930,7 +3938,7 @@
 						{
 							"label": "Non Veterans",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [72.1, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0

@@ -22,7 +22,8 @@ $(document).ready(()=> {
     initTabs();
 
     // initialize roleLinks
-    initRoleLinks();
+    initRoleLinks('.gender-role-links');
+    initRoleLinks('.re-role-links');
 
 });
 
@@ -144,12 +145,39 @@ function initTabs() {
             var activeTabPaneID = $(this).attr('href');
             console.log("ACTIVE TAB PANE ID")
             console.log(activeTabPaneID);
-            const targetTabPane = document.querySelector(activeTabPaneID).querySelector('.tab-pane.active');
-            console.log("TAB PANE FOUND");
-            console.log(targetTabPane);
-            targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
-            targetTabPane.querySelector('.role-other-charts').style.display = "none";
 
+            if (category === "gender" || category === "race-ethnicity" || category === "veterans") {
+                const targetTabPane = document.getElementById(category).querySelector('.tab-pane.active');
+                console.log("TAB PANE FOUND");
+                console.log(targetTabPane);
+                targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                targetTabPane.querySelector('.role-other-charts').style.display = "none";
+            }
+
+            // reset active role links on category tab click
+            if (category === "gender" || category === "race-ethnicity") {
+                // get first .sub-tabs > li
+                const roleYearTabs = document.getElementById(category).querySelector('.sub-tabs');
+                var defaultYearTabID = roleYearTabs.getAttribute('data-tab-year-default');
+
+                console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID);
+
+                $('a[href="' + defaultYearTabID + '"]').tab('show');
+
+                const roleLinksContainer = document.querySelector(activeTabPaneID).querySelector('.role-links-container');
+                console.log("ROLE LINKS CONTAINER");
+                console.log(roleLinksContainer);
+
+                const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
+                for (var i = 0; i < roleLinks.length; i++) {
+                    if (i == 0) {
+                        roleLinks[i].classList.add("active");
+                    } else {
+                        roleLinks[i].classList.remove("active");
+                    }
+                }
+
+            }
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
 
             loadCharts(category, year, rolesArr);
@@ -162,9 +190,56 @@ function initTabs() {
             console.log(activeTabLevel1);
 
             category =  activeTabLevel1.getAttribute('data-chart-category');
+
+            const activeCategoryTabPane = document.getElementById(category);
+            if (category === "gender" || category === "race-ethnicity") {
+                const roleLinksContainer = activeCategoryTabPane.querySelector('.role-links-container');
+                console.log("ROLE LINKS CONTAINER");
+                console.log(roleLinksContainer);
+
+                // reset active role links on category tab click
+                const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
+                console.log("ROLE LINKS LIST");
+                console.log(roleLinks);
+                for (var i = 0; i < roleLinks.length; i++) {
+                    if (i == 0) {
+                        roleLinks[i].classList.add("active");
+                    } else {
+                        roleLinks[i].classList.remove("active");
+                    }
+                }
+            }
+
             year = $(this).data('chart-year');
+
             roles = 'us_overall;intl_overall;us_bca;us_bds;us_bgs';
             rolesArr = roles.split(";");
+
+            // TODO: add to json file nex time instead of this
+            if (category == "gender") {
+                var genderWOCOverallPercent = document.getElementById('genderWOCOverallPercent');
+                var genderWOCExecutivePercent = document.getElementById('genderWOCExecutivePercent');
+
+                if (year == "2021") {
+                    genderWOCOverallPercent.textContent = "9.1%";
+                    genderWOCExecutivePercent.textContent = "8.4%";
+                }
+
+                if (year == "2020") {
+                    genderWOCOverallPercent.textContent = "8.6%";
+                    genderWOCExecutivePercent.textContent = "7.8%";
+                }
+            }
+
+            // display disclaimer below the role links
+            const reDisclaimer = document.getElementById('reDisclaimer');
+            if (category == "race-ethnicity" && year == "2020") {
+                // show reOverallDisclaimer20
+                reDisclaimer.textContent = "** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.";
+            } else {
+                // show reOverallDisclaimer21
+                reDisclaimer.textContent = "";
+            }
 
             var activeTabPaneID = $(this).attr('href');
             const targetTabPane = document.querySelector(activeTabPaneID);
@@ -180,23 +255,29 @@ function initTabs() {
     });
 }
 
-function initRoleLinks() {
-    const roleLinks = document.querySelectorAll('a.role-links');
+function initRoleLinks(roleLinksClass) {
+    console.log('roleLinksClass :' + roleLinksClass);
+
+    const roleLinks = document.querySelectorAll('a.role-links' + roleLinksClass);
     console.log("RoleLinks");
     console.log(roleLinks);
 
+    // get current active
     for (var i = 0; i < roleLinks.length; i++) {
-        //console.log(roleLinks[i]);
-        roleLinks[i].addEventListener('click', function(e, key) {
+
+        roleLinks[i].addEventListener('click', function(e) {
             e.preventDefault();
-            
-            console.log("KEY");
-            console.log(key);
-            
-            /*if (e.target.classList.includes("active")) {
 
-            }*/
+            // remove active class 
+            for (var i = 0; i < roleLinks.length; i++) {
+                if (roleLinks[i].classList.contains("active")) {
+                    roleLinks[i].classList.remove("active");
+                }
+            }
 
+            //console.log(roleLinks[i]);
+            this.classList.add("active");
+            
             var targetTabListLevel2 = e.target.getAttribute('data-target-tablistlv2');
             console.log(targetTabListLevel2);
 
@@ -222,12 +303,22 @@ function initRoleLinks() {
             console.log("TAB PANE FOUND");
             console.log(targetTabPane);
 
+            // display disclaimer below the role links
+            const reDisclaimer = document.getElementById('reDisclaimer');
+            if (category == "race-ethnicity" && year == "2020" && roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
+                // show reOverallDisclaimer20
+                reDisclaimer.textContent = "** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.";
+            } else if (category == "race-ethnicity" && roles === "executive_council") {
+                reDisclaimer.textContent = "* Executive Council race and ethnicity data reflects U.S. leaders only. Susan Doniz, chief information officer and senior vice president of Information Technology & Data Analytics, based in Canada, identifies as Hispanic.";
+            } else {
+                // show reOverallDisclaimer21
+                reDisclaimer.textContent = "";
+            }
+
             if (roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
-                console.log("HAHAHAH");
                 targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
                 targetTabPane.querySelector('.role-other-charts').style.display = "none";
             } else {
-                console.log("HEHEHHE")
                 targetTabPane.querySelector('.role-overall-charts').style.display = "none";
                 targetTabPane.querySelector('.role-other-charts').style.display = "flex";
 
@@ -235,11 +326,14 @@ function initRoleLinks() {
             loadCharts(category, year, rolesArr);
 
         });
+
     }
 }
 
+
 function loadCharts(category, year, roles) {
     console.log(`${category} - ${year} - ${roles}`);
+
     $.ajax({
         type: 'GET',
         async: false,
@@ -258,6 +352,7 @@ function loadCharts(category, year, roles) {
                     // under race and ethnicity
                     continue;
                 }
+
                 console.log("ROLES");
                 console.log(roles[i]);
                 console.log("CATEGORY YEAR")
@@ -273,31 +368,54 @@ function loadCharts(category, year, roles) {
                 console.log(`Chart type: ${chartObj.type}`);
                 chartObj = injectCallbacksByChart(chartObj);
                 console.log(chartObj);
+
+
                 // call chart canvas by id
                 const chartCanvas = document.getElementById(canvasID);
                 console.log(chartCanvas);
 
                 const chartCanvasParent = chartCanvas.parentElement;
 
-                // assumes all bar graphs shares one canvas only
+                disclaimerContainerID = data[category][year]['disclaimer_container_id'];
+                const chartsDisclaimer = document.getElementById(disclaimerContainerID);
 
+                if ('disclaimer' in data[category][year][roles[i]]) {
+                    // e.g., genderChartsDisclaimer
+                    chartsDisclaimer.textContent = data[category][year][roles[i]]['disclaimer'];
+                } else {
+                    chartsDisclaimer.textContent = "";
+                }
+
+                // assumes all bar graphs shares one canvas only
                 if (chartObj.type === "bar") {
-                    console.log("BAR GRAPH DETECTED");
-                    var tmpCanvasWidth = chartCanvas.getAttribute('width');
-                    var tmpCanvasHeight = chartCanvas.getAttribute('height');
-                    console.log("DESTROYING CURRENT CANVAS");
-                    chartCanvas.remove();
-                    console.log("CANVAS BAR GRAPH DESTROYED");
-                    
-                    console.log("CREATING CANVAS")
-                    var newChartCanvas = document.createElement('canvas');
-                    newChartCanvas.setAttribute('id', canvasID);
-                    newChartCanvas.setAttribute('width', tmpCanvasWidth);
-                    newChartCanvas.setAttribute('height', tmpCanvasHeight);
-                    chartCanvasParent.appendChild(newChartCanvas);
-                    console.log("CANVAS SUCCESSFULLY CREATED")
-                    
-                    chart = new Chart(newChartCanvas, chartObj);
+
+                    // chart canvas container (bar graph container) was already set to display block
+                    // we set it to none again if there is no data
+                    if (chartObj.data.datasets[0].data.length == 0) {
+                        chartCanvas.style.display = "none";
+                        chartCanvasParent.nextElementSibling.style.display = "flex";
+                    } else{
+
+                        chartCanvasParent.nextElementSibling.style.display = "none";
+
+                        console.log("BAR GRAPH DETECTED");
+                        var tmpCanvasWidth = chartCanvas.getAttribute('width');
+                        var tmpCanvasHeight = chartCanvas.getAttribute('height');
+                        console.log("DESTROYING CURRENT CANVAS");
+                        chartCanvas.remove();
+                        console.log("CANVAS BAR GRAPH DESTROYED");
+                        
+                        console.log("CREATING CANVAS")
+                        var newChartCanvas = document.createElement('canvas');
+                        newChartCanvas.setAttribute('id', canvasID);
+                        newChartCanvas.setAttribute('width', tmpCanvasWidth);
+                        newChartCanvas.setAttribute('height', tmpCanvasHeight);
+                        chartCanvasParent.appendChild(newChartCanvas);
+                        console.log("CANVAS SUCCESSFULLY CREATED")
+                        
+                        chart = new Chart(newChartCanvas, chartObj);
+
+                    }
                 } else {
                     // initialize chart
                     console.log("CHART OBJECT DATA");
@@ -353,6 +471,9 @@ function overallDoughnutLabel(tooltipItem, data) {
 }
 
 function roleBarChartDataLabelsFormatter(value) {
+    if (value == "-1") {
+        return 'N/A';
+    }
     return value + '%';
 }
 
