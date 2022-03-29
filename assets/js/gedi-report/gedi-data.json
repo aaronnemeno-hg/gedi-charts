@@ -1016,7 +1016,7 @@
 							}
 						},
 						"tooltips": {
-							"enabled": false
+							"enabled": true
 						},
 						"indexAxis": "y",
 						"scales": {
@@ -1116,9 +1116,11 @@
 					"data": {
 						"labels": ["Women", "Men"],
 						"datasets": [{
+							"spanGaps": true,
+							"showLines": false,
+							"barThickness": 50, 
 							"label": "",
 							"data": [25.0, 75.0],
-							"barThickness": 50,
 							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
 							"datalabels": {
 								"anchor": "end",
@@ -1129,7 +1131,6 @@
 					},
 					"options": {
 						"responsive": true,
-						"aspectRatio": 2,
 						"tooltips": {
 							"callbacks": {}
 						},
@@ -1940,7 +1941,7 @@
 						{
 							"label": "Pacific Islander", 
 							"barThickness":25,
-							"data": [0, 0],
+							"data": [0.6, 0],
 							"backgroundColor": "rgb(204,233,129)",
 							"borderColor": "rgb(204,233,129)",
 							"borderWidth": 0
@@ -1948,7 +1949,7 @@
 						{
 							"label": "Native American",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [0.7, 0],
 							"backgroundColor": "rgb(129,188,0)",
 							"borderColor": "rgb(129,188,0)",
 							"borderWidth": 0
@@ -1956,7 +1957,7 @@
 						{
 							"label": "2 or more races",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [2.3, 0],
 							"backgroundColor": "rgb(0,113,103)",
 							"borderColor": "rgb(0,113,103)",
 							"borderWidth": 0
@@ -1988,7 +1989,7 @@
 						{
 							"label": "White",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [62.9, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0
@@ -2857,7 +2858,7 @@
 						{
 							"label": "Pacific Islander", 
 							"barThickness":25,
-							"data": [0, 0],
+							"data": [0.6, 0],
 							"backgroundColor": "rgb(204,233,129)",
 							"borderColor": "rgb(204,233,129)",
 							"borderWidth": 0
@@ -2865,7 +2866,7 @@
 						{
 							"label": "Native American",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [0.6, 0],
 							"backgroundColor": "rgb(129,188,0)",
 							"borderColor": "rgb(129,188,0)",
 							"borderWidth": 0
@@ -2873,7 +2874,7 @@
 						{
 							"label": "2 or more races",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [2.4, 0],
 							"backgroundColor": "rgb(0,113,103)",
 							"borderColor": "rgb(0,113,103)",
 							"borderWidth": 0
@@ -2905,7 +2906,7 @@
 						{
 							"label": "White",
 							"barThickness": 25,
-							"data": [0, 0],
+							"data": [63.4, 0],
 							"backgroundColor": "rgb(19,60,101)",
 							"borderColor": "rgb(19,60,101)",
 							"borderWidth": 0

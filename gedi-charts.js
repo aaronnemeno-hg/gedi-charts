@@ -74,7 +74,6 @@ function initChartPluginService() {
                 wrapText = true;
             }
 
-
             // Set font settings to draw it correctly.
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -163,6 +162,15 @@ function initTabs() {
                 console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID);
 
                 $('a[href="' + defaultYearTabID + '"]').tab('show');
+                
+                if (category === "race-ethnicity") {
+                    const legendHLAX = document.querySelector(activeTabPaneID).querySelector('.role-legend.legend-hlax');
+
+                    console.log("LEGEND HLAX FOUND");
+                    console.log(legendHLAX);
+                    // reset legend textContent
+                    legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
+                }
 
                 const roleLinksContainer = document.querySelector(activeTabPaneID).querySelector('.role-links-container');
                 console.log("ROLE LINKS CONTAINER");
@@ -176,7 +184,6 @@ function initTabs() {
                         roleLinks[i].classList.remove("active");
                     }
                 }
-
             }
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
 
@@ -215,7 +222,7 @@ function initTabs() {
             roles = 'us_overall;intl_overall;us_bca;us_bds;us_bgs';
             rolesArr = roles.split(";");
 
-            // TODO: add to json file nex time instead of this
+            // TODO: add to json file next time instead of this
             if (category == "gender") {
                 var genderWOCOverallPercent = document.getElementById('genderWOCOverallPercent');
                 var genderWOCExecutivePercent = document.getElementById('genderWOCExecutivePercent');
@@ -231,6 +238,7 @@ function initTabs() {
                 }
             }
 
+            // TODO: add to json file next time instead of this
             // display disclaimer below the role links
             const reDisclaimer = document.getElementById('reDisclaimer');
             if (category == "race-ethnicity" && year == "2020") {
@@ -245,6 +253,15 @@ function initTabs() {
             const targetTabPane = document.querySelector(activeTabPaneID);
             console.log("TAB PANE FOUND");
             console.log(targetTabPane);
+
+            if (category === "race-ethnicity") {
+                const legendHLAX = targetTabPane.querySelector('.role-legend.legend-hlax');
+
+                console.log("LEGEND HLAX FOUND");
+                console.log(legendHLAX);
+                // reset legend textContent
+                legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
+            }
 
             targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
             targetTabPane.querySelector('.role-other-charts').style.display = "none";
@@ -303,16 +320,32 @@ function initRoleLinks(roleLinksClass) {
             console.log("TAB PANE FOUND");
             console.log(targetTabPane);
 
-            // display disclaimer below the role links
             const reDisclaimer = document.getElementById('reDisclaimer');
-            if (category == "race-ethnicity" && year == "2020" && roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
-                // show reOverallDisclaimer20
-                reDisclaimer.textContent = "** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.";
-            } else if (category == "race-ethnicity" && roles === "executive_council") {
-                reDisclaimer.textContent = "* Executive Council race and ethnicity data reflects U.S. leaders only. Susan Doniz, chief information officer and senior vice president of Information Technology & Data Analytics, based in Canada, identifies as Hispanic.";
+            if (category == "race-ethnicity") {
+                const legendHLAX = targetTabPane.querySelector('.role-legend.legend-hlax');
+                console.log("LEGEND HLAX FOUND");
+                console.log(legendHLAX);
+                // reset legend textContent
+                legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
+                
+                if (roles === "executive_council") {
+                    legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x*";
+                } 
+
+                if (year === "2020"  && roles != "executive_council") {
+                    // show reOverallDisclaimer20
+                    reDisclaimer.innerHTML = "** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.";
+                } else if (roles === "executive_council") {
+                    var disclaimerExecutiveCouncil = '<span style="display: block;">* Executive Council race and ethnicity data reflects U.S. leaders only. Susan Doniz, chief information officer and senior vice president of Information Technology & Data Analytics, based in Canada, identifies as Hispanic.</span>';
+                    if (year === "2020") {
+                        disclaimerExecutiveCouncil += '<span style="display: block;">** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.</span>';
+                    }
+                    reDisclaimer.innerHTML = disclaimerExecutiveCouncil;
+                } else {
+                    reDisclaimer.innerHTML = "";
+                }
             } else {
-                // show reOverallDisclaimer21
-                reDisclaimer.textContent = "";
+                reDisclaimer.innerHTML = "";
             }
 
             if (roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
@@ -321,10 +354,9 @@ function initRoleLinks(roleLinksClass) {
             } else {
                 targetTabPane.querySelector('.role-overall-charts').style.display = "none";
                 targetTabPane.querySelector('.role-other-charts').style.display = "flex";
-
             }
-            loadCharts(category, year, rolesArr);
 
+            loadCharts(category, year, rolesArr);
         });
 
     }
@@ -384,6 +416,8 @@ function loadCharts(category, year, roles) {
                 console.log(chartCanvas);
 
                 const chartCanvasParent = chartCanvas.parentElement;
+                console.log("CHART CANVAS PARENT");
+                console.log(chartCanvasParent);
 
                 disclaimerContainerID = data[category][year]['disclaimer_container_id'];
                 const chartsDisclaimer = document.getElementById(disclaimerContainerID);
@@ -404,7 +438,6 @@ function loadCharts(category, year, roles) {
                         chartCanvas.style.display = "none";
                         chartCanvasParent.nextElementSibling.style.display = "flex";
                     } else{
-
                         chartCanvasParent.nextElementSibling.style.display = "none";
 
                         console.log("BAR GRAPH DETECTED");
@@ -426,6 +459,18 @@ function loadCharts(category, year, roles) {
 
                     }
                 } else {
+                    // if chart is donut or horizontal stacked, then always hide 
+                    // the Data Not Available html
+                    const activePaneID = category + '-' + year;
+                    const targetTabPane = document.getElementById(activePaneID);
+                    if (targetTabPane) {
+                        const roleOtherChartsNoData = targetTabPane.querySelector('.role-other-charts-nodata');
+                        console.log("ROLE OTHER CHARTS NO DATA");
+                        console.log(targetTabPane);
+                        if (roleOtherChartsNoData) {
+                            roleOtherChartsNoData.style.display = "none";
+                        }
+                    }
                     // initialize chart
                     console.log("CHART OBJECT DATA");
                     console.log(chartObj);
@@ -448,12 +493,13 @@ function injectCallbacksByChart(chartObj) {
         console.log(chartObj.options.tooltips.callbacks);
         chartObj.options.tooltips.callbacks.label = overallDoughnutLabel;
     } else if (chartObj.type === "bar") { // vertical
-        chartObj.plugins = [self.ChartDataLabels];
+        chartObj.plugins = [ChartDataLabels];
         console.log("CHART DATA LABELS");
         console.log(chartObj.data.datasets[0].datalabels);
         // formatter
         chartObj.data.datasets[0].datalabels.formatter = roleBarChartDataLabelsFormatter;
         
+        chartObj.options.scales.yAxes[0].ticks.callback = roleBarChartTickFormat;
         // label callback
         console.log("CHART DATA TOOLTIPS");
         console.log(chartObj.options.tooltips);
@@ -480,9 +526,16 @@ function overallDoughnutLabel(tooltipItem, data) {
 }
 
 function roleBarChartDataLabelsFormatter(value) {
+    // s represents 'space'. the width of the bar
+    // will be the with of the space
+    if (value == "s"){
+        return '';
+    }
+
     if (value == "-1") {
         return 'N/A';
     }
+
     return value + '%';
 }
 
@@ -501,5 +554,9 @@ function roleBarChartLabel(context) {
 }
 
 function roleBarChartYAxes(value, index, ticks) {
+    return value + '%';
+}
+
+function roleBarChartTickFormat(value, index, values) {
     return value + '%';
 }
