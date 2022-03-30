@@ -278,11 +278,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["", "", "Women", "Men", "", ""],
 						"datasets": [{
-							"data": [25.0, 75.0],
+							"data": ["s", "s", 25.0, 75.0, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -341,11 +341,11 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["", "", "Women", "Men", "", ""],
 						"datasets": [{
-							"data": [13.6, 86.4],
+							"data": ["s", "s", 13.6, 86.4, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -589,12 +589,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [16.6, 83.4],
+							"data": ["s", "s", 16.6, 83.4, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -715,12 +715,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [29.0, 71.0],
+							"data": ["s", "s", 29.0, 71.0, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -778,12 +778,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [22.0, 78.0],
+							"data": ["s", "s", 22.0, 78.0, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -1114,14 +1114,14 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["", "", "Women", "Men", "", ""],
 						"datasets": [{
 							"spanGaps": true,
 							"showLines": false,
 							"barThickness": 50, 
 							"label": "",
-							"data": [25.0, 75.0],
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"data": ["s", "s", 25.0, 75.0, "s", "s"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -1179,12 +1179,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["", "", "Women", "Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [19.0, 81.0],
+							"data": ["s", "s", 19.0, 81.0, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -1431,12 +1431,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [16.8, 82.9],
+							"data": ["s", "s", 16.8, 82.9, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -1557,12 +1557,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [29.7, 69.8],
+							"data": ["s", "s", 29.7, 69.8, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
@@ -1620,12 +1620,12 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-						"labels": ["U.S. Women", "U.S. Men"],
+						"labels": ["", "", "U.S. Women", "U.S. Men", "", ""],
 						"datasets": [{
 							"label": "",
-							"data": [23.9, 75.7],
+							"data": ["s", "s", 23.9, 75.7, "s", "s"],
 							"barThickness": 50,
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"backgroundColor": ["", "", "rgb(105,167,226)", "rgb(20,60,101)", "", ""],
 							"datalabels": {
 								"anchor": "end",
 								"align": "top",
