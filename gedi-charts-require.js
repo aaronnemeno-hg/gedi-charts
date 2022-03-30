@@ -170,26 +170,28 @@ require([
                         console.log(targetTabPane);
                         targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
                         targetTabPane.querySelector('.role-other-charts').style.display = "none";
-                    }
         
-                    // reset active role links on category tab click
-                    if (category === "gender" || category === "race-ethnicity") {
+                        // reset tabs level 2 to category-2021.tab-pane
                         // get first .sub-tabs > li
                         const roleYearTabs = document.getElementById(category).querySelector('.sub-tabs');
                         var defaultYearTabID = roleYearTabs.getAttribute('data-tab-year-default');
         
-                        console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID);
-        
+                        console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID + " TAB SHOW BEGIN");
                         $('a[href="' + defaultYearTabID + '"]').tab('show');
-                        
-                        if (category === "race-ethnicity") {
-                            const legendHLAX = document.querySelector(activeTabPaneID).querySelector('.role-legend.legend-hlax');
+                        console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID + " TAB SHOW END");
+                    }
         
-                            console.log("LEGEND HLAX FOUND");
-                            console.log(legendHLAX);
-                            // reset legend textContent
-                            legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
-                        }
+                    if (category === "race-ethnicity") {
+                        const legendHLAX = document.querySelector(activeTabPaneID).querySelector('.role-legend.legend-hlax');
+        
+                        console.log("LEGEND HLAX FOUND");
+                        console.log(legendHLAX);
+                        // reset legend textContent
+                        legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
+                    }
+        
+                    // reset active role links on category tab click
+                    if (category === "gender" || category === "race-ethnicity") {
         
                         const roleLinksContainer = document.querySelector(activeTabPaneID).querySelector('.role-links-container');
                         console.log("ROLE LINKS CONTAINER");
@@ -454,42 +456,29 @@ require([
                             // chart canvas container (bar graph container) was already set to display block
                             // we set it to none again if there is no data
                             if (chartObj.data.datasets[0].data.length == 0) {
-                                chartCanvas.style.display = "none";
-                                chartCanvasParent.nextElementSibling.style.display = "flex";
-                            } else{
-                                chartCanvasParent.nextElementSibling.style.display = "none";
-        
-                                console.log("BAR GRAPH DETECTED");
-                                var tmpCanvasWidth = chartCanvas.getAttribute('width');
-                                var tmpCanvasHeight = chartCanvas.getAttribute('height');
-                                console.log("DESTROYING CURRENT CANVAS");
-                                chartCanvas.remove();
-                                console.log("CANVAS BAR GRAPH DESTROYED");
-                                
-                                console.log("CREATING CANVAS")
-                                var newChartCanvas = document.createElement('canvas');
-                                newChartCanvas.setAttribute('id', canvasID);
-                                newChartCanvas.setAttribute('width', tmpCanvasWidth);
-                                newChartCanvas.setAttribute('height', tmpCanvasHeight);
-                                chartCanvasParent.appendChild(newChartCanvas);
-                                console.log("CANVAS SUCCESSFULLY CREATED")
-                                
-                                chart = new Chart(newChartCanvas, chartObj);
-        
+                                chartCanvas.previousElementSibling.style.display = "initial";
+                            } else {
+                                chartCanvas.previousElementSibling.style.display = "none";
                             }
+        
+                            console.log("BAR GRAPH DETECTED");
+                            var tmpCanvasWidth = chartCanvas.getAttribute('width');
+                            var tmpCanvasHeight = chartCanvas.getAttribute('height');
+                            console.log("DESTROYING CURRENT CANVAS");
+                            chartCanvas.remove();
+                            console.log("CANVAS BAR GRAPH DESTROYED");
+                            
+                            console.log("CREATING CANVAS")
+                            var newChartCanvas = document.createElement('canvas');
+                            newChartCanvas.setAttribute('id', canvasID);
+                            newChartCanvas.setAttribute('width', tmpCanvasWidth);
+                            newChartCanvas.setAttribute('height', tmpCanvasHeight);
+                            chartCanvasParent.appendChild(newChartCanvas);
+                            console.log("CANVAS SUCCESSFULLY CREATED")
+                            
+                            chart = new Chart(newChartCanvas, chartObj);
+        
                         } else {
-                            // if chart is donut or horizontal stacked, then always hide 
-                            // the Data Not Available html
-                            const activePaneID = category + '-' + year;
-                            const targetTabPane = document.getElementById(activePaneID);
-                            if (targetTabPane) {
-                                const roleOtherChartsNoData = targetTabPane.querySelector('.role-other-charts-nodata');
-                                console.log("ROLE OTHER CHARTS NO DATA");
-                                console.log(targetTabPane);
-                                if (roleOtherChartsNoData) {
-                                    roleOtherChartsNoData.style.display = "none";
-                                }
-                            }
                             // initialize chart
                             console.log("CHART OBJECT DATA");
                             console.log(chartObj);

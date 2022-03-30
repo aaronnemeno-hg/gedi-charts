@@ -63,6 +63,7 @@
 .role-other-charts {
     display: flex;
     padding-top: 2rem;
+    position: relative;
 }
 
 .role-links-container {
@@ -128,15 +129,18 @@
     text-align: center;
 }
 
-.role-other-charts-nodata {
-    min-height: 540px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.role-other-charts-nodata p {
-    font-size: 3rem;
+p.role-other-charts-nodata {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-right: 0;
+    text-align: center;
+    top: 50%;
+    /*margin-top: calc(-26px + -2em);*/
+    font-size: 3em;
+    opacity: 0.5;
 }
 
 /* Gender */
