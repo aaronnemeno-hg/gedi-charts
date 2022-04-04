@@ -408,10 +408,16 @@ function loadCharts(category, year, roles) {
                 const canvasID = data[category][year][roles[i]]['canvas_id'];
                 var chartObj = data[category][year][roles[i]]['chart'];
                 
+            
+                addtlConfig = {}
+                if (data[category][year][roles[i]].hasOwnProperty('tooltip_id')) {
+                   // for custom tooltip I added on each objects to generate charts
+                   addtlConfig['tooltip_id'] = data[category][year][roles[i][['tooltip_id']]];
+                }
+
                 console.log(`Chart type: ${chartObj.type}`);
                 chartObj = injectCallbacksByChart(chartObj);
                 console.log(chartObj);
-
 
                 // call chart canvas by id
                 const chartCanvas = document.getElementById(canvasID);
@@ -494,8 +500,76 @@ function injectCallbacksByChart(chartObj) {
         console.log(chartObj.options.tooltips);
         chartObj.options.tooltips.callbacks.label = roleBarChartLabel;
         chartObj.options.scales.yAxes[0].callback = roleBarChartYAxes;
+    } else if (chartObj.type === "horizontalBar") {
+        if (chartObj.options.tooltips.hasOwnProperty('customTooltipConfig')) {
+            console.log("HAS CUSTOM TOOLTIP Config");
+            console.log(chartObj.options.tooltips.customTooltipConfig);
+            var customTooltipConfig = chartObj.options.tooltips.customTooltipConfig;
+            initCustomTooltips(chartObj, customTooltipConfig);
+            //chartObj.options.tooltips.custom = genderUSBCA21Tooltip;
+        }
     }
     return chartObj;
+}
+
+function parseTooltipMessage(msg) {
+    var arrMsg = msg.split(': ');
+    console.log(arrMsg);
+    return arrMsg;
+}
+
+function initCustomTooltips(chartObj, customTooltipConfig) {
+    // determine which tooltip callback to use
+    var adjustments = customTooltipConfig.adjustments;
+
+    for (var i = 0; i < adjustments.length; i++) {
+        var targetTooltip = document.getElementById(adjustments[i].id);
+        if (targetTooltip) {
+            if (adjustments[i].hasOwnProperty("left")) {
+                targetTooltip.style.left = adjustments[i].left;
+            }
+        }
+    }
+
+    // determine which tooltip callback function to use
+    var callbackName  = customTooltipConfig.callbackName;
+    if (callbackName == "genderUSBCA21Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBCA21Tooltip;
+    } else if (callbackName == "genderUSBDS21Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBDS21Tooltip;
+    } else if (callbackName == "genderUSBGS21Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBGS21Tooltip;
+    } else if (callbackName == "genderUSBCA20Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBCA20Tooltip;
+    } else if (callbackName == "genderUSBDS20Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBDS20Tooltip;
+    } else if (callbackName == "genderUSBGS20Tooltip") {
+        chartObj.options.tooltips.custom = genderUSBGS20Tooltip;
+    } else if (callbackName == "reUSBCA21Tooltip") {
+        chartObj.options.tooltips.custom = reUSBCA21Tooltip;
+    } else if (callbackName == "reUSBDS21Tooltip") {
+        chartObj.options.tooltips.custom = reUSBDS21Tooltip;
+    } else if (callbackName == "reUSBGS21Tooltip") {
+        chartObj.options.tooltips.custom = reUSBGS21Tooltip;
+    } else if (callbackName == "reUSBCA20Tooltip") {
+        chartObj.options.tooltips.custom = reUSBCA20Tooltip;
+    } else if (callbackName == "reUSBDS20Tooltip") {
+        chartObj.options.tooltips.custom = reUSBDS20Tooltip;
+    } else if (callbackName == "reUSBGS20Tooltip") {
+        chartObj.options.tooltips.custom = reUSBGS20Tooltip;
+    } else if (callbackName == "veUSBCA21Tooltip") {
+        chartObj.options.tooltips.custom = veUSBCA21Tooltip;
+    } else if (callbackName == "veUSBDS21Tooltip") {
+        chartObj.options.tooltips.custom = veUSBDS21Tooltip;
+    } else if (callbackName == "veUSBGS21Tooltip") {
+        chartObj.options.tooltips.custom = veUSBGS21Tooltip;
+    } else if (callbackName == "veUSBCA20Tooltip") {
+        chartObj.options.tooltips.custom = veUSBCA20Tooltip;
+    } else if (callbackName == "veUSBDS20Tooltip") {
+        chartObj.options.tooltips.custom = veUSBDS20Tooltip;
+    } else if (callbackName == "veUSBGS20Tooltip") {
+        chartObj.options.tooltips.custom = veUSBGS20Tooltip;
+    }
 }
 
 /**
@@ -548,4 +622,1092 @@ function roleBarChartYAxes(value, index, ticks) {
 
 function roleBarChartTickFormat(value, index, values) {
     return value + '%';
+}
+
+/**
+ * 
+ *  BEGIN CUSTOM TOOLTIP CALLBACKS
+ * 
+ */
+// custom tooltip for gender, race ethnicity, and veterans
+function genderUSBCA21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBCA21Women');
+    const customTooltipMen = document.getElementById('genderUSBCA21Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function genderUSBDS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBDS21Women');
+    const customTooltipMen = document.getElementById('genderUSBDS21Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function genderUSBGS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBGS21Women');
+    const customTooltipMen = document.getElementById('genderUSBGS21Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function genderUSBCA20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBCA20Women');
+    const customTooltipMen = document.getElementById('genderUSBCA20Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function genderUSBDS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBDS20Women');
+    const customTooltipMen = document.getElementById('genderUSBDS20Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function genderUSBGS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipWomen = document.getElementById('genderUSBGS20Women');
+    const customTooltipMen = document.getElementById('genderUSBGS20Men');
+
+    if (!customTooltipWomen) {
+        return;
+    }
+
+    if (!customTooltipMen) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Women") {
+        customTooltipWomen.textContent = percent + '% ' + label;
+        customTooltipMen.textContent = "";
+    } else {
+        customTooltipWomen.textContent = "";
+        customTooltipMen.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBCA21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBCA21PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBCA21NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBCA21TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBCA21Black');
+    const customTooltipHLAX = document.getElementById('reUSBCA21HLAX');
+    const customTooltipAsian = document.getElementById('reUSBCA21Asian');
+    const customTooltipWhite = document.getElementById('reUSBCA21White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+
+    if (!customTooltipBlack) {
+        return;
+    }
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+
+    if (!customTooltipAsian) {
+        return;
+    }
+
+    if (!customTooltipWhite) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBDS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBDS21PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBDS21NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBDS21TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBDS21Black');
+    const customTooltipHLAX = document.getElementById('reUSBDS21HLAX');
+    const customTooltipAsian = document.getElementById('reUSBDS21Asian');
+    const customTooltipWhite = document.getElementById('reUSBDS21White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+
+    if (!customTooltipBlack) {
+        return;
+    }
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+
+    if (!customTooltipAsian) {
+        return;
+    }
+
+    if (!customTooltipWhite) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBGS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBGS21PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBGS21NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBGS21TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBGS21Black');
+    const customTooltipHLAX = document.getElementById('reUSBGS21HLAX');
+    const customTooltipAsian = document.getElementById('reUSBGS21Asian');
+    const customTooltipWhite = document.getElementById('reUSBGS21White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+
+    if (!customTooltipBlack) {
+        return;
+    }
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+
+    if (!customTooltipAsian) {
+        return;
+    }
+
+    if (!customTooltipWhite) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBCA20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBCA20PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBCA20NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBCA20TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBCA20Black');
+    const customTooltipHLAX = document.getElementById('reUSBCA20HLAX');
+    const customTooltipAsian = document.getElementById('reUSBCA20Asian');
+    const customTooltipWhite = document.getElementById('reUSBCA20White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+    //console.log("PI")
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+    //console.log("NA")
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+    //console.log("TwoOrMore")
+
+    if (!customTooltipBlack) {
+        return;
+    }
+    //console.log("Black")
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+    //console.log("HLAX")
+
+    if (!customTooltipAsian) {
+        return;
+    }
+    //console.log("Asian")
+
+    if (!customTooltipWhite) {
+        return;
+    }
+    //console.log("White")
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBDS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBDS20PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBDS20NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBDS20TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBDS20Black');
+    const customTooltipHLAX = document.getElementById('reUSBDS20HLAX');
+    const customTooltipAsian = document.getElementById('reUSBDS20Asian');
+    const customTooltipWhite = document.getElementById('reUSBDS20White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+
+    if (!customTooltipBlack) {
+        return;
+    }
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+
+    if (!customTooltipAsian) {
+        return;
+    }
+
+    if (!customTooltipWhite) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+function reUSBGS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipPacificIslander = document.getElementById('reUSBGS20PacificIslander');
+    const customTooltipNativeAmerican = document.getElementById('reUSBGS20NativeAmerican');
+    const customTooltipTwoOrMore = document.getElementById('reUSBGS20TwoOrMore');
+    const customTooltipBlack = document.getElementById('reUSBGS20Black');
+    const customTooltipHLAX = document.getElementById('reUSBGS20HLAX');
+    const customTooltipAsian = document.getElementById('reUSBGS20Asian');
+    const customTooltipWhite = document.getElementById('reUSBGS20White');
+
+    if (!customTooltipPacificIslander) {
+        return;
+    }
+
+    if (!customTooltipNativeAmerican) {
+        return;
+    }
+
+    if (!customTooltipTwoOrMore) {
+        return;
+    }
+
+    if (!customTooltipBlack) {
+        return;
+    }
+
+    if (!customTooltipHLAX) {
+        return;
+    }
+
+    if (!customTooltipAsian) {
+        return;
+    }
+
+    if (!customTooltipWhite) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Pacific Islander") {
+        customTooltipPacificIslander.textContent = percent + '% ' + label;
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Native American"){
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = percent + '% ' + label;;
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "2 or more races") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = percent + '% ' + label;
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Black") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = percent + '% ' + label;
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Hispanic/Latino/a/x") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = percent + '% ' + label;
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = "";
+    } else if (label == "Asian") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = percent + '% ' + label;
+        customTooltipWhite.textContent = "";
+    } else if (label == "White") {
+        customTooltipPacificIslander.textContent = "";
+        customTooltipNativeAmerican.textContent = "";
+        customTooltipTwoOrMore.textContent = "";
+        customTooltipBlack.textContent = "";
+        customTooltipHLAX.textContent = "";
+        customTooltipAsian.textContent = "";
+        customTooltipWhite.textContent = percent + '% ' + label;
+    }
+}
+
+// veterans
+function veUSBCA21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBCA21Veterans');
+    const customTooltipOthers = document.getElementById('veUSBCA21Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
+}
+
+function veUSBDS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBDS21Veterans');
+    const customTooltipOthers = document.getElementById('veUSBDS21Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
+}
+
+function veUSBGS21Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBGS21Veterans');
+    const customTooltipOthers = document.getElementById('veUSBGS21Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
+}
+
+function veUSBCA20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBCA20Veterans');
+    const customTooltipOthers = document.getElementById('veUSBCA20Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
+}
+
+function veUSBDS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBDS20Veterans');
+    const customTooltipOthers = document.getElementById('veUSBDS20Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
+}
+
+function veUSBGS20Tooltip(tooltipModel) {
+    console.log(tooltipModel);
+    console.log(tooltipModel.body);
+    const customTooltipVeterans = document.getElementById('veUSBGS20Veterans');
+    const customTooltipOthers = document.getElementById('veUSBGS20Others');
+
+    if (!customTooltipVeterans) {
+        return;
+    }
+
+    if (!customTooltipOthers) {
+        return;
+    }
+
+    if (!tooltipModel.body) {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = "";
+        return;
+    }
+
+    var arrMsg = parseTooltipMessage(tooltipModel.body[0]['lines'][0]);
+    var label = arrMsg[0];
+    var percent = arrMsg[1];
+
+    if (label == "Veterans") {
+        customTooltipVeterans.textContent = percent + '% ' + label;
+        customTooltipOthers.textContent = "";
+    } else {
+        customTooltipVeterans.textContent = "";
+        customTooltipOthers.textContent = percent + '% ' + label;
+    }
 }

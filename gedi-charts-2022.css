@@ -1,9 +1,25 @@
+/* TEMP - TO REMOVE */
+.charts-tabs {
+    width: 905px;
+}
 /* General */
+
+.charts-tabs .nav-tabs li.active a span,
+.sub-tabs li.active a span {
+    color: #0078B8 !important;
+}
+
+.role-charts-disclaimer {
+    width: 100%;
+    height: 30px;
+}
 
 /* Overall Doughnuts */
 .role-overall-charts {
-    display: flex;;
+    display: flex;
     flex-direction: row;
+    padding-top: 2rem;
+    min-height: 484px;
 }
 
 .role-overall-charts .role-overall-doughnuts-container,
@@ -14,7 +30,7 @@
 .role-overall-doughnut-item .role-overall-doughnut-wrapper {
     display: flex;
     flex-direction: row;
-    padding-bottom: 1.2rem;
+    padding: 1rem 0;
 }
 
 .role-overall-doughnut-item h3,
@@ -30,7 +46,6 @@
 }
 
 .role-overall-doughnut-desc p {
-    text-align: center;
     margin-left: 10px;
     margin-bottom: 0 !important; /* avoid collision with gedi-reports-2022.css */
     font-weight: 300;
@@ -39,7 +54,6 @@
 .role-overall-doughnut-desc p span {
     display: block;
 }
-
 
 .role-overall-doughnut-desc p span:first-child {
     font-size: 2.5rem;
@@ -55,14 +69,33 @@
     margin-bottom: 0;
 }
 
+.role-overall-stacked-wrapper {
+    position: relative;
+}
+
 .role-overall-stacked-wrapper p {
     padding: 0;
     margin: 0 !important; /* avoid colliding with gedi-reports-2022.css */
 }
 
+.role-overall-stacked-wrapper .role-overall-stacked-tooltip {
+    position: absolute;
+    height: 28px;    
+    font-size: 0.8rem;
+}
+
+
+/**/
+.role-overall-stacked-bca,
+.role-overall-stacked-bds,
+.role-overall-stacked-bgs {
+    padding-top: 15px;
+}
+/**/
+
 .role-other-charts {
     display: flex;
-    padding-top: 2rem;
+    margin-top: 2rem;
     position: relative;
 }
 
@@ -87,13 +120,14 @@
 }
 
 .role-legend-container .role-legend:not(:first-child) {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .role-legend-container .role-legend-text {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     margin-bottom: 0 !important;
     padding: 0;
+    font-size: .80rem;
 }
 
 .role-links-container a.role-links {
@@ -106,8 +140,13 @@
     text-align: center;
 }
 
+a.role-links {
+    width: 150px;
+    height: 50px;
+}
+
 .role-links-container a.role-links.active {
-    color: #4BA0CC;
+    color: #0078B8 !important;
     border-top: 2px solid #BEC3C8;
 }
 
@@ -124,6 +163,7 @@
 
 .role-charts-disclaimer p {
     margin-top: 10px;
+    margin-bottom: 0 !important;
     font-size: .8rem;
     color: #727D87;
     text-align: center;
@@ -224,12 +264,26 @@ p.role-other-charts-nodata {
     background: #598200;
 }
 
+.charts-footer {
+    margin-top: 3rem;
+}
+
 .charts-footer p span {
     display: block;
+    line-height: 22px;
+}
+
+.charts-footer p span:first-child {
+    margin-bottom: 1rem;
 }
 
 .charts-footer .charts-footer-title {
     font-weight: 700;
+}
+
+.charts-footer .data-disclaimer-desc {
+    font-weight: 700;
+    word-spacing: -2px;
 }
 
 .nav-tabs.sub-tabs {
@@ -263,10 +317,12 @@ p.role-other-charts-nodata {
 }
 
 .disability-desc-left {
+    margin-right: .5rem;
     width: 40%;
 }
 
 .disability-desc-right {
+    margin-left: .5rem;
     width: 30%;
 }
 
@@ -288,10 +344,12 @@ p.role-other-charts-nodata {
 }
 
 .lgbtqia-desc-left {
+    margin-right: .5rem;
     width: 40%;
 }
 
 .lgbtqia-desc-right {
+    margin-left: .5rem;
     width: 30%;
 }
 
@@ -305,7 +363,6 @@ p.role-other-charts-nodata {
 .lgbtqia-desc-right span mark{
     background-color: #CCE981;
 }
-
 
 @media only screen  and (min-width: 668px) {
 
