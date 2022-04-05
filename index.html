@@ -24,713 +24,727 @@
   </head>
   <body>
       <section class="block copy-large copy-styles fade-bottom js-resize story-section gedi-charts-section-2022" style="">
-        <div class="wrap">
-          <div class="charts-tabs">
-            <div class="tabs tabs-bottom tabs-center tabs-simple">
-              <ul id="tabListLevel1" class="nav nav-tabs">
-                <li class="active">
-                  <a href="#gender" data-toggle="tab" data-chart-level="category" data-chart-category="gender" data-chart-targets="us_overall;intl_overall;"><span>Gender</span></a>
-                </li>
-                <li>
-                  <a href="#race-ethnicity" data-toggle="tab" data-chart-level="category" data-chart-category="race-ethnicity"><span>Race & Ethnicity</span></a>
-                </li>
-                <li>
-                  <a href="#veterans" data-toggle="tab" data-chart-level="category" data-chart-category="veterans"><span>Veterans</span></a>
-                </li>
-                <li>
-                  <a href="#disability" data-toggle="tab" data-chart-level="category" data-chart-category="disability"><span>Disability</span></a>
-                </li>
-                <li>
-                  <a href="#lgbtqia" data-toggle="tab" data-chart-level="category" data-chart-category="lgbtqia"><span>LGBTQIA+</span></a>
-                </li>
-              </ul>
-              <div class="tab-content">
-                <!-- Gender Content -->
-                <div class="tab-pane active" id="gender">
-                  <div class="">
-                    <p>Women’s representation in our workforce increased to 23.2% in the United States and 24.6% internationally, both because of hiring efforts and stronger retention. In 2021, women left the company at a lower rate than men for the first time in decades. Although our gender representation is on par with the aerospace and defense industry, we’re accelerating our investments in the early science, technology, engineering and math (STEM) pipeline to help strengthen diverse representation. In 2021, Boeing engaged with an estimated 2.7 million young women and girls through various STEM programs.</p>
-                    <div class="tabs tabs-bottom tabs-center tabs-simple">
-                      <ul id="tabListLevel2Gender" class="nav nav-tabs sub-tabs" data-tab-year-default="#gender-2021">
-                        <li class="active">
-                          <a href="#gender-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
-                        </li>
-                        <li>
-                          <a href="#gender-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
-                        </li>
-                      </ul>
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="gender-2021">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-women"></div>
-                            <p class="role-legend-text">Women</p>
-                            <div class="role-legend legend-men"></div>
-                            <p class="role-legend-text">Men</p>
-                          </div>
-
-                          <div class="role-overall-charts">                
-                            <div class="role-overall-doughnuts-container">
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                    <canvas id="genderUSOverall21" width="140" height="140"></canvas>
-                                  </div> 
-                                  <div class="role-overall-doughnut-desc">
-                                    <p><span>23.2%</span><span>Women</span></p>
+        <div class="container wrap">
+          <div class="row">
+            <div class="col-md-12">
+              <div>
+                <div class="tabs tabs-bottom tabs-center tabs-simple">
+                  <ul id="tabListLevel1" class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#gender" data-toggle="tab" data-chart-level="category" data-chart-category="gender" data-chart-targets="us_overall;intl_overall;"><span>Gender</span></a>
+                    </li>
+                    <li>
+                      <a href="#race-ethnicity" data-toggle="tab" data-chart-level="category" data-chart-category="race-ethnicity"><span>Race & Ethnicity</span></a>
+                    </li>
+                    <li>
+                      <a href="#veterans" data-toggle="tab" data-chart-level="category" data-chart-category="veterans"><span>Veterans</span></a>
+                    </li>
+                    <li>
+                      <a href="#disability" data-toggle="tab" data-chart-level="category" data-chart-category="disability"><span>Disability</span></a>
+                    </li>
+                    <li>
+                      <a href="#lgbtqia" data-toggle="tab" data-chart-level="category" data-chart-category="lgbtqia"><span>LGBTQIA+</span></a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <!-- Gender Content -->
+                    <div class="tab-pane active" id="gender">
+                      <div class="">
+                        <p>Women’s representation in our workforce increased to 23.2% in the United States and 24.6% internationally, both because of hiring efforts and stronger retention. In 2021, women left the company at a lower rate than men for the first time in decades. Although our gender representation is on par with the aerospace and defense industry, we’re accelerating our investments in the early science, technology, engineering and math (STEM) pipeline to help strengthen diverse representation. In 2021, Boeing engaged with an estimated 2.7 million young women and girls through various STEM programs.</p>
+                        <div class="tabs tabs-bottom tabs-center tabs-simple">
+                          <ul id="tabListLevel2Gender" class="nav nav-tabs sub-tabs" data-tab-year-default="#gender-2021">
+                            <li class="active">
+                              <a href="#gender-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
+                            </li>
+                            <li>
+                              <a href="#gender-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="gender-2021">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-women"></div>
+                                    <p class="role-legend-text">Women</p>
+                                    <div class="role-legend legend-men"></div>
+                                    <p class="role-legend-text">Men</p>
                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="row role-overall-doughnut-item">
+                                    <div class="col-md-12">
+                                      <h3>U.S. Overall</h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="row row-no-gutters role-overall-doughnut-wrapper">
+                                          <div class="col-xs-4 role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                            <canvas id="genderUSOverall21" width="140" height="140"></canvas>
+                                          </div>
+                                          <div class="col-xs-4 role-overall-doughnut-desc">
+                                            <p><span>23.2%</span><span>Women</span></p>
+                                          </div>
+                                      </div>
+                                    </div>
+      
+                                    <div class="row role-overall-doughnut-item">
+                                      <div class="col-md-12">
+                                        <h3>International Overall</h3>
+                                      </div>
+                                      <div class="col-md-12">
+                                        <div class="row row-no-gutters role-overall-doughnut-wrapper">
+                                          <div class="col-xs-4 role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                            <canvas id="genderIntlOverall21" width="140" height="140"></canvas>
+                                          </div>
+                                          <div class="col-xs-4 role-overall-doughnut-desc">
+                                            <p><span>24.6%</span><span>Women</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                  </div> <!-- end .role-overall-doughnuts-container -->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="role-overall-stacked-container">
+                                  
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBCA21Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBCA21Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="genderUSBCA21" width="400" height="50"></canvas>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBDS21Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBDS21Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="genderUSBDS21" width="400" height="50"></canvas>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBGS21Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBGS21Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="genderUSBGS21" width="400" height="50"></canvas>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
                                 </div>
                               </div>
-
-                              <div class="role-overall-doughnut-item">
-                                <h3>International Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                    <canvas id="genderIntlOverall21" width="140" height="140"></canvas>
-                                  </div>
-                                  <div class="role-overall-doughnut-desc">
-                                    <p><span>24.6%</span><span>Women</span></p>
-                                  </div>
-                                </div>
-                              </div> 
-                            </div> <!-- end .role-overall-doughnuts-container -->
-
-                            <div class="role-overall-stacked-container">
-                              
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBCA21Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBCA21Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="genderUSBCA21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
+    
+                              <div class="role-other-charts" style="display: none;">
+                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                <canvas id="genderBarGraph21" width="400" height="200"></canvas>
                               </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBDS21Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBDS21Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="genderUSBDS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
+                              <div class="role-charts-disclaimer">
+                                <p id="genderChartsDisclaimer21"></p>
                               </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBGS21Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBGS21Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="genderUSBGS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
+                            </div> <!-- .end #gender-2021 -->
+    
+                            <div class="tab-pane" id="gender-2020">
+                              <div class="role-legend-container">
+                                <div class="role-legend legend-women"></div>
+                                <p class="role-legend-text">Women</p>
+                                <div class="role-legend legend-men"></div>
+                                <p class="role-legend-text">Men</p>
                               </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>
-
-                          <div class="role-other-charts" style="display: none;">
-                            <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                            <canvas id="genderBarGraph21" width="400" height="200"></canvas>
-                          </div>
-                          <div class="role-charts-disclaimer">
-                            <p id="genderChartsDisclaimer21"></p>
-                          </div>
-                        </div> <!-- .end #gender-2021 -->
-
-                        <div class="tab-pane" id="gender-2020">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-women"></div>
-                            <p class="role-legend-text">Women</p>
-                            <div class="role-legend legend-men"></div>
-                            <p class="role-legend-text">Men</p>
-                          </div>
-                          <div class="role-overall-charts">
-                            <div class="role-overall-doughnuts-container">
-
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                    <canvas id="genderUSOverall20" width="140" height="140"></canvas>
+                              <div class="role-overall-charts">
+                                <div class="role-overall-doughnuts-container">
+    
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>U.S. Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                        <canvas id="genderUSOverall20" width="140" height="140"></canvas>
+                                      </div>
+                                      <div class="role-overall-doughnut-desc">
+                                        <p><span>22.9%</span><span>Women</span></p>
+                                      </div>
+                                    </div>
                                   </div>
-                                  <div class="role-overall-doughnut-desc">
-                                    <p><span>22.9%</span><span>Women</span></p>
+    
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>International Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                        <canvas id="genderIntlOverall20" width="140" height="140"></canvas>
+                                      </div>
+                                      <div class="role-overall-doughnut-desc">
+                                        <p><span>24.3%</span><span>Women</span></p>
+                                      </div>
+                                    </div>
                                   </div>
-                                </div>
-                              </div>
-
-                              <div class="role-overall-doughnut-item">
-                                <h3>International Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                    <canvas id="genderIntlOverall20" width="140" height="140"></canvas>
+                                </div> <!-- end .role-overall-doughnuts-container -->
+    
+                                <div class="role-overall-stacked-container">
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Commercial Airplanes</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="genderUSBCA20Women" class="role-overall-stacked-tooltip"></p>
+                                      <p id="genderUSBCA20Men" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                        <canvas id="genderUSBCA20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
                                   </div>
-                                  <div class="role-overall-doughnut-desc">
-                                    <p><span>24.3%</span><span>Women</span></p>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Defense, Space and Security</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="genderUSBDS20Women" class="role-overall-stacked-tooltip"></p>
+                                      <p id="genderUSBDS20Men" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                        <canvas id="genderUSBDS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
                                   </div>
-                                </div>
-                              </div>
-                            </div> <!-- end .role-overall-doughnuts-container -->
-
-                            <div class="role-overall-stacked-container">
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBCA20Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBCA20Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="genderUSBCA20" width="400" height="50"></canvas>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Global Services</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="genderUSBGS20Women" class="role-overall-stacked-tooltip"></p>
+                                      <p id="genderUSBGS20Men" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                        <canvas id="genderUSBGS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
                                   </div>
-                                </div>
+                                </div> <!-- end .role-overall-stacked-container -->
                               </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBDS20Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBDS20Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="genderUSBDS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
+    
+                              <div class="role-other-charts">
+                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                <canvas id="genderBarGraph20" width="400" height="200"></canvas>
                               </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="genderUSBGS20Women" class="role-overall-stacked-tooltip"></p>
-                                  <p id="genderUSBGS20Men" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="genderUSBGS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
+                              <div class="role-charts-disclaimer">
+                                <p id="genderChartsDisclaimer20"></p>
                               </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>
-
-                          <div class="role-other-charts">
-                            <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                            <canvas id="genderBarGraph20" width="400" height="200"></canvas>
-                          </div>
-                          <div class="role-charts-disclaimer">
-                            <p id="genderChartsDisclaimer20"></p>
-                          </div>
-                        </div> <!-- end #gender-2020 -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="role-links-container">
-                    <div class="role-links-wrapper">
-                      <a href="#" 
-                          class="role-links active gender-role-links" 
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
-                          Overall
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="board_of_directors">
-                          Board of Directors
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="executive_council">
-                          Executive Council
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="executives">
-                          Executives
-                      </a>
-                      <a href="#"
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="managers">
-                          Managers
-                      </a>
-                    </div>
-                    <div class="role-links-wrapper">
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="individual_contributors">
-                          Individual Contributors
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="engineering">
-                          Engineering
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="production_and_maintenance">
-                          Production & Maintenance
-                      </a>
-                      <a href="#" 
-                          class="role-links gender-role-links" 
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="promotions">Promotions</a>
-                      <a href="#" 
-                          class="role-links gender-role-links"
-                          data-target-tablistlv2="tabListLevel2Gender"
-                          data-chart-roles="hires">
-                          Hires
-                      </a>
-                    </div>
-                  </div>
-                  <div class="role-gender-woc">
-
-                    <p class="role-gender-woc-title"><span>Women of Color</span></p>
-                    <div class="role-gender-woc-wrapper">
-                      <div class="role-gender-woc-overall">
-                        <div class="role-gender-woc-us-overall">
-                          <p>
-                            <span class="role-gender-woc-level">U.S. Overall</span>
-                            <span id="genderWOCOverallPercent" class="role-gender-woc-percent">9.1%</span>
-                            <!--<span class="role-gender-woc-change">(+0.5pts)</span>-->
-                          </p>
-                        </div>
-                        <div class="role-gender-woc-executive-overall">
-                          <p>
-                            <span class="role-gender-woc-level">Executive Level</span>
-                            <span id="genderWOCExecutivePercent" class="role-gender-woc-percent">8.4%</span>
-                            <!--<span class="role-gender-woc-change">(+0.6pts)</span>-->
-                          </p>
-                        </div>
-                      </div>
-                      <div class="role-gender-woc-message">
-                        <p>We’re proud of our diverse women leaders and the innovation they bring to Boeing. Women of color are more represented overall and in the executive levels compared with last year, though we know there’s still much work to do. Leanne Caret, president and CEO of Boeing Defense, Space & Security and executive champion of the Boeing Women Inspiring Leadership (BWIL) Business Resource Group, has for the past few years held Executive Women of Color Connect Circles to support and champion Boeing’s most senior women of color. Efforts such as this help foster connection and sponsorship, enabling Boeing to hire and retain more women of color.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- end #gender -->
-
-                <!-- Race & Ethnicity Content -->
-                <div class="tab-pane" id="race-ethnicity">
-                  <div class="">
-                    <p>In our U.S. workforce, overall racial and ethnic minority representation increased to 32.7%, 3 points above average for the aerospace and defense industry. In 2021, racial and ethnic minorities accounted for 42.5% of our U.S. hires, compared with 37.2% in 2020.  Our racial equity aspirations, Racial Equity Task Force, Business Resource Groups and Inclusion Ambassadors continue to inform our efforts, including the enterprise rollout of bias mitigation training and guidance on inclusive interview teams. In 2021, we provided $3.4 million in grants to support historically Black colleges and universities through scholarships, student programs, curriculum, Thurgood Marshall College Fund programs, and more, and we’ve invested $30 million in organizations focused on racial equity and social justice since 2020.</p>
-                    <div class="tabs-bottom tabs-center tabs-simple">
-                      <ul id="tabListLevel2RaceEthnicity" class="nav nav-tabs sub-tabs" data-tab-year-default="#race-ethnicity-2021">
-                        <li class="active">
-                          <a href="#race-ethnicity-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
-                        </li>
-                        <li>
-                          <a href="#race-ethnicity-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
-                        </li>
-                      </ul>
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="race-ethnicity-2021">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-pacific-islander"></div>
-                            <p class="role-legend-text">Pacific Islander</p>
-                            <div class="role-legend legend-native-american"></div>
-                            <p class="role-legend-text">Native American</p>
-                            <div class="role-legend legend-2-or-more"></div>
-                            <p class="role-legend-text">2 or more races</p>
-                            <div class="role-legend legend-black"></div>
-                            <p class="role-legend-text">Black</p>
-                            <div class="role-legend legend-hlax"></div>
-                            <p class="role-legend-text">Hispanic/Latino/a/x</p>
-                            <div class="role-legend legend-asian"></div>
-                            <p class="role-legend-text">Asian</p>
-                            <div class="role-legend legend-white"></div>
-                            <p class="role-legend-text">White</p>
-                          </div>
-                          <div class="role-overall-charts">
-                            <div class="role-overall-doughnuts-container">
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
-                                    <canvas id="reUSOverall21" width="320" height="320"></canvas>
-                                  </div> 
-                                </div>
-                              </div>
-                            </div> <!-- end of .role-overall-doughnuts-container -->
-                            <div class="role-overall-stacked-container">
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBCA21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA21White" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="reUSBCA21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBDS21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS21White" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="reUSBDS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBGS21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS21White" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="reUSBGS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>
-                          <div class="role-other-charts">
-                            <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                            <canvas id="reBarGraph21" width="400" height="200"></canvas>
-                          </div>
-
-                          <div class="role-charts-disclaimer">
-                            <p id="reChartsDisclaimer21"></p>
-                          </div>
-                        </div>
-                        <div class="tab-pane" id="race-ethnicity-2020">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-addtl-races"></div>
-                            <p class="role-legend-text">Additional Races**</p>
-                            <div class="role-legend legend-pacific-islander"></div>
-                            <p class="role-legend-text">Pacific Islander</p>
-                            <div class="role-legend legend-native-american"></div>
-                            <p class="role-legend-text">Native American</p>
-                            <div class="role-legend legend-2-or-more"></div>
-                            <p class="role-legend-text">2 or more races</p>
-                            <div class="role-legend legend-black"></div>
-                            <p class="role-legend-text">Black</p>
-                            <div class="role-legend legend-hlax"></div>
-                            <p class="role-legend-text">Hispanic/Latino/a/x</p>
-                            <div class="role-legend legend-asian"></div>
-                            <p class="role-legend-text">Asian</p>
-                            <div class="role-legend legend-white"></div>
-                            <p class="role-legend-text">White</p>
-                          </div>
-                          <div class="role-overall-charts">
-                            <div class="role-overall-doughnuts-container">
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
-                                    <canvas id="reUSOverall20" width="320" height="320"></canvas>
-                                  </div> 
-                                </div>
-                              </div>
-                            </div> <!-- end of .role-overall-doughnuts-container -->
-                            <div class="role-overall-stacked-container">
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBCA20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBCA20White" class="role-overall-stacked-tooltip"></p>                                  
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="reUSBCA20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBDS20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBDS20White" class="role-overall-stacked-tooltip"></p> 
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="reUSBDS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="reUSBGS20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20Black" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20HLAX" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20Asian" class="role-overall-stacked-tooltip"></p>
-                                  <p id="reUSBGS20White" class="role-overall-stacked-tooltip"></p> 
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="reUSBGS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>                      
-                          <div class="role-other-charts">
-                            <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                            <canvas id="reBarGraph20" width="400" height="200"></canvas>
-                          </div>
-                          <div class="role-charts-disclaimer">
-                            <p id="reChartsDisclaimer20"></p>
+                            </div> <!-- end #gender-2020 -->
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="role-links-container">
-                    <div class="role-links-wrapper">
-                      <a href="#" 
-                          class="role-links re-role-links active" 
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
-                          Overall
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="board_of_directors">
-                          Board of Directors
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="executive_council">
-                          Executive Council
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="executives">
-                          Executives
-                      </a>
-                      <a href="#"
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="managers">
-                          Managers
-                      </a>
-                    </div>
-                    <div class="role-links-wrapper">
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="individual_contributors">
-                          Individual Contributors
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="engineering">
-                          Engineering
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="production_and_maintenance">
-                          Production & Maintenance
-                      </a>
-                      <a href="#" 
-                          class="role-links re-role-links" 
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="promotions">Promotions</a>
-                      <a href="#" 
-                          class="role-links re-role-links"
-                          data-target-tablistlv2="tabListLevel2RaceEthnicity"
-                          data-chart-roles="hires">
-                          Hires
-                      </a>
-                    </div>
-                  </div>
-                  <p id="reDisclaimer"></p>
-                </div> <!-- end #race-ethnicity -->
-
-                <!-- Veterans Content -->
-                <div class="tab-pane" id="veterans">
-                  <div class="">
-                    <p>Veterans comprise 14.6% of our total workforce. Veteran representation is above industry standard in the majority of our business units, such as Boeing Global Services, which is nearly 11 points above comparable aerospace businesses. In 2021, 18% of our hires were veterans, and we aim to continue growing that number. We’re proud partners of the Department of Defense SkillBridge program, through which we expect to train and hire hundreds of military veterans. We also recently expanded the U.S. military pay differential for reservists when they are on temporary special military duty, and in 2021 we donated $13 million to organizations that support veterans and their families. Our strategy is not just about hiring veterans, it is also about supporting them and their families so they can enjoy enduring careers with Boeing.</p>
-                    <div class="tabs-bottom tabs-center tabs-simple">
-                      <ul id="tabListLevel2Veterans" class="nav nav-tabs sub-tabs" data-tab-year-default="#veterans-2021">
-                        <li class="active">
-                          <a href="#veterans-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
-                        </li>
-                        <li>
-                          <a href="#veterans-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
-                        </li>
-                      </ul>
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="veterans-2021">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-veterans"></div>
-                            <p class="role-legend-text">Veterans</p>
-                            <div class="role-legend legend-others"></div>
-                            <p class="role-legend-text">Others</p>
-                          </div>
-                          <div class="role-overall-charts">
-                            <div class="role-overall-doughnuts-container">
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
-                                    <canvas id="veUSOverall21" width="320" height="320"></canvas>
-                                  </div> 
-                                </div>
-                              </div>
-                            </div> <!-- end of .role-overall-doughnuts-container -->
-                            <div class="role-overall-stacked-container">
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBCA21Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBCA21Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="veUSBCA21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBDS21Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBDS21Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="veUSBDS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBGS21Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBGS21Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="veUSBGS21" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>
-                          <div class="role-other-charts">
-                            <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
-                          </div>                    
-
-                          <div class="role-charts-disclaimer">
-                            <p id="veChartsDisclaimer21"></p>
-                          </div>
+                      <div class="role-links-container">
+                        <div class="role-links-wrapper">
+                          <a href="#" 
+                              class="role-links active gender-role-links" 
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
+                              Overall
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="board_of_directors">
+                              Board of Directors
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="executive_council">
+                              Executive Council
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="executives">
+                              Executives
+                          </a>
+                          <a href="#"
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="managers">
+                              Managers
+                          </a>
                         </div>
-                        <div class="tab-pane" id="veterans-2020">
-                          <div class="role-legend-container">
-                            <div class="role-legend legend-veterans"></div>
-                            <p class="role-legend-text">Veterans</p>
-                            <div class="role-legend legend-others"></div>
-                            <p class="role-legend-text">Others</p>
+                        <div class="role-links-wrapper">
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="individual_contributors">
+                              Individual Contributors
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="engineering">
+                              Engineering
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="production_and_maintenance">
+                              Production & Maintenance
+                          </a>
+                          <a href="#" 
+                              class="role-links gender-role-links" 
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="promotions">Promotions</a>
+                          <a href="#" 
+                              class="role-links gender-role-links"
+                              data-target-tablistlv2="tabListLevel2Gender"
+                              data-chart-roles="hires">
+                              Hires
+                          </a>
+                        </div>
+                      </div>
+                      <div class="role-gender-woc">
+    
+                        <p class="role-gender-woc-title"><span>Women of Color</span></p>
+                        <div class="role-gender-woc-wrapper">
+                          <div class="role-gender-woc-overall">
+                            <div class="role-gender-woc-us-overall">
+                              <p>
+                                <span class="role-gender-woc-level">U.S. Overall</span>
+                                <span id="genderWOCOverallPercent" class="role-gender-woc-percent">9.1%</span>
+                                <!--<span class="role-gender-woc-change">(+0.5pts)</span>-->
+                              </p>
+                            </div>
+                            <div class="role-gender-woc-executive-overall">
+                              <p>
+                                <span class="role-gender-woc-level">Executive Level</span>
+                                <span id="genderWOCExecutivePercent" class="role-gender-woc-percent">8.4%</span>
+                                <!--<span class="role-gender-woc-change">(+0.6pts)</span>-->
+                              </p>
+                            </div>
                           </div>
-                          <div class="role-overall-charts">
-                            <div class="role-overall-doughnuts-container">
-                              <div class="role-overall-doughnut-item">
-                                <h3>U.S. Overall</h3>
-                                <div class="role-overall-doughnut-wrapper">
-                                  <div class="ro2e-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
-                                    <canvas id="veUSOverall20" width="320" height="320"></canvas>
-                                  </div> 
-                                </div>
-                              </div>
-                            </div> <!-- end of .role-overall-doughnuts-container -->
-                            <div class="role-overall-stacked-container">
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Commercial Airplanes</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBCA20Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBCA20Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                    <canvas id="veUSBCA20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Defense, Space and Security</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBDS20Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBDS20Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                    <canvas id="veUSBDS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="role-overall-stacked-item">
-                                <h3>U.S. Boeing Global Services</h3>
-                                <div class="role-overall-stacked-wrapper">
-                                  <p id="veUSBGS20Veterans" class="role-overall-stacked-tooltip"></p>
-                                  <p id="veUSBGS20Others" class="role-overall-stacked-tooltip"></p>
-                                  <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                    <canvas id="veUSBGS20" width="400" height="50"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> <!-- end .role-overall-stacked-container -->
-                          </div>
-                          <div class="role-other-charts">
-                            <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
-                          </div>
-
-                          <div class="role-charts-disclaimer">
-                            <p id="veChartsDisclaimer20"></p>
+                          <div class="role-gender-woc-message">
+                            <p>We’re proud of our diverse women leaders and the innovation they bring to Boeing. Women of color are more represented overall and in the executive levels compared with last year, though we know there’s still much work to do. Leanne Caret, president and CEO of Boeing Defense, Space & Security and executive champion of the Boeing Women Inspiring Leadership (BWIL) Business Resource Group, has for the past few years held Executive Women of Color Connect Circles to support and champion Boeing’s most senior women of color. Efforts such as this help foster connection and sponsorship, enabling Boeing to hire and retain more women of color.</p>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> <!-- end #gender -->
+    
+                    <!-- Race & Ethnicity Content -->
+                    <div class="tab-pane" id="race-ethnicity">
+                      <div class="">
+                        <p>In our U.S. workforce, overall racial and ethnic minority representation increased to 32.7%, 3 points above average for the aerospace and defense industry. In 2021, racial and ethnic minorities accounted for 42.5% of our U.S. hires, compared with 37.2% in 2020.  Our racial equity aspirations, Racial Equity Task Force, Business Resource Groups and Inclusion Ambassadors continue to inform our efforts, including the enterprise rollout of bias mitigation training and guidance on inclusive interview teams. In 2021, we provided $3.4 million in grants to support historically Black colleges and universities through scholarships, student programs, curriculum, Thurgood Marshall College Fund programs, and more, and we’ve invested $30 million in organizations focused on racial equity and social justice since 2020.</p>
+                        <div class="tabs-bottom tabs-center tabs-simple">
+                          <ul id="tabListLevel2RaceEthnicity" class="nav nav-tabs sub-tabs" data-tab-year-default="#race-ethnicity-2021">
+                            <li class="active">
+                              <a href="#race-ethnicity-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
+                            </li>
+                            <li>
+                              <a href="#race-ethnicity-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="race-ethnicity-2021">
+                              <div class="role-legend-container">
+                                <div class="role-legend legend-pacific-islander"></div>
+                                <p class="role-legend-text">Pacific Islander</p>
+                                <div class="role-legend legend-native-american"></div>
+                                <p class="role-legend-text">Native American</p>
+                                <div class="role-legend legend-2-or-more"></div>
+                                <p class="role-legend-text">2 or more races</p>
+                                <div class="role-legend legend-black"></div>
+                                <p class="role-legend-text">Black</p>
+                                <div class="role-legend legend-hlax"></div>
+                                <p class="role-legend-text">Hispanic/Latino/a/x</p>
+                                <div class="role-legend legend-asian"></div>
+                                <p class="role-legend-text">Asian</p>
+                                <div class="role-legend legend-white"></div>
+                                <p class="role-legend-text">White</p>
+                              </div>
+                              <div class="role-overall-charts">
+                                <div class="role-overall-doughnuts-container">
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>U.S. Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
+                                        <canvas id="reUSOverall21" width="320" height="320"></canvas>
+                                      </div> 
+                                    </div>
+                                  </div>
+                                </div> <!-- end of .role-overall-doughnuts-container -->
+                                <div class="role-overall-stacked-container">
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Commercial Airplanes</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBCA21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA21White" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                        <canvas id="reUSBCA21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Defense, Space and Security</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBDS21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS21White" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                        <canvas id="reUSBDS21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Global Services</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBGS21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS21White" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                        <canvas id="reUSBGS21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> <!-- end .role-overall-stacked-container -->
+                              </div>
+                              <div class="role-other-charts">
+                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                <canvas id="reBarGraph21" width="400" height="200"></canvas>
+                              </div>
+    
+                              <div class="role-charts-disclaimer">
+                                <p id="reChartsDisclaimer21"></p>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="race-ethnicity-2020">
+                              <div class="role-legend-container">
+                                <div class="role-legend legend-addtl-races"></div>
+                                <p class="role-legend-text">Additional Races**</p>
+                                <div class="role-legend legend-pacific-islander"></div>
+                                <p class="role-legend-text">Pacific Islander</p>
+                                <div class="role-legend legend-native-american"></div>
+                                <p class="role-legend-text">Native American</p>
+                                <div class="role-legend legend-2-or-more"></div>
+                                <p class="role-legend-text">2 or more races</p>
+                                <div class="role-legend legend-black"></div>
+                                <p class="role-legend-text">Black</p>
+                                <div class="role-legend legend-hlax"></div>
+                                <p class="role-legend-text">Hispanic/Latino/a/x</p>
+                                <div class="role-legend legend-asian"></div>
+                                <p class="role-legend-text">Asian</p>
+                                <div class="role-legend legend-white"></div>
+                                <p class="role-legend-text">White</p>
+                              </div>
+                              <div class="role-overall-charts">
+                                <div class="role-overall-doughnuts-container">
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>U.S. Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
+                                        <canvas id="reUSOverall20" width="320" height="320"></canvas>
+                                      </div> 
+                                    </div>
+                                  </div>
+                                </div> <!-- end of .role-overall-doughnuts-container -->
+                                <div class="role-overall-stacked-container">
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Commercial Airplanes</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBCA20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBCA20White" class="role-overall-stacked-tooltip"></p>                                  
+                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                        <canvas id="reUSBCA20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Defense, Space and Security</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBDS20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBDS20White" class="role-overall-stacked-tooltip"></p> 
+                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                        <canvas id="reUSBDS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Global Services</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="reUSBGS20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20Black" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20HLAX" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20Asian" class="role-overall-stacked-tooltip"></p>
+                                      <p id="reUSBGS20White" class="role-overall-stacked-tooltip"></p> 
+                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                        <canvas id="reUSBGS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> <!-- end .role-overall-stacked-container -->
+                              </div>                      
+                              <div class="role-other-charts">
+                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                <canvas id="reBarGraph20" width="400" height="200"></canvas>
+                              </div>
+                              <div class="role-charts-disclaimer">
+                                <p id="reChartsDisclaimer20"></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="role-links-container">
+                        <div class="role-links-wrapper">
+                          <a href="#" 
+                              class="role-links re-role-links active" 
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
+                              Overall
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="board_of_directors">
+                              Board of Directors
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="executive_council">
+                              Executive Council
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="executives">
+                              Executives
+                          </a>
+                          <a href="#"
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="managers">
+                              Managers
+                          </a>
+                        </div>
+                        <div class="role-links-wrapper">
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="individual_contributors">
+                              Individual Contributors
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="engineering">
+                              Engineering
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="production_and_maintenance">
+                              Production & Maintenance
+                          </a>
+                          <a href="#" 
+                              class="role-links re-role-links" 
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="promotions">Promotions</a>
+                          <a href="#" 
+                              class="role-links re-role-links"
+                              data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                              data-chart-roles="hires">
+                              Hires
+                          </a>
+                        </div>
+                      </div>
+                      <p id="reDisclaimer"></p>
+                    </div> <!-- end #race-ethnicity -->
+    
+                    <!-- Veterans Content -->
+                    <div class="tab-pane" id="veterans">
+                      <div class="">
+                        <p>Veterans comprise 14.6% of our total workforce. Veteran representation is above industry standard in the majority of our business units, such as Boeing Global Services, which is nearly 11 points above comparable aerospace businesses. In 2021, 18% of our hires were veterans, and we aim to continue growing that number. We’re proud partners of the Department of Defense SkillBridge program, through which we expect to train and hire hundreds of military veterans. We also recently expanded the U.S. military pay differential for reservists when they are on temporary special military duty, and in 2021 we donated $13 million to organizations that support veterans and their families. Our strategy is not just about hiring veterans, it is also about supporting them and their families so they can enjoy enduring careers with Boeing.</p>
+                        <div class="tabs-bottom tabs-center tabs-simple">
+                          <ul id="tabListLevel2Veterans" class="nav nav-tabs sub-tabs" data-tab-year-default="#veterans-2021">
+                            <li class="active">
+                              <a href="#veterans-2021" data-chart-level="year" data-chart-year="2021" data-toggle="tab"><span>2021</span></a>
+                            </li>
+                            <li>
+                              <a href="#veterans-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="veterans-2021">
+                              <div class="role-legend-container">
+                                <div class="role-legend legend-veterans"></div>
+                                <p class="role-legend-text">Veterans</p>
+                                <div class="role-legend legend-others"></div>
+                                <p class="role-legend-text">Others</p>
+                              </div>
+                              <div class="role-overall-charts">
+                                <div class="role-overall-doughnuts-container">
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>U.S. Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="role-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
+                                        <canvas id="veUSOverall21" width="320" height="320"></canvas>
+                                      </div> 
+                                    </div>
+                                  </div>
+                                </div> <!-- end of .role-overall-doughnuts-container -->
+                                <div class="role-overall-stacked-container">
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Commercial Airplanes</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBCA21Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBCA21Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                        <canvas id="veUSBCA21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Defense, Space and Security</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBDS21Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBDS21Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                        <canvas id="veUSBDS21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Global Services</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBGS21Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBGS21Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                        <canvas id="veUSBGS21" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> <!-- end .role-overall-stacked-container -->
+                              </div>
+                              <div class="role-other-charts">
+                                <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
+                              </div>                    
+    
+                              <div class="role-charts-disclaimer">
+                                <p id="veChartsDisclaimer21"></p>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="veterans-2020">
+                              <div class="role-legend-container">
+                                <div class="role-legend legend-veterans"></div>
+                                <p class="role-legend-text">Veterans</p>
+                                <div class="role-legend legend-others"></div>
+                                <p class="role-legend-text">Others</p>
+                              </div>
+                              <div class="role-overall-charts">
+                                <div class="role-overall-doughnuts-container">
+                                  <div class="role-overall-doughnut-item">
+                                    <h3>U.S. Overall</h3>
+                                    <div class="role-overall-doughnut-wrapper">
+                                      <div class="ro2e-us-overall-doughnut" style="max-height: 350px; max-width: 350px;">
+                                        <canvas id="veUSOverall20" width="320" height="320"></canvas>
+                                      </div> 
+                                    </div>
+                                  </div>
+                                </div> <!-- end of .role-overall-doughnuts-container -->
+                                <div class="role-overall-stacked-container">
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Commercial Airplanes</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBCA20Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBCA20Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                        <canvas id="veUSBCA20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Defense, Space and Security</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBDS20Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBDS20Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                        <canvas id="veUSBDS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="role-overall-stacked-item">
+                                    <h3>U.S. Boeing Global Services</h3>
+                                    <div class="role-overall-stacked-wrapper">
+                                      <p id="veUSBGS20Veterans" class="role-overall-stacked-tooltip"></p>
+                                      <p id="veUSBGS20Others" class="role-overall-stacked-tooltip"></p>
+                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                        <canvas id="veUSBGS20" width="400" height="50"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> <!-- end .role-overall-stacked-container -->
+                              </div>
+                              <div class="role-other-charts">
+                                <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
+                              </div>
+    
+                              <div class="role-charts-disclaimer">
+                                <p id="veChartsDisclaimer20"></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- end #veterans -->
+    
+                    <!-- Disability Content -->
+                    <div class="tab-pane" id="disability">
+                      <div class="disability-desc-container">
+                        <p class="disability-desc-left"><span>Our Seek, Speak & Listen habits have helped raise awareness and destigmatize disability. As a result, the self-identification participation rate for disability doubled from the previous year to 28%. We will continue educating ourselves and ensuring that teammates of all abilities feel welcome and able to bring their whole selves to work. With expanded programs to hire more neurodiverse talent in 2022, including our Autism at Work program, and efforts to increase accessibility on our commercial airplanes and in our workplaces, we continue to make Boeing better, stronger and more innovative.</span></p>
+                        <p class="disability-desc-right"><span>In 2021, 28% of eligible employees participated in voluntary self-ID, with</span> <span><mark>6.4% of employees identifying as a person with a disability.</mark></span>
+                        </p>
+                      </div>
+                    </div> <!-- end #disability -->
+    
+                    <!-- LGBTQIA Content -->
+                    <div class="tab-pane" id="lgbtqia">
+                      <div class="lgbtqia-desc-container">
+                        <p class="lgbtqia-desc-left">In 2021, our teammates shared that they wanted to self-identify in more authentic ways. Now, U.S. teammates can voluntarily and confidentially report their gender identity and sexual orientation. With this step, our goals are to educate, normalize and destigmatize concepts of gender identity and orientation. This also helps Boeing monitor progress toward full inclusion and equity across our teams, and we hope to expand self-identification options internationally in locations where it is safe for our teammates to do so. We encourage teammates to self-identify to give us a more accurate understanding of our workforce so we can better support them. Recent improvements based on teammate feedback include reinstating domestic partnership benefits, expanding our gender affirmation support, and developing a protocol for all-gender single stall restrooms.</p>
+                        <p class="lgbtqia-desc-right"><span>In 2021 7.13% of eligible employees participated in the gender identity self-ID and</span> <span><mark>6.12% participated in the sexual orientation self-ID.</mark></span></p>
+                      </div>
+                    </div> <!-- end lgbtqia -->
                   </div>
-                </div> <!-- end #veterans -->
-
-                <!-- Disability Content -->
-                <div class="tab-pane" id="disability">
-                  <div class="disability-desc-container">
-                    <p class="disability-desc-left"><span>Our Seek, Speak & Listen habits have helped raise awareness and destigmatize disability. As a result, the self-identification participation rate for disability doubled from the previous year to 28%. We will continue educating ourselves and ensuring that teammates of all abilities feel welcome and able to bring their whole selves to work. With expanded programs to hire more neurodiverse talent in 2022, including our Autism at Work program, and efforts to increase accessibility on our commercial airplanes and in our workplaces, we continue to make Boeing better, stronger and more innovative.</span></p>
-                    <p class="disability-desc-right"><span>In 2021, 28% of eligible employees participated in voluntary self-ID, with</span> <span><mark>6.4% of employees identifying as a person with a disability.</mark></span>
-                    </p>
-                  </div>
-                </div> <!-- end #disability -->
-
-                <!-- LGBTQIA Content -->
-                <div class="tab-pane" id="lgbtqia">
-                  <div class="lgbtqia-desc-container">
-                    <p class="lgbtqia-desc-left">In 2021, our teammates shared that they wanted to self-identify in more authentic ways. Now, U.S. teammates can voluntarily and confidentially report their gender identity and sexual orientation. With this step, our goals are to educate, normalize and destigmatize concepts of gender identity and orientation. This also helps Boeing monitor progress toward full inclusion and equity across our teams, and we hope to expand self-identification options internationally in locations where it is safe for our teammates to do so. We encourage teammates to self-identify to give us a more accurate understanding of our workforce so we can better support them. Recent improvements based on teammate feedback include reinstating domestic partnership benefits, expanding our gender affirmation support, and developing a protocol for all-gender single stall restrooms.</p>
-                    <p class="lgbtqia-desc-right"><span>In 2021 7.13% of eligible employees participated in the gender identity self-ID and</span> <span><mark>6.12% participated in the sexual orientation self-ID.</mark></span></p>
-                  </div>
-                </div> <!-- end lgbtqia -->
-              </div>
+                </div>
+                <hr>
+                <div class="charts-footer">
+                  <p>
+                    <span class="charts-footer-title">Data disclaimer and terms</span>
+                    <span class="charts-footer-desc data-disclaimer-desc">This report provides visibility to the reliable data we have based on teammates' voluntary self-identification but does not reflect the full diversity of our workforce. We're working toward expanded self-identification outside the United States. Additional U.S. data will be available in our 2021 EEO-1 report. More information is also available in the data glossary.</span>
+                  </p>
+                  <p>
+                    <span class="charts-footer-title">Pay Equity summary</span>
+                    <span class="charts-footer-desc">We foster a diverse, collaborative and inclusive environment that empowers employees to do their best. Equal pay for equal work is a foundational element of our approach. We hold ourselves accountable to equal pay for equal work by conducting regular compensation reviews to ensure that employees are compensated equitably throughout their careers - indepent of race, gender or ethnicity. It's the right thing to do and makes us a better, more inclusive, more inclusive and higher-performing company. We're commited to continuing and expanding our analysis globally and doing the work to ensure pay equity at the time of hire and throughout every employee's career.</span>
+                  </p>
+                </div>
+              </div> <!-- end .chart-tabs --> 
             </div>
-            <hr>
-            <div class="charts-footer">
-              <p>
-                <span class="charts-footer-title">Data disclaimer and terms</span>
-                <span class="charts-footer-desc data-disclaimer-desc">This report provides visibility to the reliable data we have based on teammates' voluntary self-identification but does not reflect the full diversity of our workforce. We're working toward expanded self-identification outside the United States. Additional U.S. data will be available in our 2021 EEO-1 report. More information is also available in the data glossary.</span>
-              </p>
-              <p>
-                <span class="charts-footer-title">Pay Equity summary</span>
-                <span class="charts-footer-desc">We foster a diverse, collaborative and inclusive environment that empowers employees to do their best. Equal pay for equal work is a foundational element of our approach. We hold ourselves accountable to equal pay for equal work by conducting regular compensation reviews to ensure that employees are compensated equitably throughout their careers - indepent of race, gender or ethnicity. It's the right thing to do and makes us a better, more inclusive, more inclusive and higher-performing company. We're commited to continuing and expanding our analysis globally and doing the work to ensure pay equity at the time of hire and throughout every employee's career.</span>
-              </p>
-            </div>
-          </div> <!-- end .chart-tabs --> 
+          </div>
         </div>
       </section>
   </body>
