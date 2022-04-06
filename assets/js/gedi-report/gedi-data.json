@@ -1753,11 +1753,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Additional Races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [6.4, 7.0, 14.2, 68.8, 3.6],
-							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"data": [3.6, 6.4, 7.0, 14.2, 68.8],
+							"backgroundColor": [ "#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -2184,7 +2184,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [8.3, 0, 8.3, 83.3, 0],
+							"data": [0, 8.3, 0, 8.3, 83.3],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2246,7 +2246,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [25.0, 0, 5.0,  65.0, 5.0],
+							"data": [5.0, 25.0, 0, 5.0,  65.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2308,7 +2308,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [6.5, 4.0, 8.3, 79.2, 2.0],
+							"data": [2.0, 6.5, 4.0, 8.3, 79.2],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2370,7 +2370,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [6.0, 6.2, 7.9, 77.0, 2.9],
+							"data": [2.9, 6.0, 6.2, 7.9, 77.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2495,7 +2495,7 @@
 						"labels":[["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [4.4, 7.6, 17.6, 67.7, 2.7],
+							"data": [2.7, 4.4, 7.6, 17.6, 67.7],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2558,7 +2558,7 @@
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [7.6, 7.2, 16.6, 64.0, 4.6],
+							"data": [4.6, 7.6, 7.2, 16.6, 64.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2684,7 +2684,7 @@
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [8.3, 9.6, 13.9, 62.8, 5.4],
+							"data": [5.4, 8.3, 9.6, 13.9, 62.8],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
