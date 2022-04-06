@@ -25,6 +25,9 @@ $(document).ready(()=> {
     initRoleLinks('.gender-role-links');
     initRoleLinks('.re-role-links');
 
+    // initialize mobile dropdown
+    initRoleMobileDropdown('.gender-mobile-dropdown');
+    initRoleMobileDropdown('.re-mobile-dropdown');
 });
 
 function initChartPluginService() {
@@ -141,20 +144,18 @@ function initTabs() {
             roles = 'us_overall;intl_overall;us_bca;us_bds;us_bgs';
             rolesArr = roles.split(";");
 
-            var activeTabPaneID = $(this).attr('href');
-            console.log("ACTIVE TAB PANE ID")
-            console.log(activeTabPaneID);
+            const activeCategoryTabPane = document.getElementById(category);
+            const targetYearTabPane = activeCategoryTabPane.querySelector('.tab-pane.active');
+            console.log("TAB PANE FOUND");
+            console.log(targetYearTabPane);
 
             if (category === "gender" || category === "race-ethnicity" || category === "veterans") {
-                const targetTabPane = document.getElementById(category).querySelector('.tab-pane.active');
-                console.log("TAB PANE FOUND");
-                console.log(targetTabPane);
-                targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
-                targetTabPane.querySelector('.role-other-charts').style.display = "none";
+                targetYearTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                targetYearTabPane.querySelector('.role-other-charts').style.display = "none";
 
                 // reset tabs level 2 to category-2021.tab-pane
                 // get first .sub-tabs > li
-                const roleYearTabs = document.getElementById(category).querySelector('.sub-tabs');
+                const roleYearTabs = activeCategoryTabPane.querySelector('.sub-tabs');
                 var defaultYearTabID = roleYearTabs.getAttribute('data-tab-year-default');
 
                 console.log("DEFAULT YEAR TAB ID: " + defaultYearTabID + " TAB SHOW BEGIN");
@@ -163,7 +164,7 @@ function initTabs() {
             }
 
             if (category === "race-ethnicity") {
-                const legendHLAX = document.querySelector(activeTabPaneID).querySelector('.role-legend.legend-hlax');
+                const legendHLAX = activeCategoryTabPane.querySelector('.role-legend.legend-hlax');
 
                 console.log("LEGEND HLAX FOUND");
                 console.log(legendHLAX);
@@ -171,24 +172,49 @@ function initTabs() {
                 legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
             }
 
-            // reset active role links on category tab click
             if (category === "gender" || category === "race-ethnicity") {
+                // reset active role links on category tab click
+                var roleLinksContainerID = activeCategoryTabPane.getAttribute('data-chart-links');
+                const roleLinksContainer = document.getElementById(roleLinksContainerID);
+                
+                if (roleLinksContainer) {
+                    console.log("ROLE LINKS CONTAINER");
+                    console.log(roleLinksContainer);
 
-                const roleLinksContainer = document.querySelector(activeTabPaneID).querySelector('.role-links-container');
-                console.log("ROLE LINKS CONTAINER");
-                console.log(roleLinksContainer);
+                    const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
+                    for (var i = 0; i < roleLinks.length; i++) {
+                        if (i == 0) {
+                            roleLinks[i].classList.add("active");
+                        } else {
+                            roleLinks[i].classList.remove("active");
+                        }
+                    }
+                }
 
-                const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
-                for (var i = 0; i < roleLinks.length; i++) {
-                    if (i == 0) {
-                        roleLinks[i].classList.add("active");
-                    } else {
-                        roleLinks[i].classList.remove("active");
+                var roleDropdownContainerID = activeCategoryTabPane.getAttribute('data-chart-dropdown');
+                const roleDropdownContainer = document.getElementById(roleDropdownContainerID);
+                
+                if (roleDropdownContainer) {
+                    // reset role dropdown
+
+                    // reset role dropdown btn, default value Overall
+                    const roleDropdownBtn = roleDropdownContainer.querySelector('.role-dropdown-btn');
+                    roleDropdownBtn.textContent = "Overall";
+
+                    // reset active drop down items
+                    const roleDropdownItems = roleDropdownContainer.querySelectorAll('.role-dropdown-options .role-dropdown-item');
+                    for (var i = 0; i < roleDropdownItems.length; i++) {
+                        if (i == 0) {
+                            roleDropdownItems[i].classList.add("active");
+                        } else {
+                            roleDropdownItems[i].classList.remove("active");
+                        }
                     }
                 }
             }
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
 
+            // load charts data
             loadCharts(category, year, rolesArr);
 
         } else if (tabLevel == "year") {
@@ -202,21 +228,44 @@ function initTabs() {
 
             const activeCategoryTabPane = document.getElementById(category);
             if (category === "gender" || category === "race-ethnicity") {
-                const roleLinksContainer = activeCategoryTabPane.querySelector('.role-links-container');
-                console.log("ROLE LINKS CONTAINER");
-                console.log(roleLinksContainer);
-
                 // reset active role links on category tab click
-                const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
-                console.log("ROLE LINKS LIST");
-                console.log(roleLinks);
-                for (var i = 0; i < roleLinks.length; i++) {
-                    if (i == 0) {
-                        roleLinks[i].classList.add("active");
-                    } else {
-                        roleLinks[i].classList.remove("active");
+                var roleLinksContainerID = activeCategoryTabPane.getAttribute('data-chart-links');
+                const roleLinksContainer = document.getElementById(roleLinksContainerID);
+                
+                if (roleLinksContainer) {
+                    console.log("ROLE LINKS CONTAINER");
+                    console.log(roleLinksContainer);
+
+                    const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
+                    for (var i = 0; i < roleLinks.length; i++) {
+                        if (i == 0) {
+                            roleLinks[i].classList.add("active");
+                        } else {
+                            roleLinks[i].classList.remove("active");
+                        }
                     }
                 }
+
+                var roleDropdownContainerID = activeCategoryTabPane.getAttribute('data-chart-dropdown');
+                const roleDropdownContainer = document.getElementById(roleDropdownContainerID);
+                
+                if (roleDropdownContainer) {
+                    // reset role dropdown
+
+                    // reset role dropdown btn, default value Overall
+                    const roleDropdownBtn = roleDropdownContainer.querySelector('.role-dropdown-btn');
+                    roleDropdownBtn.textContent = "Overall";
+
+                    // reset active drop down items
+                    const roleDropdownItems = roleDropdownContainer.querySelectorAll('.role-dropdown-options .role-dropdown-item');
+                    for (var i = 0; i < roleDropdownItems.length; i++) {
+                        if (i == 0) {
+                            roleDropdownItems[i].classList.add("active");
+                        } else {
+                            roleDropdownItems[i].classList.remove("active");
+                        }
+                    }
+                }  
             }
 
             year = $(this).data('chart-year');
@@ -251,13 +300,12 @@ function initTabs() {
                 reDisclaimer.textContent = "";
             }
 
-            var activeTabPaneID = $(this).attr('href');
-            const targetTabPane = document.querySelector(activeTabPaneID);
+            const targetYearTabPane = activeCategoryTabPane.querySelector('.tab-pane.active');
             console.log("TAB PANE FOUND");
-            console.log(targetTabPane);
+            console.log(targetYearTabPane);
 
             if (category === "race-ethnicity") {
-                const legendHLAX = targetTabPane.querySelector('.role-legend.legend-hlax');
+                const legendHLAX = activeCategoryTabPane.querySelector('.role-legend.legend-hlax');
 
                 console.log("LEGEND HLAX FOUND");
                 console.log(legendHLAX);
@@ -265,12 +313,11 @@ function initTabs() {
                 legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
             }
 
-            targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
-            targetTabPane.querySelector('.role-other-charts').style.display = "none";
+            targetYearTabPane.querySelector('.role-overall-charts').style.display = "flex";
+            targetYearTabPane.querySelector('.role-other-charts').style.display = "none";
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
             loadCharts(category, year, rolesArr);
         }
-
     });
 }
 
@@ -297,13 +344,15 @@ function initRoleLinks(roleLinksClass) {
             //console.log(roleLinks[i]);
             this.classList.add("active");
             
-            var targetTabListLevel2 = e.target.getAttribute('data-target-tablistlv2');
-            console.log(targetTabListLevel2);
-
+            // get tab level 1 (category)
             const tabListLevel1 = document.getElementById('tabListLevel1');
             var activeTabLevel1 = tabListLevel1.querySelector('li.active a');
             console.log("ACTIVE TAB LEVEL 1")
             console.log(activeTabLevel1);
+
+            // get tab level 2 (year)
+            var targetTabListLevel2 = e.target.getAttribute('data-target-tablistlv2');
+            console.log(targetTabListLevel2);
 
             const tabListLevel2 = document.getElementById(targetTabListLevel2);
             var activeTabLevel2 = tabListLevel2.querySelector('li.active a');
@@ -316,15 +365,14 @@ function initRoleLinks(roleLinksClass) {
             rolesArr = roles.split(";");
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
 
-            var activeTabPaneID = activeTabLevel2.getAttribute('href');
-            console.log(activeTabPaneID);
-            const targetTabPane = document.querySelector(activeTabPaneID);
+            const activeCategoryTabPane = document.getElementById(category);
+            const targetYearTabPane = activeCategoryTabPane.querySelector('.tab-pane.active');
             console.log("TAB PANE FOUND");
-            console.log(targetTabPane);
+            console.log(targetYearTabPane);
 
             const reDisclaimer = document.getElementById('reDisclaimer');
             if (category == "race-ethnicity") {
-                const legendHLAX = targetTabPane.querySelector('.role-legend.legend-hlax');
+                const legendHLAX = targetYearTabPane.querySelector('.role-legend.legend-hlax');
                 console.log("LEGEND HLAX FOUND");
                 console.log(legendHLAX);
                 // reset legend textContent
@@ -350,17 +398,144 @@ function initRoleLinks(roleLinksClass) {
                 reDisclaimer.innerHTML = "";
             }
 
+            console.log("=========================ROLE LINK TO DROPDOWN============================")
+            const roleDropdownContainer = activeCategoryTabPane.querySelector('.role-dropdown-container');
+
+            const roleDropdownBtn = roleDropdownContainer.querySelector('.role-dropdown-btn');
+            roleDropdownBtn.textContent = this.textContent.trim();
+
+            const roleDropdownItems = roleDropdownContainer.querySelectorAll('.role-dropdown-item');
+            console.log(roleDropdownItems);
+            for (var i = 0; i < roleDropdownItems.length; i++) {
+                console.log(roleDropdownItems[i].textContent);
+                console.log(this.textContent);
+                if (roleDropdownItems[i].textContent.trim() === this.textContent.trim()) {
+                    console.log("SAME TEXT CONTENT");
+                    roleDropdownItems[i].classList.add("active");
+                } else {
+                    roleDropdownItems[i].classList.remove("active");
+                }
+            }
+            console.log("==========================END ROLE LINK TO DROPDOWN===========================")
+
             if (roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
-                targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
-                targetTabPane.querySelector('.role-other-charts').style.display = "none";
+                targetYearTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                targetYearTabPane.querySelector('.role-other-charts').style.display = "none";
             } else {
-                targetTabPane.querySelector('.role-overall-charts').style.display = "none";
-                targetTabPane.querySelector('.role-other-charts').style.display = "flex";
+                targetYearTabPane.querySelector('.role-overall-charts').style.display = "none";
+                targetYearTabPane.querySelector('.role-other-charts').style.display = "flex";
             }
 
             loadCharts(category, year, rolesArr);
         });
 
+    }
+}
+
+function initRoleMobileDropdown(roleMobileDropdownClass) {
+
+    const roleMobileDropdownButtons = document.querySelectorAll(roleMobileDropdownClass + ' .role-dropdown-btn');
+    console.log("ROLE MOBILE DROPDOWN BUTTONS");
+    console.log(roleMobileDropdownButtons);
+    for (var i = 0; i < roleMobileDropdownButtons.length; i++) {
+        roleMobileDropdownButtons[i].addEventListener('click', function(e) {
+            e.target.parentElement.nextElementSibling.classList.toggle('show');
+        });
+    }
+
+    const roleMobileDropdownItems = document.querySelectorAll(roleMobileDropdownClass + ' .role-dropdown-options > a');
+    for (var i = 0; i < roleMobileDropdownItems.length; i++) {
+        roleMobileDropdownItems[i].addEventListener('click', function(e){
+            //alert(event.target.textContent);
+            e.preventDefault();
+
+            // change text based on active
+            const roleDropdownBtn = document.querySelector(roleMobileDropdownClass + ' .role-dropdown-btn');
+            roleDropdownBtn.textContent = event.target.textContent;
+
+            // toggle class show
+            e.target.parentElement.classList.toggle('show');
+
+            const currActiveDropdownItem = e.target.parentElement.querySelector('.role-dropdown-item.active');
+            currActiveDropdownItem.classList.remove("active");
+
+            e.target.classList.add("active");
+
+            var targetTabListLevel2 = e.target.getAttribute('data-target-tablistlv2');
+            console.log(targetTabListLevel2);
+
+            const tabListLevel1 = document.getElementById('tabListLevel1');
+            var activeTabLevel1 = tabListLevel1.querySelector('li.active a');
+            console.log("ACTIVE TAB LEVEL 1")
+            console.log(activeTabLevel1);
+
+            const tabListLevel2 = document.getElementById(targetTabListLevel2);
+            var activeTabLevel2 = tabListLevel2.querySelector('li.active a');
+            console.log("ACTIVE TAB LEVEL 2")
+            console.log(activeTabLevel2);
+            
+            category = activeTabLevel1.getAttribute('data-chart-category');
+            year = activeTabLevel2.getAttribute('data-chart-year');
+            roles = e.target.getAttribute('data-chart-roles');
+            rolesArr = roles.split(";");
+            console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
+
+
+            const activeCategoryTabPane = document.getElementById(category);
+            const targetYearTabPane = activeCategoryTabPane.querySelector('.tab-pane.active');
+            console.log("TAB PANE FOUND");
+            console.log(targetYearTabPane);
+
+            const reDisclaimer = document.getElementById('reDisclaimer');
+            if (category == "race-ethnicity") {
+                const legendHLAX = targetYearTabPane.querySelector('.role-legend.legend-hlax');
+                console.log("LEGEND HLAX FOUND");
+                console.log(legendHLAX);
+                // reset legend textContent
+                legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
+                
+                if (roles === "executive_council") {
+                    legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x*";
+                } 
+
+                if (year === "2020"  && roles != "executive_council") {
+                    // show reOverallDisclaimer20
+                    reDisclaimer.innerHTML = "** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.";
+                } else if (roles === "executive_council") {
+                    var disclaimerExecutiveCouncil = '<span style="display: block;">* Executive Council race and ethnicity data reflects U.S. leaders only. Susan Doniz, chief information officer and senior vice president of Information Technology & Data Analytics, based in Canada, identifies as Hispanic.</span>';
+                    if (year === "2020") {
+                        disclaimerExecutiveCouncil += '<span style="display: block;">** In our 2021 Global Equity, Diversity & Inclusion Report, we aggregated Native American, Pacific Islander, and two or more races as “Additional Races.” Based on team member feedback, we’re reporting each group in this year’s report.</span>';
+                    }
+                    reDisclaimer.innerHTML = disclaimerExecutiveCouncil;
+                } else {
+                    reDisclaimer.innerHTML = "";
+                }
+            } else {
+                reDisclaimer.innerHTML = "";
+            }
+
+            console.log("=======================ROLE LINKS TO DROPDOWN=================");
+            const roleLinksContainer = activeCategoryTabPane.querySelector('.role-links-container');
+            const roleLinks = roleLinksContainer.querySelectorAll('.role-links');
+            for (var i = 0; i < roleLinks.length; i++) {
+                if(roleLinks[i].textContent.trim() === this.textContent.trim()){
+                    roleLinks[i].classList.add("active");
+                } else {
+                    roleLinks[i].classList.remove("active");
+                }
+            }
+            console.log("=====================END ROLE LINKS TO DROPDOWN=================");
+
+            if (roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
+                targetYearTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                targetYearTabPane.querySelector('.role-other-charts').style.display = "none";
+            } else {
+                targetYearTabPane.querySelector('.role-overall-charts').style.display = "none";
+                targetYearTabPane.querySelector('.role-other-charts').style.display = "flex";
+            }
+
+            loadCharts(category, year, rolesArr);           
+        });
     }
 }
 
