@@ -1,6 +1,6 @@
 /* TEMP - TO REMOVE */
 .charts-tabs {
-    width: 905px;
+    max-width: 905px;
 }
 /* General */
 
@@ -20,12 +20,13 @@
     flex-direction: row;
     padding-top: 2rem;
     min-height: 484px;
+    justify-content: space-between;
 }
 
-.role-overall-charts .role-overall-doughnuts-container,
+/*.role-overall-charts .role-overall-doughnuts-container,
 .role-overall-charts .role-overall-stacked-container {
     width: 50%;
-}
+}*/
 
 .role-overall-doughnut-item .role-overall-doughnut-wrapper {
     display: flex;
@@ -364,10 +365,303 @@ p.role-other-charts-nodata {
     background-color: #CCE981;
 }
 
+@media only screen and (max-width: 600px) {
+    .role-overall-charts {
+        flex-direction: column;
+    }
+
+    .role-overall-doughnuts-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media only screen  and (min-width: 668px) {
 
     .nav-tabs.sub-tabs li {
         width: unset;
     }
 
+}
+
+/**
+* GEDI Custom Tooltips - Gender
+*/
+
+#genderUSBCA21Women {
+    left: 0px;
+}
+
+#genderUSBCA21Men {
+    left: 80px;
+}
+
+#genderUSBDS21Women {
+    left: 0px;
+}
+
+#genderUSBDS21Men {
+    left: 96px;
+}
+
+#genderUSBGS21Women {
+    left: 0px;
+}
+
+#genderUSBGS21Men {
+    left: 103px;
+}
+
+#genderUSBCA20Women {
+    left: 0px;
+}
+
+#genderUSBCA20Men {
+    left: 75px;
+}
+
+#genderUSBDS20Women {
+    left: 0px;
+}
+
+#genderUSBDS20Men {
+    left: 98px;
+}
+
+#genderUSBGS20Women {
+    left: 0px;
+}
+
+#genderUSBGS20Men {
+    left: 98px;
+}
+
+/**
+* GEDI Custom Tooltips -  Race Ethnicity
+*/
+
+/* 2021 US BCA RE */
+#reUSBCA21PacificIslander {
+    left: 0px;
+}
+
+#reUSBCA21NativeAmerican {
+    left: 8px;
+}
+
+#reUSBCA21TwoOrMore {
+    left: 15px;
+}
+
+#reUSBCA21Black {
+    left: 23px;
+}
+
+#reUSBCA21HLAX {
+    left: 50px;
+}
+
+#reUSBCA21Asian {
+    left: 72px;
+}
+
+#reUSBCA21White {
+    left: 153px;
+}
+
+/* 2021 US BDS RE */
+#reUSBDS21PacificIslander {
+    left: 0px;
+}
+
+#reUSBDS21NativeAmerican {
+    left: 3px;
+}
+
+#reUSBDS21TwoOrMore {
+    left: 7px;
+}
+
+#reUSBDS21Black {
+    left: 14px;
+}
+
+#reUSBDS21HLAX {
+    left: 52px;
+}
+
+#reUSBDS21Asian {
+    left: 86px;
+}
+
+#reUSBDS21White {
+    left: 107px;
+}
+
+/* 2021 US BGS RE */
+#reUSBGS21PacificIslander {
+    left: 0px;
+}
+
+#reUSBGS21NativeAmerican {
+    left: 3px;
+}
+
+#reUSBGS21TwoOrMore {
+    left: 7px;
+}
+
+#reUSBGS21Black {
+    left: 15px;
+}
+
+#reUSBGS21HLAX {
+    left: 50px;
+}
+
+#reUSBGS21Asian {
+    left: 113px;
+}
+
+#reUSBGS21White {
+    left: 146px;
+}
+
+/* 2020 US BCA RE */
+#reUSBCA20PacificIslander {
+    left: 0px;
+}
+
+#reUSBCA20NativeAmerican {
+    left: 8px;
+}
+
+#reUSBCA20TwoOrMore {
+    left: 12px;
+}
+
+#reUSBCA20Black {
+    left: 21px;
+}
+
+#reUSBCA20HLAX {
+    left: 49px;
+}
+
+#reUSBCA20Asian {
+    left: 70px;
+}
+
+#reUSBCA20White {
+    left: 146px;
+}
+
+/* 2020 US BDS RE */
+#reUSBDS20PacificIslander {
+    left: 0px;
+}
+
+#reUSBDS20NativeAmerican {
+    left: 3px;
+}
+
+#reUSBDS20TwoOrMore {
+    left: 8px;
+}
+
+#reUSBDS20Black {
+    left: 12px;
+}
+
+#reUSBDS20HLAX {
+    left: 49px;
+}
+
+#reUSBDS20Asian {
+    left: 80px;
+}
+
+#reUSBDS20White {
+    left: 100px;
+}
+
+/* 2020 US BGS RE */
+#reUSBGS20PacificIslander {
+    left: 0px;
+}
+
+#reUSBGS20NativeAmerican {
+    left: 3px;
+}
+
+#reUSBGS20TwoOrMore {
+    left: 9px;
+}
+
+#reUSBGS20Black {
+    left: 15px;
+}
+
+#reUSBGS20HLAX {
+    left: 49px;
+}
+
+#reUSBGS20Asian {
+    left: 113px;
+}
+
+#reUSBGS20White {
+    left: 144px;
+}
+
+/**
+* GEDI Custom Tooltips - Veterans
+*/
+#veUSBCA21Veterans {
+    left: 0px;
+}
+
+#veUSBCA21Others {
+    left: 61px;
+}
+
+#veUSBDS21Veterans {
+    left: 0px;
+}
+
+#veUSBDS21Others {
+    left: 77px;
+}
+
+#veUSBGS21Veterans {
+    left: 0px;
+}
+
+#veUSBGS21Others {
+    left: 113px;
+}
+
+#veUSBCA20Veterans {
+    left: 0px;
+}
+
+#veUSBCA20Others {
+    left: 65px;
+}
+
+#veUSBDS20Veterans {
+    left: 0px;
+}
+
+#veUSBDS20Others {
+    left: 77px;
+}
+
+#veUSBGS20Veterans {
+    left: 0px;
+}
+
+#veUSBGS20Others {
+    left: 141px;
 }
