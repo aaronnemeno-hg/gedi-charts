@@ -442,7 +442,7 @@
                                     <p id="reChartsDisclaimer21"></p>
                                   </div>
                                 </div>
-
+                                </div>
                             </div>
                             <div class="tab-pane" id="race-ethnicity-2020">
                               <div class="row">
@@ -540,7 +540,6 @@
                                 </div>
 
                               </div>
-                              
                             </div>
                           </div>
                         </div>
@@ -627,14 +626,16 @@
                           </ul>
                           <div class="tab-content">
                             <div class="tab-pane active" id="veterans-2021">
-                              <div class="role-legend-container">
-                                <div class="role-legend legend-veterans"></div>
-                                <p class="role-legend-text">Veterans</p>
-                                <div class="role-legend legend-others"></div>
-                                <p class="role-legend-text">Others</p>
-                              </div>
-                              <div class="role-overall-charts">
-                                <div class="role-overall-doughnuts-container">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-veterans"></div>
+                                    <p class="role-legend-text">Veterans</p>
+                                    <div class="role-legend legend-others"></div>
+                                    <p class="role-legend-text">Others</p>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
                                   <div class="role-overall-doughnut-item">
                                     <h3>U.S. Overall</h3>
                                     <div class="role-overall-doughnut-wrapper">
@@ -643,57 +644,66 @@
                                       </div> 
                                     </div>
                                   </div>
-                                </div> <!-- end of .role-overall-doughnuts-container -->
-                                <div class="role-overall-stacked-container">
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Commercial Airplanes</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBCA21Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBCA21Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                        <canvas id="veUSBCA21" width="400" height="50"></canvas>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                  <div class="role-overall-stacked-container">
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBCA21Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBCA21Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="veUSBCA21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Defense, Space and Security</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBDS21Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBDS21Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                        <canvas id="veUSBDS21" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBDS21Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBDS21Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="veUSBDS21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Global Services</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBGS21Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBGS21Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                        <canvas id="veUSBGS21" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBGS21Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBGS21Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="veUSBGS21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts">
+                                    <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
+                                  </div>                    
+        
+                                  <div class="role-charts-disclaimer">
+                                    <p id="veChartsDisclaimer21"></p>
                                   </div>
-                                </div> <!-- end .role-overall-stacked-container -->
+                                </div>
                               </div>
-                              <div class="role-other-charts">
-                                <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
-                              </div>                    
-    
-                              <div class="role-charts-disclaimer">
-                                <p id="veChartsDisclaimer21"></p>
-                              </div>
+                              
                             </div>
                             <div class="tab-pane" id="veterans-2020">
-                              <div class="role-legend-container">
-                                <div class="role-legend legend-veterans"></div>
-                                <p class="role-legend-text">Veterans</p>
-                                <div class="role-legend legend-others"></div>
-                                <p class="role-legend-text">Others</p>
-                              </div>
-                              <div class="role-overall-charts">
-                                <div class="role-overall-doughnuts-container">
+                              <div class="row">
+                                <div class="col-md-12">
+
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-veterans"></div>
+                                    <p class="role-legend-text">Veterans</p>
+                                    <div class="role-legend legend-others"></div>
+                                    <p class="role-legend-text">Others</p>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
                                   <div class="role-overall-doughnut-item">
                                     <h3>U.S. Overall</h3>
                                     <div class="role-overall-doughnut-wrapper">
@@ -702,47 +712,52 @@
                                       </div> 
                                     </div>
                                   </div>
-                                </div> <!-- end of .role-overall-doughnuts-container -->
-                                <div class="role-overall-stacked-container">
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Commercial Airplanes</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBCA20Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBCA20Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                        <canvas id="veUSBCA20" width="400" height="50"></canvas>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="role-overall-stacked-container">
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBCA20Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBCA20Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="veUSBCA20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Defense, Space and Security</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBDS20Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBDS20Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                        <canvas id="veUSBDS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBDS20Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBDS20Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="veUSBDS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Global Services</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="veUSBGS20Veterans" class="role-overall-stacked-tooltip"></p>
-                                      <p id="veUSBGS20Others" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                        <canvas id="veUSBGS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="veUSBGS20Veterans" class="role-overall-stacked-tooltip"></p>
+                                        <p id="veUSBGS20Others" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="veUSBGS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts">
+                                    <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
                                   </div>
-                                </div> <!-- end .role-overall-stacked-container -->
+        
+                                  <div class="role-charts-disclaimer">
+                                    <p id="veChartsDisclaimer20"></p>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="role-other-charts">
-                                <!--<canvas id="veBarGraph21" width="400" height="200"></canvas>-->
-                              </div>
-    
-                              <div class="role-charts-disclaimer">
-                                <p id="veChartsDisclaimer20"></p>
-                              </div>
+                             
                             </div>
                           </div>
                         </div>
