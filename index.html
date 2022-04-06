@@ -352,24 +352,27 @@
                           </ul>
                           <div class="tab-content">
                             <div class="tab-pane active" id="race-ethnicity-2021">
-                              <div class="role-legend-container">
-                                <div class="role-legend legend-pacific-islander"></div>
-                                <p class="role-legend-text">Pacific Islander</p>
-                                <div class="role-legend legend-native-american"></div>
-                                <p class="role-legend-text">Native American</p>
-                                <div class="role-legend legend-2-or-more"></div>
-                                <p class="role-legend-text">2 or more races</p>
-                                <div class="role-legend legend-black"></div>
-                                <p class="role-legend-text">Black</p>
-                                <div class="role-legend legend-hlax"></div>
-                                <p class="role-legend-text">Hispanic/Latino/a/x</p>
-                                <div class="role-legend legend-asian"></div>
-                                <p class="role-legend-text">Asian</p>
-                                <div class="role-legend legend-white"></div>
-                                <p class="role-legend-text">White</p>
-                              </div>
-                              <div class="role-overall-charts">
-                                <div class="role-overall-doughnuts-container">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-pacific-islander"></div>
+                                    <p class="role-legend-text">Pacific Islander</p>
+                                    <div class="role-legend legend-native-american"></div>
+                                    <p class="role-legend-text">Native American</p>
+                                    <div class="role-legend legend-2-or-more"></div>
+                                    <p class="role-legend-text">2 or more races</p>
+                                    <div class="role-legend legend-black"></div>
+                                    <p class="role-legend-text">Black</p>
+                                    <div class="role-legend legend-hlax"></div>
+                                    <p class="role-legend-text">Hispanic/Latino/a/x</p>
+                                    <div class="role-legend legend-asian"></div>
+                                    <p class="role-legend-text">Asian</p>
+                                    <div class="role-legend legend-white"></div>
+                                    <p class="role-legend-text">White</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
                                   <div class="role-overall-doughnut-item">
                                     <h3>U.S. Overall</h3>
                                     <div class="role-overall-doughnut-wrapper">
@@ -378,85 +381,92 @@
                                       </div> 
                                     </div>
                                   </div>
-                                </div> <!-- end of .role-overall-doughnuts-container -->
-                                <div class="role-overall-stacked-container">
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Commercial Airplanes</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBCA21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA21White" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                        <canvas id="reUSBCA21" width="400" height="50"></canvas>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="role-overall-stacked-container">
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBCA21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA21White" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="reUSBCA21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Defense, Space and Security</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBDS21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS21White" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                        <canvas id="reUSBDS21" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBDS21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS21White" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="reUSBDS21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Global Services</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBGS21PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS21White" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                        <canvas id="reUSBGS21" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBGS21PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS21White" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="reUSBGS21" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts">
+                                    <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                    <canvas id="reBarGraph21" width="400" height="200"></canvas>
                                   </div>
-                                </div> <!-- end .role-overall-stacked-container -->
-                              </div>
-                              <div class="role-other-charts">
-                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                                <canvas id="reBarGraph21" width="400" height="200"></canvas>
-                              </div>
-    
-                              <div class="role-charts-disclaimer">
-                                <p id="reChartsDisclaimer21"></p>
-                              </div>
+        
+                                  <div class="role-charts-disclaimer">
+                                    <p id="reChartsDisclaimer21"></p>
+                                  </div>
+                                </div>
+
                             </div>
                             <div class="tab-pane" id="race-ethnicity-2020">
-                              <div class="role-legend-container">
-                                <div class="role-legend legend-addtl-races"></div>
-                                <p class="role-legend-text">Additional Races**</p>
-                                <div class="role-legend legend-pacific-islander"></div>
-                                <p class="role-legend-text">Pacific Islander</p>
-                                <div class="role-legend legend-native-american"></div>
-                                <p class="role-legend-text">Native American</p>
-                                <div class="role-legend legend-2-or-more"></div>
-                                <p class="role-legend-text">2 or more races</p>
-                                <div class="role-legend legend-black"></div>
-                                <p class="role-legend-text">Black</p>
-                                <div class="role-legend legend-hlax"></div>
-                                <p class="role-legend-text">Hispanic/Latino/a/x</p>
-                                <div class="role-legend legend-asian"></div>
-                                <p class="role-legend-text">Asian</p>
-                                <div class="role-legend legend-white"></div>
-                                <p class="role-legend-text">White</p>
-                              </div>
-                              <div class="role-overall-charts">
-                                <div class="role-overall-doughnuts-container">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-addtl-races"></div>
+                                    <p class="role-legend-text">Additional Races**</p>
+                                    <div class="role-legend legend-pacific-islander"></div>
+                                    <p class="role-legend-text">Pacific Islander</p>
+                                    <div class="role-legend legend-native-american"></div>
+                                    <p class="role-legend-text">Native American</p>
+                                    <div class="role-legend legend-2-or-more"></div>
+                                    <p class="role-legend-text">2 or more races</p>
+                                    <div class="role-legend legend-black"></div>
+                                    <p class="role-legend-text">Black</p>
+                                    <div class="role-legend legend-hlax"></div>
+                                    <p class="role-legend-text">Hispanic/Latino/a/x</p>
+                                    <div class="role-legend legend-asian"></div>
+                                    <p class="role-legend-text">Asian</p>
+                                    <div class="role-legend legend-white"></div>
+                                    <p class="role-legend-text">White</p>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
                                   <div class="role-overall-doughnut-item">
                                     <h3>U.S. Overall</h3>
                                     <div class="role-overall-doughnut-wrapper">
@@ -465,61 +475,65 @@
                                       </div> 
                                     </div>
                                   </div>
-                                </div> <!-- end of .role-overall-doughnuts-container -->
-                                <div class="role-overall-stacked-container">
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Commercial Airplanes</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBCA20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBCA20White" class="role-overall-stacked-tooltip"></p>                                  
-                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                        <canvas id="reUSBCA20" width="400" height="50"></canvas>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="role-overall-stacked-container">
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBCA20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBCA20White" class="role-overall-stacked-tooltip"></p>                                  
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="reUSBCA20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Defense, Space and Security</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBDS20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBDS20White" class="role-overall-stacked-tooltip"></p> 
-                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                        <canvas id="reUSBDS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBDS20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBDS20White" class="role-overall-stacked-tooltip"></p> 
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="reUSBDS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Global Services</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="reUSBGS20PacificIslander" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20Black" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20HLAX" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20Asian" class="role-overall-stacked-tooltip"></p>
-                                      <p id="reUSBGS20White" class="role-overall-stacked-tooltip"></p> 
-                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                        <canvas id="reUSBGS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="reUSBGS20PacificIslander" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20NativeAmerican" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20TwoOrMore" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20Black" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20HLAX" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20Asian" class="role-overall-stacked-tooltip"></p>
+                                        <p id="reUSBGS20White" class="role-overall-stacked-tooltip"></p> 
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="reUSBGS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts">
+                                    <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                    <canvas id="reBarGraph20" width="400" height="200"></canvas>
                                   </div>
-                                </div> <!-- end .role-overall-stacked-container -->
-                              </div>                      
-                              <div class="role-other-charts">
-                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                                <canvas id="reBarGraph20" width="400" height="200"></canvas>
-                              </div>
-                              <div class="role-charts-disclaimer">
-                                <p id="reChartsDisclaimer20"></p>
+                                  <div class="role-charts-disclaimer">
+                                    <p id="reChartsDisclaimer20"></p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>

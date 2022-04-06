@@ -149,7 +149,7 @@ function initTabs() {
                 const targetTabPane = document.getElementById(category).querySelector('.tab-pane.active');
                 console.log("TAB PANE FOUND");
                 console.log(targetTabPane);
-                targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                // targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
                 targetTabPane.querySelector('.role-other-charts').style.display = "none";
 
                 // reset tabs level 2 to category-2021.tab-pane
