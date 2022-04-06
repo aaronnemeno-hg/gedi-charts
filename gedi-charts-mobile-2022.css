@@ -4,7 +4,6 @@
 
 .role-dropdown-container {
     display: none;
-    max-width: 375px;
 }
 
 .role-dropdown-btn-container {
@@ -33,9 +32,9 @@
 
 .role-dropdown-options {
     display: none;
-    min-width: 375px;
     position: absolute;
     z-index: 1;
+    width: calc(100% - 5px);
 }
 
 .role-dropdown-item {
@@ -69,6 +68,7 @@
 @media only screen and (max-width: 768px) {
     .role-dropdown-container {
         display: block;
+        position: relative;
     }
 
     .role-links-container {
