@@ -139,92 +139,108 @@
                                     </div>
                                   </div> <!-- end .role-overall-stacked-container -->
                                 </div>
-                              </div>
-    
-                              <div class="role-other-charts" style="display: none;">
-                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                                <canvas id="genderBarGraph21" width="400" height="200"></canvas>
-                              </div>
-                              <div class="role-charts-disclaimer">
-                                <p id="genderChartsDisclaimer21"></p>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts" style="display: none;">
+                                    <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                    <canvas id="genderBarGraph21" width="400" height="200"></canvas>
+                                  </div>
+                                  <div class="role-charts-disclaimer">
+                                    <p id="genderChartsDisclaimer21"></p>
+                                  </div>
+                                </div>
                               </div>
                             </div> <!-- .end #gender-2021 -->
     
                             <div class="tab-pane" id="gender-2020">
-                              <div class="role-legend-container">
-                                <div class="role-legend legend-women"></div>
-                                <p class="role-legend-text">Women</p>
-                                <div class="role-legend legend-men"></div>
-                                <p class="role-legend-text">Men</p>
-                              </div>
-                              <div class="role-overall-charts">
-                                <div class="role-overall-doughnuts-container">
-    
-                                  <div class="role-overall-doughnut-item">
-                                    <h3>U.S. Overall</h3>
-                                    <div class="role-overall-doughnut-wrapper">
-                                      <div class="role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                        <canvas id="genderUSOverall20" width="140" height="140"></canvas>
-                                      </div>
-                                      <div class="role-overall-doughnut-desc">
-                                        <p><span>22.9%</span><span>Women</span></p>
+                              <div class="row ">
+                                <div class="col-md-12">
+                                  <div class="role-legend-container">
+                                    <div class="role-legend legend-women"></div>
+                                    <p class="role-legend-text">Women</p>
+                                    <div class="role-legend legend-men"></div>
+                                    <p class="role-legend-text">Men</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="row role-overall-doughnut-item">
+                                    <div class="col-md-12">
+                                      <h3>U.S. Overall</h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="row row-no-gutters role-overall-doughnut-wrapper">
+                                        <div class="col-xs-4 role-us-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                          <canvas id="genderUSOverall20" width="140" height="140"></canvas>
+                                        </div>
+                                        <div class="col-xs-4 role-overall-doughnut-desc">
+                                          <p><span>22.9%</span><span>Women</span></p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-    
-                                  <div class="role-overall-doughnut-item">
-                                    <h3>International Overall</h3>
-                                    <div class="role-overall-doughnut-wrapper">
-                                      <div class="role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
-                                        <canvas id="genderIntlOverall20" width="140" height="140"></canvas>
-                                      </div>
-                                      <div class="role-overall-doughnut-desc">
-                                        <p><span>24.3%</span><span>Women</span></p>
+
+                                  <div class="row role-overall-doughnut-item">
+                                    <div class="col-md-12">
+                                      <h3>International Overall</h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="row row-no-gutters role-overall-doughnut-wrapper">
+                                        <div class="col-xs-4 role-intl-overall-doughnut" style="max-height: 150px; max-width: 150px;">
+                                          <canvas id="genderIntlOverall20" width="140" height="140"></canvas>
+                                        </div>
+                                        <div class="col-xs-4 role-overall-doughnut-desc">
+                                          <p><span>24.3%</span><span>Women</span></p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div> <!-- end .role-overall-doughnuts-container -->
-    
-                                <div class="role-overall-stacked-container">
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Commercial Airplanes</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="genderUSBCA20Women" class="role-overall-stacked-tooltip"></p>
-                                      <p id="genderUSBCA20Men" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bca" style="max-width: 500px;">
-                                        <canvas id="genderUSBCA20" width="400" height="50"></canvas>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                  <div class="role-overall-stacked-container">
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Commercial Airplanes</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBCA20Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBCA20Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bca" style="max-width: 500px;">
+                                          <canvas id="genderUSBCA20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Defense, Space and Security</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="genderUSBDS20Women" class="role-overall-stacked-tooltip"></p>
-                                      <p id="genderUSBDS20Men" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bds" style="max-width: 500px;">
-                                        <canvas id="genderUSBDS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Defense, Space and Security</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBDS20Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBDS20Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bds" style="max-width: 500px;">
+                                          <canvas id="genderUSBDS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="role-overall-stacked-item">
-                                    <h3>U.S. Boeing Global Services</h3>
-                                    <div class="role-overall-stacked-wrapper">
-                                      <p id="genderUSBGS20Women" class="role-overall-stacked-tooltip"></p>
-                                      <p id="genderUSBGS20Men" class="role-overall-stacked-tooltip"></p>
-                                      <div class="role-overall-stacked-bgs" style="max-width: 500px;">
-                                        <canvas id="genderUSBGS20" width="400" height="50"></canvas>
+                                    <div class="role-overall-stacked-item">
+                                      <h3>U.S. Boeing Global Services</h3>
+                                      <div class="role-overall-stacked-wrapper">
+                                        <p id="genderUSBGS20Women" class="role-overall-stacked-tooltip"></p>
+                                        <p id="genderUSBGS20Men" class="role-overall-stacked-tooltip"></p>
+                                        <div class="role-overall-stacked-bgs" style="max-width: 500px;">
+                                          <canvas id="genderUSBGS20" width="400" height="50"></canvas>
+                                        </div>
                                       </div>
                                     </div>
+                                  </div> <!-- end .role-overall-stacked-container -->
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="role-other-charts">
+                                    <p class="role-other-charts-nodata" style="display: none;">N/A</p>
+                                    <canvas id="genderBarGraph20" width="400" height="200"></canvas>
                                   </div>
-                                </div> <!-- end .role-overall-stacked-container -->
-                              </div>
-    
-                              <div class="role-other-charts">
-                                <p class="role-other-charts-nodata" style="display: none;">N/A</p>
-                                <canvas id="genderBarGraph20" width="400" height="200"></canvas>
-                              </div>
-                              <div class="role-charts-disclaimer">
-                                <p id="genderChartsDisclaimer20"></p>
+                                  <div class="role-charts-disclaimer">
+                                    <p id="genderChartsDisclaimer20"></p>
+                                  </div>
+                                </div>
                               </div>
                             </div> <!-- end #gender-2020 -->
                           </div>

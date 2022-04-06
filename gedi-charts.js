@@ -265,7 +265,7 @@ function initTabs() {
                 legendHLAX.nextElementSibling.textContent = "Hispanic/Latino/a/x";
             }
 
-            targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
+            // targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
             targetTabPane.querySelector('.role-other-charts').style.display = "none";
             console.log(`category-in-use: ${category} year-in-use: ${year} roles-in-use: ${roles}`);
             loadCharts(category, year, rolesArr);
