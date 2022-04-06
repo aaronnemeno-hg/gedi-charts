@@ -351,10 +351,10 @@ function initRoleLinks(roleLinksClass) {
             }
 
             if (roles === "us_overall;intl_overall;us_bca;us_bds;us_bgs") {
-                targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
+                // targetTabPane.querySelector('.role-overall-charts').style.display = "flex";
                 targetTabPane.querySelector('.role-other-charts').style.display = "none";
             } else {
-                targetTabPane.querySelector('.role-overall-charts').style.display = "none";
+                // targetTabPane.querySelector('.role-overall-charts').style.display = "none";
                 targetTabPane.querySelector('.role-other-charts').style.display = "flex";
             }
 
