@@ -35,6 +35,16 @@
     padding: 1rem 0;
 }
 
+@media only screen and (max-width: 750px){
+    .role-overall-doughnut-item .role-overall-doughnut-wrapper {
+        justify-content: center;
+    }
+
+    .role-overall-doughnut-item .role-overall-doughnut-wrapper.role-overall-doughnut-wrapper-no-label {
+        justify-content: space-between;
+    }
+}
+
 .role-overall-doughnut-item h3,
 .role-overall-stacked-item h3 {
     padding-top: .7rem;
