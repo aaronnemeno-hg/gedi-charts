@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="tabs.css" />
     <link rel="stylesheet" href="gedi-report-2022.css" />
     <link rel="stylesheet" href="gedi-charts-2022.css" />
+    <link rel="stylesheet" href="gedi-charts-mobile-2022.css" />
 
     <script src="assets/vendor/jquery/dist/jquery-1.11.1.min.js"></script>
     <!--<script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>-->
@@ -48,7 +49,7 @@
                   </ul>
                   <div class="tab-content">
                     <!-- Gender Content -->
-                    <div class="tab-pane active" id="gender">
+                    <div class="tab-pane active" id="gender" data-chart-links="genderRoleLinks" data-chart-dropdown="genderRoleDropdown">
                       <div class="">
                         <p>Women’s representation in our workforce increased to 23.2% in the United States and 24.6% internationally, both because of hiring efforts and stronger retention. In 2021, women left the company at a lower rate than men for the first time in decades. Although our gender representation is on par with the aerospace and defense industry, we’re accelerating our investments in the early science, technology, engineering and math (STEM) pipeline to help strengthen diverse representation. In 2021, Boeing engaged with an estimated 2.7 million young women and girls through various STEM programs.</p>
                         <div class="tabs tabs-bottom tabs-center tabs-simple">
@@ -60,6 +61,74 @@
                               <a href="#gender-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
                             </li>
                           </ul>
+                          <div id="genderRoleDropdown" class="role-dropdown-container gender-mobile-dropdown">
+                            <div class="role-dropdown-btn-container">
+                              <img class="role-dropdown-arrow" src="assets/icons/arrow_down_custom.png" alt="">
+                              <button class="role-dropdown-btn">Overall</button>
+                            </div>
+                            <div class="role-dropdown-options">
+                              <a class="role-dropdown-item gender-role-dropdown active"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
+                                 Overall
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="board_of_directors">
+                                Board of Directors
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="executive_council">
+                                 Executive Council
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="executives">
+                                Executives
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="managers">
+                                Managers
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="individual_contributors">
+                                 Individual Contributors
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                  href="#"
+                                  data-target-tablistlv2="tabListLevel2Gender"
+                                  data-chart-roles="engineering">
+                                Engineering
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="production_and_maintenance">
+                                 Production & Maintenance
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="promotions">
+                                Promotions
+                              </a>
+                              <a class="role-dropdown-item gender-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2Gender"
+                                 data-chart-roles="hires">
+                                Hires
+                              </a>
+                            </div>
+                          </div>
                           <div class="tab-content">
                             <div class="tab-pane active" id="gender-2021">
                               <div class="row">
@@ -246,7 +315,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="role-links-container">
+                      <div id="genderRoleLinks" class="role-links-container">
                         <div class="role-links-wrapper">
                           <a href="#" 
                               class="role-links active gender-role-links" 
@@ -329,16 +398,15 @@
                                 <!--<span class="role-gender-woc-change">(+0.6pts)</span>-->
                               </p>
                             </div>
-                          </div>
-                          <div class="role-gender-woc-message">
-                            <p>We’re proud of our diverse women leaders and the innovation they bring to Boeing. Women of color are more represented overall and in the executive levels compared with last year, though we know there’s still much work to do. Leanne Caret, president and CEO of Boeing Defense, Space & Security and executive champion of the Boeing Women Inspiring Leadership (BWIL) Business Resource Group, has for the past few years held Executive Women of Color Connect Circles to support and champion Boeing’s most senior women of color. Efforts such as this help foster connection and sponsorship, enabling Boeing to hire and retain more women of color.</p>
+                            <div class="role-gender-woc-message">
+                              <p>We’re proud of our diverse women leaders and the innovation they bring to Boeing. Women of color are more represented overall and in the executive levels compared with last year, though we know there’s still much work to do. Leanne Caret, president and CEO of Boeing Defense, Space & Security and executive champion of the Boeing Women Inspiring Leadership (BWIL) Business Resource Group, has for the past few years held Executive Women of Color Connect Circles to support and champion Boeing’s most senior women of color. Efforts such as this help foster connection and sponsorship, enabling Boeing to hire and retain more women of color.</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div> <!-- end #gender -->
-    
+                      </div> <!-- end #gender -->
+                    </div>
                     <!-- Race & Ethnicity Content -->
-                    <div class="tab-pane" id="race-ethnicity">
+                    <div class="tab-pane" id="race-ethnicity" data-chart-links="reRoleLinks" data-chart-dropdown="reRoleDropdown">
                       <div class="">
                         <p>In our U.S. workforce, overall racial and ethnic minority representation increased to 32.7%, 3 points above average for the aerospace and defense industry. In 2021, racial and ethnic minorities accounted for 42.5% of our U.S. hires, compared with 37.2% in 2020.  Our racial equity aspirations, Racial Equity Task Force, Business Resource Groups and Inclusion Ambassadors continue to inform our efforts, including the enterprise rollout of bias mitigation training and guidance on inclusive interview teams. In 2021, we provided $3.4 million in grants to support historically Black colleges and universities through scholarships, student programs, curriculum, Thurgood Marshall College Fund programs, and more, and we’ve invested $30 million in organizations focused on racial equity and social justice since 2020.</p>
                         <div class="tabs-bottom tabs-center tabs-simple">
@@ -350,6 +418,74 @@
                               <a href="#race-ethnicity-2020" data-chart-level="year" data-chart-year="2020" data-toggle="tab"><span>2020</span></a>
                             </li>
                           </ul>
+                          <div id="reRoleDropdown" class="role-dropdown-container re-mobile-dropdown">
+                            <div class="role-dropdown-btn-container">
+                              <img class="role-dropdown-arrow" src="assets/icons/arrow_down_custom.png" alt="">
+                              <button class="role-dropdown-btn">Overall</button>
+                            </div>
+                            <div class="role-dropdown-options">
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown active"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="us_overall;intl_overall;us_bca;us_bds;us_bgs">
+                                Overall
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="board_of_directors">
+                                Board of Directors
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="executive_council">
+                                Executive Council
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="executives">
+                                Executives
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="managers">
+                                Managers
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="individual_contributors">
+                                Individual Contributors
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="engineering">
+                                Engineering
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="production_and_maintenance">
+                                Production & Maintenance
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="promotions">
+                                Promotions
+                              </a>
+                              <a class="role-dropdown-item race-ethnicity-role-dropdown"
+                                 href="#"
+                                 data-target-tablistlv2="tabListLevel2RaceEthnicity"
+                                 data-chart-roles="hires">
+                                Hires
+                              </a>
+                            </div>
+                          </div>
                           <div class="tab-content">
                             <div class="tab-pane active" id="race-ethnicity-2021">
                               <div class="row">
@@ -544,7 +680,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="role-links-container">
+                      <div id="reRoleLinks" class="role-links-container">
                         <div class="role-links-wrapper">
                           <a href="#" 
                               class="role-links re-role-links active" 
@@ -794,9 +930,6 @@
                   </p>
                 </div>
               </div> <!-- end .chart-tabs --> 
-            </div>
-          </div>
-        </div>
       </section>
   </body>
 </html>

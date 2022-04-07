@@ -116,16 +116,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBCA20Tooltip",
-								"adjustments": [{
-									"id": "genderUSBCA20Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBCA20Men",
-									"left": "85px"
-								}]
-							},
+							"customCallback": "genderUSBCA20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -191,16 +182,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBDS20Tooltip",
-								"adjustments": [{
-									"id": "genderUSBDS20Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBDS20Men",
-									"left": "112px"
-								}]
-							},
+							"customCallback": "genderUSBDS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -266,16 +248,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBGS20Tooltip",
-								"adjustments": [{
-									"id": "genderUSBGS20Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBGS20Men",
-									"left": "112px"
-								}]
-							},
+							"customCallback": "genderUSBGS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -985,16 +958,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBCA21Tooltip",
-								"adjustments": [{
-									"id": "genderUSBCA21Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBCA21Men",
-									"left": "90px"
-								}]
-							},
+							"customCallback": "genderUSBCA21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -1060,16 +1024,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBDS21Tooltip",
-								"adjustments": [{
-									"id": "genderUSBDS21Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBDS21Men",
-									"left": "110px"
-								}]
-							},
+							"customCallback": "genderUSBDS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -1135,16 +1090,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "genderUSBGS21Tooltip",
-								"adjustments": [{
-									"id": "genderUSBGS21Women",
-									"left": "0px"
-								}, {
-									"id": "genderUSBGS21Men",
-									"left": "117px"
-								}]
-							},
+							"customCallback": "genderUSBGS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -1753,11 +1699,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Black", "Hispanic/Latino/a/x", "Asian", "White", "Additional Races"],
+						"labels": ["Additional Races", "Black", "Hispanic/Latino/a/x", "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [6.4, 7.0, 14.2, 68.8, 3.6],
-							"backgroundColor": ["#BBD8F2", "#4C95DF", "#2F77CC", "#133C65", "#598200"],
+							"data": [3.6, 6.4, 7.0, 14.2, 68.8],
+							"backgroundColor": [ "#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -1862,31 +1808,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBCA20Tooltip",
-								"adjustments": [{
-									"id": "reUSBCA20PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBCA20NativeAmerican",
-									"left": "8px"
-								},{
-									"id": "reUSBCA20TwoOrMore",
-									"left": "12px"
-								},{
-									"id": "reUSBCA20Black",
-									"left": "25px"
-								},{
-									"id": "reUSBCA20HLAX",
-									"left": "55px"
-								},{
-									"id": "reUSBCA20Asian",
-									"left": "79px"
-								},{
-									"id": "reUSBCA20White",
-									"left": "164px"
-								}]
-							},
+							"customCallback": "reUSBCA20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -1992,31 +1914,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBDS20Tooltip",
-								"adjustments": [{
-									"id": "reUSBDS20PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBDS20NativeAmerican",
-									"left": "3px"
-								},{
-									"id": "reUSBDS20TwoOrMore",
-									"left": "8px"
-								},{
-									"id": "reUSBDS20Black",
-									"left": "12px"
-								},{
-									"id": "reUSBDS20HLAX",
-									"left": "55px"
-								},{
-									"id": "reUSBDS20Asian",
-									"left": "90px"
-								},{
-									"id": "reUSBDS20White",
-									"left": "114px"
-								}]
-							},
+							"customCallback": "reUSBDS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -2122,31 +2020,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBGS20Tooltip",
-								"adjustments": [{
-									"id": "reUSBGS20PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBGS20NativeAmerican",
-									"left": "3px"
-								},{
-									"id": "reUSBGS20TwoOrMore",
-									"left": "9px"
-								},{
-									"id": "reUSBGS20Black",
-									"left": "18px"
-								},{
-									"id": "reUSBGS20HLAX",
-									"left": "55px"
-								},{
-									"id": "reUSBGS20Asian",
-									"left": "129px"
-								},{
-									"id": "reUSBGS20White",
-									"left": "164px"
-								}]
-							},
+							"customCallback": "reUSBGS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -2184,7 +2058,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [8.3, 0, 8.3, 83.3, 0],
+							"data": [0, 8.3, 0, 8.3, 83.3],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2246,7 +2120,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [25.0, 0, 5.0,  65.0, 5.0],
+							"data": [5.0, 25.0, 0, 5.0,  65.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2308,7 +2182,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [6.5, 4.0, 8.3, 79.2, 2.0],
+							"data": [2.0, 6.5, 4.0, 8.3, 79.2],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2370,7 +2244,7 @@
 					"data": {
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
-							"data": [6.0, 6.2, 7.9, 77.0, 2.9],
+							"data": [2.9, 6.0, 6.2, 7.9, 77.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2495,7 +2369,7 @@
 						"labels":[["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [4.4, 7.6, 17.6, 67.7, 2.7],
+							"data": [2.7, 4.4, 7.6, 17.6, 67.7],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2558,7 +2432,7 @@
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [7.6, 7.2, 16.6, 64.0, 4.6],
+							"data": [4.6, 7.6, 7.2, 16.6, 64.0],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2684,7 +2558,7 @@
 						"labels": [["Additional", "Races"], "Black", ["Hispanic/","Latino/a/x"], "Asian", "White"],
 						"datasets": [{
 							"label": "",
-							"data": [8.3, 9.6, 13.9, 62.8, 5.4],
+							"data": [5.4, 8.3, 9.6, 13.9, 62.8],
 							"barThickness": 50,
 							"backgroundColor": ["#598200", "#BBD8F2", "#4C95DF", "#2F77CC", "#133C65"],
 							"datalabels": {
@@ -2857,31 +2731,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBCA21Tooltip",
-								"adjustments": [{
-									"id": "reUSBCA21PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBCA21NativeAmerican",
-									"left": "8px"
-								},{
-									"id": "reUSBCA21TwoOrMore",
-									"left": "15px"
-								},{
-									"id": "reUSBCA21Black",
-									"left": "25px"
-								},{
-									"id": "reUSBCA21HLAX",
-									"left": "55px"
-								},{
-									"id": "reUSBCA21Asian",
-									"left": "82px"
-								},{
-									"id": "reUSBCA21White",
-									"left": "173px"
-								}]
-							},
+							"customCallback": "reUSBCA21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -2987,31 +2837,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBDS21Tooltip",
-								"adjustments": [{
-									"id": "reUSBDS21PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBDS21NativeAmerican",
-									"left": "3px"
-								},{
-									"id": "reUSBDS21TwoOrMore",
-									"left": "8px"
-								},{
-									"id": "reUSBDS21Black",
-									"left": "17px"
-								},{
-									"id": "reUSBDS21HLAX",
-									"left": "58px"
-								},{
-									"id": "reUSBDS21Asian",
-									"left": "98px"
-								},{
-									"id": "reUSBDS21White",
-									"left": "120px"
-								}]
-							},
+							"customCallback": "reUSBDS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -3117,31 +2943,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "reUSBGS21Tooltip",
-								"adjustments": [{
-									"id": "reUSBGS21PacificIslander",
-									"left": "0px"
-								}, {
-									"id": "reUSBGS21NativeAmerican",
-									"left": "3px"
-								},{
-									"id": "reUSBGS21TwoOrMore",
-									"left": "8px"
-								},{
-									"id": "reUSBGS21Black",
-									"left": "17px"
-								},{
-									"id": "reUSBGS21HLAX",
-									"left": "57px"
-								},{
-									"id": "reUSBGS21Asian",
-									"left": "126px"
-								},{
-									"id": "reUSBGS21White",
-									"left": "166px"
-								}]
-							},
+							"customCallback": "reUSBGS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -3177,7 +2979,7 @@
 				"chart": {
 					"type": "bar",
 					"data": {
-            "labels": [["Pacific","Islander"], ["Native","American"], ["2 or more","races"], ["Black"], ["Hispanic/","Latino/a/x"], ["Asian"], ["White"]],
+						"labels": [["Pacific","Islander"], ["Native","American"], ["2 or more","races"], ["Black"], ["Hispanic/","Latino/a/x"], ["Asian"], ["White"]],
 						"datasets": [{
 							"data": [0, 0, 0, 16.7, 0, 8.3, 75.0],
 							"barThickness": 50,
@@ -3813,16 +3615,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBCA20Tooltip",
-								"adjustments": [{
-									"id": "veUSBCA20Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBCA20Others",
-									"left": "75px"
-								}]
-							},
+							"customCallback": "veUSBCA20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -3888,16 +3681,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBDS20Tooltip",
-								"adjustments": [{
-									"id": "veUSBDS20Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBDS20Others",
-									"left": "87px"
-								}]
-							},
+							"customCallback": "veUSBDS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -3963,16 +3747,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBGS20Tooltip",
-								"adjustments": [{
-									"id": "veUSBGS20Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBGS20Others",
-									"left": "158px"
-								}]
-							},
+							"customCallback": "veUSBGS20Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -4081,16 +3856,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBCA21Tooltip",
-								"adjustments": [{
-									"id": "veUSBCA21Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBCA21Others",
-									"left": "70px"
-								}]
-							},
+							"customCallback": "veUSBCA21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -4156,16 +3922,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBDS21Tooltip",
-								"adjustments": [{
-									"id": "veUSBDS21Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBDS21Others",
-									"left": "87px"
-								}]
-							},
+							"customCallback": "veUSBDS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
@@ -4231,16 +3988,7 @@
 							}
 						},
 						"tooltips": {
-							"customTooltipConfig": {
-								"callbackName": "veUSBGS21Tooltip",
-								"adjustments": [{
-									"id": "veUSBGS21Veterans",
-									"left": "0px"
-								}, {
-									"id": "veUSBGS21Others",
-									"left": "128px"
-								}]
-							},
+							"customCallback": "veUSBGS21Tooltip",
 							"enabled": false,
 							"mode": "single"
 						},
