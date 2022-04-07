@@ -8,19 +8,21 @@
 
 .role-dropdown-btn-container {
     position: relative;
+    width: 100%;
 }
 
 .role-dropdown-arrow {
     position: absolute;
-    left: 15px;
+    left: 35px;
     top: 15px;
 }
 
 .role-dropdown-btn {
-	width: 100%;
+    display: block;
+	width: 90%;
 	padding: 10px;
 	border: 2px solid #0033A1;
-	border-radius: 8px;
+	border-radius: 5px;
 	background: #FFF;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -28,6 +30,7 @@
 	color: #0033A1;
     text-align: left;
     padding-left: 40px;
+    margin: 0 auto;
 }
 
 .role-dropdown-options {
