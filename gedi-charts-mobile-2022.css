@@ -13,8 +13,10 @@
 
 .role-dropdown-arrow {
     position: absolute;
-    left: 35px;
-    top: 15px;
+    left: 37px;
+    top: 17px;
+    cursor: pointer;
+    width: 11px;
 }
 
 .role-dropdown-btn {
@@ -34,10 +36,14 @@
 }
 
 .role-dropdown-options {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: calc(100% - 5px);
+	display: none;
+	position: absolute;
+	z-index: 1;
+	width: calc(90% - 5px);
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .role-dropdown-item {
