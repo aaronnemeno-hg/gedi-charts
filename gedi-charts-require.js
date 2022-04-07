@@ -45,6 +45,10 @@ require([
         initRoleLinks('.gender-role-links');
         initRoleLinks('.re-role-links');
         
+        // initialize mobile dropdown
+        initRoleMobileDropdown('.gender-mobile-dropdown');
+        initRoleMobileDropdown('.re-mobile-dropdown');
+
         function initChartPluginService() {
             console.log("initialize chart plugin service");
             Chart.pluginService.register({
@@ -691,11 +695,9 @@ require([
                 chartObj.options.tooltips.callbacks.label = roleBarChartLabel;
                 chartObj.options.scales.yAxes[0].callback = roleBarChartYAxes;
             } else if (chartObj.type === "horizontalBar") {
-                if (chartObj.options.tooltips.hasOwnProperty('customTooltipConfig')) {
-                    console.log("HAS CUSTOM TOOLTIP Config");
-                    console.log(chartObj.options.tooltips.customTooltipConfig);
-                    var customTooltipConfig = chartObj.options.tooltips.customTooltipConfig;
-                    initCustomTooltips(chartObj, customTooltipConfig);
+                if (chartObj.options.tooltips.hasOwnProperty('customCallback')) {
+                    var customCallback = chartObj.options.tooltips.customCallback;
+                    initCustomTooltips(chartObj, customCallback);
                     //chartObj.options.tooltips.custom = genderUSBCA21Tooltip;
                 }
             }
@@ -708,56 +710,44 @@ require([
             return arrMsg;
         }
         
-        function initCustomTooltips(chartObj, customTooltipConfig) {
-            // determine which tooltip callback to use
-            var adjustments = customTooltipConfig.adjustments;
-        
-            for (var i = 0; i < adjustments.length; i++) {
-                var targetTooltip = document.getElementById(adjustments[i].id);
-                if (targetTooltip) {
-                    if (adjustments[i].hasOwnProperty("left")) {
-                        targetTooltip.style.left = adjustments[i].left;
-                    }
-                }
-            }
+        function initCustomTooltips(chartObj, customCallback) {
         
             // determine which tooltip callback function to use
-            var callbackName  = customTooltipConfig.callbackName;
-            if (callbackName == "genderUSBCA21Tooltip") {
+            if (customCallback == "genderUSBCA21Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBCA21Tooltip;
-            } else if (callbackName == "genderUSBDS21Tooltip") {
+            } else if (customCallback == "genderUSBDS21Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBDS21Tooltip;
-            } else if (callbackName == "genderUSBGS21Tooltip") {
+            } else if (customCallback == "genderUSBGS21Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBGS21Tooltip;
-            } else if (callbackName == "genderUSBCA20Tooltip") {
+            } else if (customCallback == "genderUSBCA20Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBCA20Tooltip;
-            } else if (callbackName == "genderUSBDS20Tooltip") {
+            } else if (customCallback == "genderUSBDS20Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBDS20Tooltip;
-            } else if (callbackName == "genderUSBGS20Tooltip") {
+            } else if (customCallback == "genderUSBGS20Tooltip") {
                 chartObj.options.tooltips.custom = genderUSBGS20Tooltip;
-            } else if (callbackName == "reUSBCA21Tooltip") {
+            } else if (customCallback == "reUSBCA21Tooltip") {
                 chartObj.options.tooltips.custom = reUSBCA21Tooltip;
-            } else if (callbackName == "reUSBDS21Tooltip") {
+            } else if (customCallback == "reUSBDS21Tooltip") {
                 chartObj.options.tooltips.custom = reUSBDS21Tooltip;
-            } else if (callbackName == "reUSBGS21Tooltip") {
+            } else if (customCallback == "reUSBGS21Tooltip") {
                 chartObj.options.tooltips.custom = reUSBGS21Tooltip;
-            } else if (callbackName == "reUSBCA20Tooltip") {
+            } else if (customCallback == "reUSBCA20Tooltip") {
                 chartObj.options.tooltips.custom = reUSBCA20Tooltip;
-            } else if (callbackName == "reUSBDS20Tooltip") {
+            } else if (customCallback == "reUSBDS20Tooltip") {
                 chartObj.options.tooltips.custom = reUSBDS20Tooltip;
-            } else if (callbackName == "reUSBGS20Tooltip") {
+            } else if (customCallback == "reUSBGS20Tooltip") {
                 chartObj.options.tooltips.custom = reUSBGS20Tooltip;
-            } else if (callbackName == "veUSBCA21Tooltip") {
+            } else if (customCallback == "veUSBCA21Tooltip") {
                 chartObj.options.tooltips.custom = veUSBCA21Tooltip;
-            } else if (callbackName == "veUSBDS21Tooltip") {
+            } else if (customCallback == "veUSBDS21Tooltip") {
                 chartObj.options.tooltips.custom = veUSBDS21Tooltip;
-            } else if (callbackName == "veUSBGS21Tooltip") {
+            } else if (customCallback == "veUSBGS21Tooltip") {
                 chartObj.options.tooltips.custom = veUSBGS21Tooltip;
-            } else if (callbackName == "veUSBCA20Tooltip") {
+            } else if (customCallback == "veUSBCA20Tooltip") {
                 chartObj.options.tooltips.custom = veUSBCA20Tooltip;
-            } else if (callbackName == "veUSBDS20Tooltip") {
+            } else if (customCallback == "veUSBDS20Tooltip") {
                 chartObj.options.tooltips.custom = veUSBDS20Tooltip;
-            } else if (callbackName == "veUSBGS20Tooltip") {
+            } else if (customCallback == "veUSBGS20Tooltip") {
                 chartObj.options.tooltips.custom = veUSBGS20Tooltip;
             }
         }
@@ -1900,7 +1890,8 @@ require([
                 customTooltipVeterans.textContent = "";
                 customTooltipOthers.textContent = percent + '% ' + label;
             }
-        }
+        }        
+
 	});
 
 });
