@@ -434,12 +434,14 @@ function initRoleLinks(roleLinksClass) {
 
 function initRoleMobileDropdown(roleMobileDropdownClass) {
 
-    const roleMobileDropdownButtons = document.querySelectorAll(roleMobileDropdownClass + ' .role-dropdown-btn');
+    const roleMobileDropdownButtons = document.querySelectorAll(roleMobileDropdownClass + ' .role-dropdown-btn-container');
     console.log("ROLE MOBILE DROPDOWN BUTTONS");
     console.log(roleMobileDropdownButtons);
     for (var i = 0; i < roleMobileDropdownButtons.length; i++) {
         roleMobileDropdownButtons[i].addEventListener('click', function(e) {
-            e.target.parentElement.nextElementSibling.classList.toggle('show');
+            if (e.target.tagName == "BUTTON" || e.target.tagName == "IMG") {
+                e.target.parentElement.nextElementSibling.classList.toggle('show');
+            }
         });
     }
 
