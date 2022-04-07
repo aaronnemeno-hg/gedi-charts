@@ -211,7 +211,7 @@ p.role-other-charts-nodata {
 }
 
 .role-legend.legend-undisclosed {
-    background: #007167;
+    background: #598200;
 }
 
 .role-gender-woc {
@@ -458,6 +458,22 @@ p.role-other-charts-nodata {
 @media only screen and (max-width: 414px) { 
     .role-overall-stacked-container {
         margin: unset;
+    }
+
+    /* min-width: 390px max-width 400px */
+    #race-ethnicity-2021 .role-legend-container .role-legend-text {
+        margin-left: 0.2rem;
+    }
+
+    #race-ethnicity-2021 .role-legend-container .role-legend.legend-2-or-more {
+        margin-left: 0px;
+    }
+
+    #race-ethnicity-2020 .role-legend-container .role-legend:not(:first-child) {
+        margin-left: 0;
+    }
+    #race-ethnicity-2020 .role-legend-container .role-legend-text {
+        margin-left: 0;
     }
 }
 
