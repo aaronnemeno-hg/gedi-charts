@@ -389,6 +389,16 @@ p.role-other-charts-nodata {
 }
 
 @media only screen and (max-width: 600px) {
+    #tabListLevel1 li.active a span {
+        color: rgb(37, 55, 70) !important;
+    }    
+
+    #tabListLevel1 li.active a,
+    #tabListLevel1 li.active a:hover,
+    #tabListLevel1 li.active a:focus {
+        border-top-color: transparent !important;
+    }
+
     .role-overall-charts {
         flex-direction: column;
     }
@@ -396,7 +406,10 @@ p.role-other-charts-nodata {
     .role-overall-doughnuts-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+
+    .role-overall-doughnuts-container .role-overall-doughnut-wrapper {
+        justify-content: center;
     }
 
     .role-overall-stacked-container {
