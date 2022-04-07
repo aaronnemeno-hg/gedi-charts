@@ -8,11 +8,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["Women", "Men", "Undisclosed"],
 						"datasets": [{
 							"label": "",
-							"data": [22.9, 77.1],
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"data": [22.9, 77.1, 0.3],
+							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)", "blue"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -47,11 +47,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["Women", "Men", "Undisclosed"],
 						"datasets": [{
 							"label": "",
-							"data": [24.3, 75.7],
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"data": [24.3, 75.7, 4.3],
+							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)", "blue"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -850,11 +850,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["Women", "Men", "Undisclosed"],
 						"datasets": [{
 							"label": "",
-							"data": [23.2, 76.3],
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"data": [23.2, 76.3, 0.5],
+							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)", "blue"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
@@ -889,11 +889,11 @@
 				"chart": {
 					"type": "doughnut",
 					"data": {
-						"labels": ["Women", "Men"],
+						"labels": ["Women", "Men", "Undisclosed"],
 						"datasets": [{
 							"label": "",
-							"data": [24.6, 71.9],
-							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)"],
+							"data": [24.6, 71.9, 3.4],
+							"backgroundColor": ["rgb(105,167,226)", "rgb(20,60,101)", "blue"],
 							"borderColor": [],
 							"borderWidth": 1
 						}]
