@@ -4,6 +4,15 @@
 }
 /* General */
 
+#tabListLevel1 {
+    display: flex;
+    justify-content: center;
+}
+
+#tabListLevel1 li a span {
+    display: block;
+}
+
 .charts-tabs .nav-tabs li.active a span,
 .sub-tabs li.active a span {
     color: #0078B8 !important;
@@ -201,6 +210,10 @@ p.role-other-charts-nodata {
     background: #133C65;
 }
 
+.role-legend.legend-undisclosed {
+    background: #007167;
+}
+
 .role-gender-woc {
     max-width: 640px;
     margin: 0 auto;
@@ -344,6 +357,7 @@ p.role-other-charts-nodata {
 
 .disability-desc-right span mark {
     background-color: #CCE981;
+    opacity: 0.8;
 }
 
 .lgbtqia-desc-container {
@@ -371,6 +385,7 @@ p.role-other-charts-nodata {
 
 .lgbtqia-desc-right span mark{
     background-color: #CCE981;
+    opacity: 0.8;
 }
 
 @media only screen and (max-width: 600px) {
@@ -390,6 +405,40 @@ p.role-other-charts-nodata {
 
     .role-overall-stacked-item:not(:first-child) {
         margin-top: 0;
+    }
+
+    .nav-tabs.sub-tabs {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-tabs.sub-tabs li {
+        width: 50%;
+    }
+
+    .disability-desc-container {
+        flex-direction: column;
+    }
+
+    .disability-desc-left {
+        width: 100%;
+    }
+
+    .disability-desc-right {
+        width: 100%;
+    }
+
+    .lgbtqia-desc-container {
+        flex-direction: column;
+    }
+
+    .lgbtqia-desc-left {
+        width: 100%;
+    }
+
+    .lgbtqia-desc-right {
+        width: 100%;
     }
 }
 
