@@ -366,6 +366,21 @@ p.role-other-charts-nodata {
     width: 30%;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .lgbtqia-desc-container , .disability-desc-container {
+        flex-direction: column;
+    }
+
+    .lgbtqia-desc-left, .disability-desc-left {
+        width: 100%;
+    }
+
+    .lgbtqia-desc-right, .disability-desc-right {
+        width: 100%;
+    }
+}
+
 .lgbtqia-desc-right span {
     font-size: 28px;
     line-height: 50px;
