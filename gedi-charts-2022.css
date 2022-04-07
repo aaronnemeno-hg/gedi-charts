@@ -34,6 +34,10 @@
     padding: 1rem 0;
 }
 
+.role-overall-stacked-item:not(:first-child) {
+    margin-top: 1.3rem;
+}
+
 .role-overall-doughnut-item h3,
 .role-overall-stacked-item h3 {
     padding-top: .7rem;
@@ -64,6 +68,10 @@
 .role-overall-doughnut-desc p span:not(:first-child) {
     font-size: 1.5rem;
     line-height: 34px;
+}
+
+.role-overall-stacked-container {
+    max-width: 400px;
 }
 
 .role-overall-stacked-item h3 {
@@ -375,6 +383,20 @@ p.role-other-charts-nodata {
         flex-direction: column;
         align-items: center;
     }
+
+    .role-overall-stacked-container {
+        margin: 0 auto;
+    }
+
+    .role-overall-stacked-item:not(:first-child) {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) { 
+    .role-overall-stacked-container {
+        margin: unset;
+    }
 }
 
 @media only screen  and (min-width: 668px) {
@@ -437,6 +459,83 @@ p.role-other-charts-nodata {
     left: 98px;
 }
 
+@media only screen and (max-width: 414px) {
+    #genderUSBCA21Men {
+        left: 75px;
+    }
+
+    #genderUSBDS21Men {
+        left: 91px;
+    }
+
+    #genderUSBGS21Men {
+        left: 98px;
+    }
+
+    #genderUSBCA20Men {
+        left: 70px;
+    }
+
+    #genderUSBDS20Men {
+        left: 93px;
+    }
+
+    #genderUSBGS20Men {
+        left: 93px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+    #genderUSBCA21Men {
+        left: 67px;
+    }
+
+    #genderUSBDS21Men {
+        left: 82px;
+    }
+
+    #genderUSBGS21Men {
+        left: 87px;
+    }
+
+    #genderUSBCA20Men {
+        left: 63px;
+    }
+
+    #genderUSBDS20Men {
+        left: 84px;
+    }
+
+    #genderUSBGS20Men {
+        left: 83px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+    #genderUSBCA21Men {
+        left: 64px;
+    }
+
+    #genderUSBDS21Men {
+        left: 79px;
+    }
+
+    #genderUSBGS21Men {
+        left: 84px;
+    }
+
+    #genderUSBCA20Men {
+        left: 59px;
+    }
+
+    #genderUSBDS20Men {
+        left: 79px;
+    }
+
+    #genderUSBGS20Men {
+        left: 79px;
+    }
+}
 /**
 * GEDI Custom Tooltips -  Race Ethnicity
 */
@@ -469,6 +568,7 @@ p.role-other-charts-nodata {
 #reUSBCA21White {
     left: 153px;
 }
+
 
 /* 2021 US BDS RE */
 #reUSBDS21PacificIslander {
@@ -615,6 +715,450 @@ p.role-other-charts-nodata {
     left: 144px;
 }
 
+@media only screen and (max-width: 414px) {
+    /* 2021 */
+    #reUSBCA21NativeAmerican {
+        left: 5px;
+    }
+    
+    #reUSBCA21TwoOrMore {
+        left: 11px;
+    }
+    
+    #reUSBCA21Black {
+        left: 20px;
+    }
+    
+    #reUSBCA21HLAX {
+        left: 47px;
+    }
+    
+    #reUSBCA21Asian {
+        left: 68px;
+    }
+    
+    #reUSBCA21White {
+        left: 143px;
+    }
+
+    #reUSBDS21NativeAmerican {
+        left: 3px;
+    }
+    
+    #reUSBDS21TwoOrMore {
+        left: 5px;
+    }
+    
+    #reUSBDS21Black {
+        left: 12px;
+    }
+    
+    #reUSBDS21HLAX {
+        left: 49px;
+    }
+    
+    #reUSBDS21Asian {
+        left: 81px;
+    }
+    
+    #reUSBDS21White {
+        left: 98px;
+    }
+
+    #reUSBGS21NativeAmerican {
+        left: 3px;
+    }
+
+    #reUSBGS21TwoOrMore {
+        left: 6px;
+    }
+
+    #reUSBGS21Black {
+        left: 14px;
+    }
+
+    #reUSBGS21HLAX {
+        left: 45px;
+    }
+
+    #reUSBGS21Asian {
+        left: 104px;
+    }
+
+    #reUSBGS21White {
+        left: 136px;
+    }
+
+    /* 2020 */
+    #reUSBCA20NativeAmerican {
+        left: 4px;
+    }
+    
+    #reUSBCA20TwoOrMore {
+        left: 11px;
+    }
+    
+    #reUSBCA20Black {
+        left: 19px;
+    }
+    
+    #reUSBCA20HLAX {
+        left: 46px;
+    }
+    
+    #reUSBCA20Asian {
+        left: 63px;
+    }
+    
+    #reUSBCA20White {
+        left: 135px;
+    }
+
+    #reUSBDS20NativeAmerican {
+        left: 1px;
+    }
+    
+    #reUSBDS20TwoOrMore {
+        left: 4px;
+    }
+    
+    #reUSBDS20Black {
+        left: 11px;
+    }
+    
+    #reUSBDS20HLAX {
+        left: 45px;
+    }
+    
+    #reUSBDS20Asian {
+        left: 75px;
+    }
+    
+    #reUSBDS20White {
+        left: 92px;
+    }
+
+    #reUSBGS20NativeAmerican {
+        left: 5px;
+    }
+    
+    #reUSBGS20TwoOrMore {
+        left: 7px;
+    }
+    
+    #reUSBGS20Black {
+        left: 14px;
+    }
+    
+    #reUSBGS20HLAX {
+        left: 44px;
+    }
+    
+    #reUSBGS20Asian {
+        left: 105px;
+    }
+    
+    #reUSBGS20White {
+        left: 134px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+    /* 2021 */
+    #reUSBCA21NativeAmerican {
+        left: 3px;
+    }
+    
+    #reUSBCA21TwoOrMore {
+        left: 9px;
+    }
+    
+    #reUSBCA21Black {
+        left: 18px;
+    }
+    
+    #reUSBCA21HLAX {
+        left: 42px;
+    }
+    
+    #reUSBCA21Asian {
+        left: 60px;
+    }
+    
+    #reUSBCA21White {
+        left: 129px;
+    }
+
+    #reUSBDS21NativeAmerican {
+        left: 2px;
+    }
+    
+    #reUSBDS21TwoOrMore {
+        left: 4px;
+    }
+    
+    #reUSBDS21Black {
+        left: 11px;
+    }
+    
+    #reUSBDS21HLAX {
+        left: 43px;
+    }
+    
+    #reUSBDS21Asian {
+        left: 72px;
+    }
+    
+    #reUSBDS21White {
+        left: 88px;
+    }
+
+    #reUSBGS21NativeAmerican {
+        left: 2px;
+    }
+
+    #reUSBGS21TwoOrMore {
+        left: 5px;
+    }
+
+    #reUSBGS21Black {
+        left: 12px;
+    }
+
+    #reUSBGS21HLAX {
+        left: 41px;
+    }
+
+    #reUSBGS21Asian {
+        left: 94px;
+    }
+
+    #reUSBGS21White {
+        left: 123px;
+    }
+
+    /* 2020 */
+    #reUSBCA20NativeAmerican {
+        left: 4px;
+    }
+    
+    #reUSBCA20TwoOrMore {
+        left: 10px;
+    }
+    
+    #reUSBCA20Black {
+        left: 17px;
+    }
+    
+    #reUSBCA20HLAX {
+        left: 41px;
+    }
+    
+    #reUSBCA20Asian {
+        left: 56px;
+    }
+    
+    #reUSBCA20White {
+        left: 122px;
+    }
+
+    #reUSBDS20NativeAmerican {
+        left: 1px;
+    }
+    
+    #reUSBDS20TwoOrMore {
+        left: 3px;
+    }
+    
+    #reUSBDS20Black {
+        left: 11px;
+    }
+    
+    #reUSBDS20HLAX {
+        left: 41px;
+    }
+    
+    #reUSBDS20Asian {
+        left: 68px;
+    }
+    
+    #reUSBDS20White {
+        left: 83px;
+    }
+
+    #reUSBGS20NativeAmerican {
+        left: 3px;
+    }
+    
+    #reUSBGS20TwoOrMore {
+        left: 6px;
+    }
+    
+    #reUSBGS20Black {
+        left: 13px;
+    }
+    
+    #reUSBGS20HLAX {
+        left: 40px;
+    }
+    
+    #reUSBGS20Asian {
+        left: 94px;
+    }
+    
+    #reUSBGS20White {
+        left: 120px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+    /* 2021 */
+    #reUSBCA21NativeAmerican {
+        left: 3px;
+    }
+    
+    #reUSBCA21TwoOrMore {
+        left: 9px;
+    }
+    
+    #reUSBCA21Black {
+        left: 18px;
+    }
+    
+    #reUSBCA21HLAX {
+        left: 40px;
+    }
+    
+    #reUSBCA21Asian {
+        left: 59px;
+    }
+    
+    #reUSBCA21White {
+        left: 123px;
+    }
+
+    #reUSBDS21NativeAmerican {
+        left: 2px;
+    }
+    
+    #reUSBDS21TwoOrMore {
+        left: 4px;
+    }
+    
+    #reUSBDS21Black {
+        left: 11px;
+    }
+    
+    #reUSBDS21HLAX {
+        left: 41px;
+    }
+    
+    #reUSBDS21Asian {
+        left: 69px;
+    }
+    
+    #reUSBDS21White {
+        left: 85px;
+    }
+
+    #reUSBGS21NativeAmerican {
+        left: 2px;
+    }
+
+    #reUSBGS21TwoOrMore {
+        left: 5px;
+    }
+
+    #reUSBGS21Black {
+        left: 12px;
+    }
+
+    #reUSBGS21HLAX {
+        left: 39px;
+    }
+
+    #reUSBGS21Asian {
+        left: 91px;
+    }
+
+    #reUSBGS21White {
+        left: 119px;
+    }
+
+    /* 2020 */
+    #reUSBCA20NativeAmerican {
+        left: 4px;
+    }
+    
+    #reUSBCA20TwoOrMore {
+        left: 10px;
+    }
+    
+    #reUSBCA20Black {
+        left: 17px;
+    }
+    
+    #reUSBCA20HLAX {
+        left: 39px;
+    }
+    
+    #reUSBCA20Asian {
+        left: 54px;
+    }
+    
+    #reUSBCA20White {
+        left: 117px;
+    }
+
+    #reUSBDS20NativeAmerican {
+        left: 1px;
+    }
+    
+    #reUSBDS20TwoOrMore {
+        left: 3px;
+    }
+    
+    #reUSBDS20Black {
+        left: 11px;
+    }
+    
+    #reUSBDS20HLAX {
+        left: 39px;
+    }
+    
+    #reUSBDS20Asian {
+        left: 65px;
+    }
+    
+    #reUSBDS20White {
+        left: 80px;
+    }
+
+    #reUSBGS20NativeAmerican {
+        left: 3px;
+    }
+    
+    #reUSBGS20TwoOrMore {
+        left: 6px;
+    }
+    
+    #reUSBGS20Black {
+        left: 13px;
+    }
+    
+    #reUSBGS20HLAX {
+        left: 37px;
+    }
+    
+    #reUSBGS20Asian {
+        left: 91px;
+    }
+    
+    #reUSBGS20White {
+        left: 116px;
+    } 
+}
+
 /**
 * GEDI Custom Tooltips - Veterans
 */
@@ -664,4 +1208,82 @@ p.role-other-charts-nodata {
 
 #veUSBGS20Others {
     left: 141px;
+}
+
+@media only screen and (max-width: 414px) {
+   #veUSBCA21Others {
+        left: 57px;
+    }
+
+    #veUSBDS21Others {
+        left: 72px;
+    }
+
+    #veUSBGS21Others {
+        left: 107px;
+    }
+
+    #veUSBCA20Others {
+        left: 62px;
+    }
+
+    #veUSBDS20Others {
+        left: 72px;
+    }
+
+    #veUSBGS20Others {
+        left: 131px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+    #veUSBCA21Others {
+        left: 52px;
+    }
+
+    #veUSBDS21Others {
+        left: 65px;
+    }
+
+    #veUSBGS21Others {
+        left: 95px;
+    }
+
+    #veUSBCA20Others {
+        left: 55px;
+    }
+
+    #veUSBDS20Others {
+        left: 65px;
+    }
+
+    #veUSBGS20Others {
+        left: 119px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+    #veUSBCA21Others {
+        left: 49px;
+    }
+
+    #veUSBDS21Others {
+        left: 62px;
+    }
+
+    #veUSBGS21Others {
+        left: 90px;
+    }
+
+    #veUSBCA20Others {
+        left: 53px;
+    }
+
+    #veUSBDS20Others {
+        left: 63px;
+    }
+
+    #veUSBGS20Others {
+        left: 113px;
+    }
 }
